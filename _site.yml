@@ -1,0 +1,18 @@
+name: "Banco de Dados - Peld Iloc"
+navbar:
+  title: "Recursos - Banco de Dados Peld Iloc"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Organização de Bancos de Dados"
+      href: dados.html
+  right: 
+    - icon: fa-envelope fa-lg
+      href: mailto:<silveira.tcl@gmail.com>
+    - icon: fa-github fa-lg
+      href: https://github.com/silveiratcl/
+output_dir: "docs"
+output:
+  html_document:
+    theme: cerulean
+    
