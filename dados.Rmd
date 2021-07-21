@@ -1,13 +1,27 @@
 ---
-title: "Organização de Bancos de Bancos de Dados"
-
+title: "Organização de Bancos de Dados"
 ---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 ## Introdução
 
-Dados  usar aula ppg
- 
 ## Objetivos
+ + Criar um banco de dados para "pessoas"
+ + Armadilhas
+ + Controle de versão e identificação de problemas
+ + Exportação
 
-- padronização
--
 
+## Formatação de Planilhas
+
+## Problemas de Formatação
+
+## Datas
+
+## Controle de Qualidade
+
+## Exportação de Dados

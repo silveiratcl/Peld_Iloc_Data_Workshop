@@ -1,16 +1,66 @@
 ---
-title: "Recursos para curadoria de Dados Peld - Iloc"
-
+title: "Workshop Dados Peld - Iloc"
 ---
-## Introdução
-
-- importancia
-- acesso a informação
-- documentos redigidos para pessoas
 
 
-## Objetivos
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-- padronização
--
+
+## Visão Geral
+
+Esta página tem como objetivo ser um documento de referência sobre procedimentos empregados para sistematização e publicação dos bancos de dados construídos até o momento no  **PELD-ILOC - Projeto Ecológico de Longa Duração ilhas Oceânicas**.
+
+## Workshop 
+
+Com intuito de relatar e discutir as propostas de organização dos bancos de dados do **PELD-ILOC**, foi idealizado um encontro com a rede de pesquisadores do projeto. Serão dois encontros com o objetivo de discutir as propostas de procedimentos que visam  dinamizar a curadoria e o acesso a informação do **PELD-ILOC**.
+
+
+A dinâmica do workshop será composta por apresentações conceituais, relatos de atividades e rodadas de discussão com os integrantes da rede. As discussões terão um importante papel para o mapeamento de dificuldades e detalhamento de protocolos.  
+
+ 
+
+As datas previstas para o encontro são:
+
+**17 de agosto** (terça-feira) 9:00 - 11:30
+**19 de agosto** (quinta-feira) 9:00 - 11:30
+
+[!!! Em breve link da Reunião](https://)
+
+\br
+
+## Programação
+
+### [Terça - Dia 17]  **9:00 - 11:30**
+      
+1. Boas práticas para construção e organização de bancos de dados (50 min)
+
+    [Slides ](https://)
+
+2. Apresentação do github do PELD ILOC - O que é? objetivos, recursos disponíveis... (50 min)
+
+
+3. Dados da Biodiversidade das Ilhas Oceânicas integrados ao OBIS - Recursos empregados na Construção do DWC-A PELD ILOC (30min) 
+      
+      
+      
+
+### [Quinta - Dia 19]  **9:00 - 11:30**
+
+1. Relato sobre padronização das bases de dados - principais problemas e soluções  (30 min)
+
+
+2. Apresentação a proposta de formatação dos bancos de dados para o PELD (30 min)
+
+
+3. Discussão sobre a proposta de organização das bases de dados (50 min)
+
+      
+4. Encaminhamentos (20 min)
+
+
+
+
+
 

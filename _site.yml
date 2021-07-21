@@ -1,10 +1,16 @@
 name: "Banco de Dados - Peld Iloc"
 navbar:
-  title: "Recursos - Banco de Dados Peld Iloc"
+  title: "Banco de Dados Peld Iloc"
   left:
     - text: "Home"
       href: index.html
     - text: "Organização de Bancos de Dados"
+      href: dados.html
+    - text: "Github Peld-Iloc"
+      href: dados.html
+    - text: "Darwin Core-A"
+      href: dados.html
+    - text: "Padrão Bases de Dados"
       href: dados.html
   right: 
     - icon: fa-envelope fa-lg
