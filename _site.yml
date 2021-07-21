@@ -7,11 +7,11 @@ navbar:
     - text: "Organização de Bancos de Dados"
       href: dados.html
     - text: "Github Peld-Iloc"
-      href: dados.html
+      href: github.html
     - text: "Darwin Core-A"
-      href: dados.html
+      href: dwc-a.html
     - text: "Padrão Bases de Dados"
-      href: dados.html
+      href: padrao_db.html
   right: 
     - icon: fa-envelope fa-lg
       href: mailto:<silveira.tcl@gmail.com>
