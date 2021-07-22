@@ -14,14 +14,21 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Introdução
 
+Todo e qualquer projeto de pesquisa terá como uma parte importante a coleta de dados. Os dados obtidos em amostragens (organismos bentos, peixes recifas) são de alguma maneira anotados em campo e posteriormente digitaslizados em forma de planilhas (excel, e.g.). Após a digitação dos dados, o passo seguinte é explorarmos de alguma maneira estas informações.
+As informações podem ser visualizadas em gráficos em tabelas.
 
+No entanto, a leitura dos dados pelo olhar humano e a leitura realizada por uma "máquina" são realizadas de maneiras completamente diferentes. A leitura huamanda de planilhas é visual, tendemos a destacar informações com cores e tabulações. Já a leitura dos dados realzadas por algiritmos em nossos computadores opera de uma maneira completamente diferente. A leitura é realisada pela codificação da informação o que é de difícil leitura para humanos.
+
+Para que possamos processar os dados coletados e estes possam ser compreendidos por algoritmos, precisamos estruturá-los de forma que possam ser lidos, formatados e recodificados para a leitura humana. Nesse sentido, o objetivo desta sessão e apresentar um guia de boas práticas de formatação de planilhas de dados. 
 
 
 ## Objetivos
- + Criar um banco de dados para "pessoas"
- + Armadilhas
- + Controle de versão e identificação de problemas
- + Exportação
+ + Criar um banco de dados organizado que possa ser lido por qualquer algoritmo
+ + Destacar as pricipais armadilhas no momento da formatação
+    
+ + Estratégias para minimização de Bugs em suas planilhas
+ + Metadados - Read Me
+ + Formatos
 
 
 ## Formatação de Planilhas
