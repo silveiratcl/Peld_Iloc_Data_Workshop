@@ -23,24 +23,52 @@ Para que possamos processar os dados coletados e estes possam ser compreendidos 
 
 
 ## Objetivos
- + Criar um banco de dados organizado que possa ser lido por qualquer algoritmo
- + Armadilhas no momento da formatação
- + Estratégias para minimização de Bugs em suas planilhas
- + Metadados - Read Me
- + Formatos
+  + Criar um banco de dados organizado que possa ser lido por qualquer algoritmo
+  + Formatos
+  + Identificar armadilhas no momento da formatação
+  + Estratégias para minimização de erros de digitação
+  + Metadados - Read Me
 
 
 ## Formatação de Planilhas
-  + Formatos de planilhas
-    - largo
-    - longo
-    - mixto (CPCe, PhotoQuad)
 
-## Problemas de Formatação
+
+### Problemas de Formatação
   + Leitura Humana vs. Leitura dos Computadores
+
+### Formatos de planilhas
+ 
+  + Largo: Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna.
+  
+  fig
+    
+  + Longo: 
+  
+  fig
+    
+  + mixto (CPCe, PhotoQuad)
+
+  fig
+
+
+
+### Logica de construção Hierárquica
+
+O emprego de uma lógica hierárquica na construção dos bancos de dados ajuda muito no momento da digitação dos dados e na compreessão da estruturea dos dados.
+
+### Nomes de Variáveis
+
+### Estados de Variáveis
+
 
 ## Datas
 
 ## Controle de Qualidade
+
+ + Nome de espécies
+ 
+ + Nomes de locais
+ 
+ + Coordendas
 
 ## Exportação de Dados

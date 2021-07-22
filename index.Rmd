@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Visão Geral
 
-Esta página tem como objetivo ser um documento de referência sobre procedimentos empregados na sistematização e publicação dos bancos de dados construídos pelo **PELD-ILOC (Pesquisa Ecológica de Longa Duração Ilhas Oceânicas Brasileiras)**.
+Esta página tem como objetivo ser um documento de referência sobre procedimentos empregados na sistematização e publicação dos bancos de dados construídos pelo **PELD-ILOC (Pesquisa Ecológica de Longa Duração nas Ilhas Oceânicas Brasileiras)**.
 
 ## Workshop 
 
