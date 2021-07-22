@@ -9,15 +9,19 @@ navbar:
     - text: "Github Peld-Iloc"
       href: blank.html
       icon: fa-github fa-lg
-    - text: "Darwin Core-A"
-      href: blank.html+=
-      icon: fa-folder fa-lg
     - text: "Padrão Bases de Dados"
       href: blank.html
       icon: fa-file-excel fa-lg
+    - text: "Darwin Core-A"
+      href: blank.html
+      icon: fa-folder fa-lg
   right: 
+    - icon: fa-envelope fa-lg
+      href: mailto:<peldiloc.gbm@id.uff.br>
     - icon: fa-github fa-lg
-      href: https://github.com/silveiratcl/
+      href: https://github.com/Peld-Oceanic-Islands
+    
+      
 output_dir: "docs"
 output:
   html_document:
