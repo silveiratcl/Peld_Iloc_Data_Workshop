@@ -24,16 +24,20 @@ Para que possamos processar os dados coletados e estes possam ser compreendidos 
 
 ## Objetivos
  + Criar um banco de dados organizado que possa ser lido por qualquer algoritmo
- + Destacar as pricipais armadilhas no momento da formatação
-    
+ + Armadilhas no momento da formatação
  + Estratégias para minimização de Bugs em suas planilhas
  + Metadados - Read Me
  + Formatos
 
 
 ## Formatação de Planilhas
+  + Formatos de planilhas
+    - largo
+    - longo
+    - mixto (CPCe, PhotoQuad)
 
 ## Problemas de Formatação
+  + Leitura Humana vs. Leitura dos Computadores
 
 ## Datas
 
