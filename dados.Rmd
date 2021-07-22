@@ -1,5 +1,10 @@
 ---
 title: "Organização de Bancos de Dados"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+
 ---
 
 
@@ -8,6 +13,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Introdução
+
+
+
 
 ## Objetivos
  + Criar um banco de dados para "pessoas"
