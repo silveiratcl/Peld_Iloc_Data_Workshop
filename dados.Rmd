@@ -43,7 +43,7 @@ Tenha em mente que o processo do uso da informação em pesquisas apresenta etap
 
 Desta maneira, quando estiver estruturando seu banco de dados, não pule etapas ou mesmo misture estes passos em uma planilhas do excel. Isto torna a informação inviável de ser acessada por outros meios de leitura (R software, e.g.). Muitas vezes nos sentimos tentados a fazer uma gráfica ou uma formatação visual no excel que não contribuirão para a manipulação e visualização das informações.
 
-<img src= "docs/imgs/data_1.png" style= "width:100%">
+<img src= "figs/data_1.png" style= "width:100%">
 
 *Exemplo de uma planilha "mista"*
 
@@ -86,7 +86,7 @@ Este tipo de organização de dados é denominda por Wickham e Grolemund (2017) 
 
 + Cada valor único deve ter sua própria célula
 
-<img src= "docs/imgs/data_2.png" style= "width:100%">
+<img src= "figs/data_2.png" style= "width:100%">
 
 *As tres regras para um conjunto de dados "tidy" (Wickham e Grolemund, 2017)*
 
