@@ -52,7 +52,7 @@ Ao final serão encaminhadas ações necessárias para dinamizar o acesso e a cu
 1. Relato sobre padronização das bases de dados - principais problemas e soluções  (30 min)
 
 
-2. Apresentação a proposta de formatação dos bancos de dados para o PELD (30 min)
+2. Apresentação da proposta de formatação dos bancos de dados para o PELD (30 min)
 
 
 3. Discussão sobre a proposta de organização das bases de dados (50 min)
