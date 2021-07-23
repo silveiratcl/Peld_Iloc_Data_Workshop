@@ -4,45 +4,103 @@ output:
     html_document:
         toc: TRUE
         toc_float: TRUE
-
 ---
 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
 ```
 
-## Introdução
+## 1. Introdução
 
-Todo e qualquer projeto de pesquisa terá como uma parte importante a coleta de dados. Os dados obtidos em amostragens (organismos bentos, peixes recifas) são de alguma maneira anotados em campo e posteriormente digitaslizados em forma de planilhas (excel, e.g.). Após a digitação dos dados, o passo seguinte é explorarmos de alguma maneira estas informações.
-As informações podem ser visualizadas em gráficos em tabelas.
+Todo e qualquer projeto de pesquisa terá como uma parte importante a coleta de dados. Os dados obtidos em amostragens (organismos bentos, peixes recifas,...) são de alguma maneira registrados em campo e posteriormente digitalizados em forma de planilhas (excel, e.g.). Após a digitação dos dados, o passo seguinte é explorarmos de alguma maneira estas informações. As informações podem ser visualizadas em gráficos em tabelas...
 
-No entanto, a leitura dos dados pelo olhar humano e a leitura realizada por uma "máquina" são realizadas de maneiras completamente diferentes. A leitura huamanda de planilhas é visual, tendemos a destacar informações com cores e tabulações. Já a leitura dos dados realzadas por algiritmos em nossos computadores opera de uma maneira completamente diferente. A leitura é realisada pela codificação da informação o que é de difícil leitura para humanos.
+No entanto, a leitura dos dados pelo olhar humano e a leitura realizada por uma "máquina" são realizadas de maneiras completamente distintas. A leitura humanda de planilhas é visual, tendemos a destacar informações com cores e tabulações. Já a leitura dos dados realizadas por algoritmos opera de uma maneira completamente diferente. 
 
-Para que possamos processar os dados coletados e estes possam ser compreendidos por algoritmos, precisamos estruturá-los de forma que possam ser lidos, formatados e recodificados para a leitura humana. Nesse sentido, o objetivo desta sessão e apresentar um guia de boas práticas de formatação de planilhas de dados. 
-
-
-## Objetivos
-  + Criar um banco de dados organizado que possa ser lido por qualquer algoritmo
-  + Formatos
-  + Identificar armadilhas no momento da formatação
-  + Estratégias para minimização de erros de digitação
-  + Metadados - Read Me
+Para que possamos processar os dados coletados, primeiramente estes devem lidos por algoritmos de maneira correta. Sendo realizada a leitura precisamos ainda estruturá-los de forma que possam ser lidos, formatados e recodificados para a leitura humana. Exitem inúmeras maneiras organizar um banco de dados e algumas estruturas de dados tornam quase que impossível a leitura e manipulação. Nesse sentido, o objetivo desta sessão e apresentar um guia de boas práticas de formatação de planilhas de dados da maneira mais simples e lógica possível, possibilitando a fácil leitura e manipulação. 
 
 
-## Formatação de Planilhas
+## 2. Objetivos
+
+  + Apresentar um guia de estruturação de banco de dados que possa ser lido por qualquer algoritmo
+  + Identificar diferentes formatos de dados
+  + Identificar possíveis armadilhas no momento da digitação 
+  + Apresentar estratégias para minimização de erros de digitação
+  + Estratégias para tornar o seu banco de dados compreessível por qualquer pessoa
 
 
-### Problemas de Formatação
-  + Leitura Humana vs. Leitura dos Computadores
+## 3. Estrutura de Planilhas
 
-### Formatos de planilhas
+### Leitura Humana vs. Leitura dos Computadores
+
+Tenha em mente que o processo do uso da informação em pesquisas apresenta etapas bem distintas. 
+
++ Aquisição - Obtenção propriamente dita dos dados (coletas, fotos, entrevistas,...)
++ Organização - Organização da informação para que possa ser lida e interpretada (logica no armazenamento: estrutura dos dados)
++ Visualização - Produção de gráficos e tabelas com os dados obtidos
++ Modelagem - Emprego de análises estatísticas com o objetico de construção de modelos e testes de Hipóteses.
+
+Desta maneira, quando estiver estruturando seu banco de dados, não pule etapas ou mesmo misture estes passos em uma planilhas do excel. Isto torna a informação inviável de ser acessada por outros meios de leitura (R software, e.g.). Muitas vezes nos sentimos tentados a fazer uma gráfica ou uma formatação visual no excel que não contribuirão para a manipulação e visualização das informações.
+
+<img src= "imgs/data_1.png" style= "width:100%">
+
+*Exemplo de uma planilha "mista"*
+
+
+Portanto, tente fazer uma etapa de cada vez e nunca misture dados coletados com tentativas de visualização, análises estatísticas e formatações visuais.
+
+
+### Formatos
+
+Existem diversas maneiras de organizar dados e alguns formatos são muito difíceis de intepretar e manipular. Abaixo são apresentadas algumas formas de organização de dados de um mesmo conjunto de informações.
+
+```{r}
+table1
+```
+
+```{r}
+table2
+```
+
+```{r}
+table3
+```
+
+```{r}
+# Dados apresentados em duas planilhas ou "tibbles"
+table4a
+```
+
+```{r}
+table4b
+```
+
+Analizando os conjuntos de dados acima, qqual vocês julga ser o mais fácil de ler e interpretar? Provavelmente vocês escolheu a a `table1`. Esta conformação de dados é maneira mais simples e a fácil de se manipular. Este formato também é conhecido pelo formato "longo". 
+
+Este tipo de organização de dados é denominda por Wickham e Grolemund (2017) do "tidy data". Segundo os autores, esta organização de dados é regida por três regras:
+
++ Cada variável deve ter sua própria coluna
+
++ Cada observação deve ter sua própria linhas
+
++ Cada valor único deve ter sua própria célula
+
+<img src= "imgs/data_2.png" style= "width:100%">
+
+*As tres regras para um conjunto de dados "tidy" (Wickham e Grolemund, 2017)*
+
+
+
+
+
  
-  + Largo: Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna.
+  + Largo: Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna. Este formato é o utilizado na grande maioria das análises estatísticas.
+
+Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna. Este formato é o utilizado na grande maioria das análises estatísticas.
   
-  fig
-    
-  + Longo: 
+  + Longo
+  
   
   fig
     
@@ -72,3 +130,10 @@ O emprego de uma lógica hierárquica na construção dos bancos de dados ajuda 
  + Coordendas
 
 ## Exportação de Dados
+
+
+
+
+## Bibliografia
+
+Wickham, H. & Grolemund, G. R for Data Science - import, tidy, transform, visualize, and model data. (O’Reilly Media, 2017).

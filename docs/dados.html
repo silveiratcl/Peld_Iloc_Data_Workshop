@@ -376,37 +376,106 @@ div.tocify {
 
 
 <div id="introdução" class="section level2">
-<h2>Introdução</h2>
-<p>Todo e qualquer projeto de pesquisa terá como uma parte importante a coleta de dados. Os dados obtidos em amostragens (organismos bentos, peixes recifas) são de alguma maneira anotados em campo e posteriormente digitaslizados em forma de planilhas (excel, e.g.). Após a digitação dos dados, o passo seguinte é explorarmos de alguma maneira estas informações. As informações podem ser visualizadas em gráficos em tabelas.</p>
-<p>No entanto, a leitura dos dados pelo olhar humano e a leitura realizada por uma “máquina” são realizadas de maneiras completamente diferentes. A leitura huamanda de planilhas é visual, tendemos a destacar informações com cores e tabulações. Já a leitura dos dados realzadas por algiritmos em nossos computadores opera de uma maneira completamente diferente. A leitura é realisada pela codificação da informação o que é de difícil leitura para humanos.</p>
-<p>Para que possamos processar os dados coletados e estes possam ser compreendidos por algoritmos, precisamos estruturá-los de forma que possam ser lidos, formatados e recodificados para a leitura humana. Nesse sentido, o objetivo desta sessão e apresentar um guia de boas práticas de formatação de planilhas de dados.</p>
+<h2>1. Introdução</h2>
+<p>Todo e qualquer projeto de pesquisa terá como uma parte importante a coleta de dados. Os dados obtidos em amostragens (organismos bentos, peixes recifas,…) são de alguma maneira registrados em campo e posteriormente digitalizados em forma de planilhas (excel, e.g.). Após a digitação dos dados, o passo seguinte é explorarmos de alguma maneira estas informações. As informações podem ser visualizadas em gráficos em tabelas…</p>
+<p>No entanto, a leitura dos dados pelo olhar humano e a leitura realizada por uma “máquina” são realizadas de maneiras completamente distintas. A leitura humanda de planilhas é visual, tendemos a destacar informações com cores e tabulações. Já a leitura dos dados realizadas por algoritmos opera de uma maneira completamente diferente.</p>
+<p>Para que possamos processar os dados coletados, primeiramente estes devem lidos por algoritmos de maneira correta. Sendo realizada a leitura precisamos ainda estruturá-los de forma que possam ser lidos, formatados e recodificados para a leitura humana. Exitem inúmeras maneiras organizar um banco de dados e algumas estruturas de dados tornam quase que impossível a leitura e manipulação. Nesse sentido, o objetivo desta sessão e apresentar um guia de boas práticas de formatação de planilhas de dados da maneira mais simples e lógica possível, possibilitando a fácil leitura e manipulação.</p>
 </div>
 <div id="objetivos" class="section level2">
-<h2>Objetivos</h2>
+<h2>2. Objetivos</h2>
 <ul>
-<li>Criar um banco de dados organizado que possa ser lido por qualquer algoritmo</li>
-<li>Formatos</li>
-<li>Identificar armadilhas no momento da formatação</li>
-<li>Estratégias para minimização de erros de digitação</li>
-<li>Metadados - Read Me</li>
+<li>Apresentar um guia de estruturação de banco de dados que possa ser lido por qualquer algoritmo</li>
+<li>Identificar diferentes formatos de dados</li>
+<li>Identificar possíveis armadilhas no momento da digitação</li>
+<li>Apresentar estratégias para minimização de erros de digitação</li>
+<li>Estratégias para tornar o seu banco de dados compreessível por qualquer pessoa</li>
 </ul>
 </div>
-<div id="formatação-de-planilhas" class="section level2">
-<h2>Formatação de Planilhas</h2>
-<div id="problemas-de-formatação" class="section level3">
-<h3>Problemas de Formatação</h3>
+<div id="estrutura-de-planilhas" class="section level2">
+<h2>3. Estrutura de Planilhas</h2>
+<div id="leitura-humana-vs.-leitura-dos-computadores" class="section level3">
+<h3>Leitura Humana vs. Leitura dos Computadores</h3>
+<p>Tenha em mente que o processo do uso da informação em pesquisas apresenta etapas bem distintas.</p>
 <ul>
-<li>Leitura Humana vs. Leitura dos Computadores</li>
+<li>Aquisição - Obtenção propriamente dita dos dados (coletas, fotos, entrevistas,…)</li>
+<li>Organização - Organização da informação para que possa ser lida e interpretada (logica no armazenamento: estrutura dos dados)</li>
+<li>Visualização - Produção de gráficos e tabelas com os dados obtidos</li>
+<li>Modelagem - Emprego de análises estatísticas com o objetico de construção de modelos e testes de Hipóteses.</li>
 </ul>
+<p>Desta maneira, quando estiver estruturando seu banco de dados, não pule etapas ou mesmo misture estes passos em uma planilhas do excel. Isto torna a informação inviável de ser acessada por outros meios de leitura (R software, e.g.). Muitas vezes nos sentimos tentados a fazer uma gráfica ou uma formatação visual no excel que não contribuirão para a manipulação e visualização das informações.</p>
+<p><img src= "imgs/data_1.png" style= "width:100%"></p>
+<p><em>Exemplo de uma planilha “mista”</em></p>
+<p>Portanto, tente fazer uma etapa de cada vez e nunca misture dados coletados com tentativas de visualização, análises estatísticas e formatações visuais.</p>
 </div>
-<div id="formatos-de-planilhas" class="section level3">
-<h3>Formatos de planilhas</h3>
+<div id="formatos" class="section level3">
+<h3>Formatos</h3>
+<p>Existem diversas maneiras de organizar dados e alguns formatos são muito difíceis de intepretar e manipular. Abaixo são apresentadas algumas formas de organização de dados de um mesmo conjunto de informações.</p>
+<pre class="r"><code>table1</code></pre>
+<pre><code>## # A tibble: 6 x 4
+##   country      year  cases population
+##   &lt;chr&gt;       &lt;int&gt;  &lt;int&gt;      &lt;int&gt;
+## 1 Afghanistan  1999    745   19987071
+## 2 Afghanistan  2000   2666   20595360
+## 3 Brazil       1999  37737  172006362
+## 4 Brazil       2000  80488  174504898
+## 5 China        1999 212258 1272915272
+## 6 China        2000 213766 1280428583</code></pre>
+<pre class="r"><code>table2</code></pre>
+<pre><code>## # A tibble: 12 x 4
+##    country      year type            count
+##    &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;           &lt;int&gt;
+##  1 Afghanistan  1999 cases             745
+##  2 Afghanistan  1999 population   19987071
+##  3 Afghanistan  2000 cases            2666
+##  4 Afghanistan  2000 population   20595360
+##  5 Brazil       1999 cases           37737
+##  6 Brazil       1999 population  172006362
+##  7 Brazil       2000 cases           80488
+##  8 Brazil       2000 population  174504898
+##  9 China        1999 cases          212258
+## 10 China        1999 population 1272915272
+## 11 China        2000 cases          213766
+## 12 China        2000 population 1280428583</code></pre>
+<pre class="r"><code>table3</code></pre>
+<pre><code>## # A tibble: 6 x 3
+##   country      year rate             
+## * &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;            
+## 1 Afghanistan  1999 745/19987071     
+## 2 Afghanistan  2000 2666/20595360    
+## 3 Brazil       1999 37737/172006362  
+## 4 Brazil       2000 80488/174504898  
+## 5 China        1999 212258/1272915272
+## 6 China        2000 213766/1280428583</code></pre>
+<pre class="r"><code># Dados apresentados em duas planilhas ou &quot;tibbles&quot;
+table4a</code></pre>
+<pre><code>## # A tibble: 3 x 3
+##   country     `1999` `2000`
+## * &lt;chr&gt;        &lt;int&gt;  &lt;int&gt;
+## 1 Afghanistan    745   2666
+## 2 Brazil       37737  80488
+## 3 China       212258 213766</code></pre>
+<pre class="r"><code>table4b</code></pre>
+<pre><code>## # A tibble: 3 x 3
+##   country         `1999`     `2000`
+## * &lt;chr&gt;            &lt;int&gt;      &lt;int&gt;
+## 1 Afghanistan   19987071   20595360
+## 2 Brazil       172006362  174504898
+## 3 China       1272915272 1280428583</code></pre>
+<p>Analizando os conjuntos de dados acima, qqual vocês julga ser o mais fácil de ler e interpretar? Provavelmente vocês escolheu a a <code>table1</code>. Esta conformação de dados é maneira mais simples e a fácil de se manipular. Este formato também é conhecido pelo formato “longo”.</p>
+<p>Este tipo de organização de dados é denominda por Wickham e Grolemund (2017) do “tidy data”. Segundo os autores, esta organização de dados é regida por três regras:</p>
 <ul>
-<li>Largo: Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna.</li>
+<li><p>Cada variável deve ter sua própria coluna</p></li>
+<li><p>Cada observação deve ter sua própria linhas</p></li>
+<li><p>Cada valor único deve ter sua própria célula</p></li>
 </ul>
-<p>fig</p>
+<p><img src= "imgs/data_2.png" style= "width:100%"></p>
+<p><em>As tres regras para um conjunto de dados “tidy” (Wickham e Grolemund, 2017)</em></p>
 <ul>
-<li>Longo:</li>
+<li>Largo: Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna. Este formato é o utilizado na grande maioria das análises estatísticas.</li>
+</ul>
+<p>Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna. Este formato é o utilizado na grande maioria das análises estatísticas.</p>
+<ul>
+<li>Longo</li>
 </ul>
 <p>fig</p>
 <ul>
@@ -438,6 +507,10 @@ div.tocify {
 </div>
 <div id="exportação-de-dados" class="section level2">
 <h2>Exportação de Dados</h2>
+</div>
+<div id="bibliografia" class="section level2">
+<h2>Bibliografia</h2>
+<p>Wickham, H. &amp; Grolemund, G. R for Data Science - import, tidy, transform, visualize, and model data. (O’Reilly Media, 2017).</p>
 </div>
 
 
