@@ -155,7 +155,6 @@ Pricipais problemas:
 Uma ferramenta do Excel que pode ajudar a evitar erros de digitação enconmtra-se na aba Dados => Validação de Dados.
 
 
-
 <img src= "figs/data_4.png" style= "width:100%">
 
 
@@ -172,10 +171,17 @@ A validação de dados pode ser realizada de diferentes maneiras:
 
 + Permitindo somente números inteiros
 + Somente decimais
-+ Seguido itens de uma lista (útil para nomes de espécies, localidades e nome de observadores)
++ Seguido itens de uma lista (útil para nomes de espécies, localidades, coordenadas e nomes de quem amostrou/processou)
 + Tempo, data, etc...
 
 Ainda podem ser adiciondas mensagens de input e error. 
+
+
+Para usar recurso de lista do Excel é preciso ter uma aba com as listas que serão usadas. Ter uma aba no mesmmo arquivo com a lista de ilhas, locais, coordendas para cada local e espécies com os nomes conferidos ajuda muito a evitar erros de digitação.
+
+<img src= "figs/data_7.png" style= "width:100%">
+
+
 
 ### 3.6 Arquivo README
 
@@ -188,27 +194,33 @@ Neste tipo de arquivo, que podem ser chamados também de metadados, pode ser apr
 + Data da última atualização da base de dados
 + Como incorporar novos dados
 
-<img src= "figs/data_7.png" style= "width:50%">
+<img src= "figs/data_8.png" style= "width:50%">
 
 
 ### 3.7 Datas
 
 Quanto a inserção de datas, sugere-se que se separe os valores de dia, mês e ano. Outros formatos também podem ser eficientes (11-05-2021, por exemplo),  mas devem ter consistência em todo o banco de dados. O mais aconselhado é que havendo uma coluna para dia, mes e ano, evita-se confusões de formato dia/mes/ano ou mes/dia/ano, por exemplo.  
 
-<img src= "figs/data_8.png" style= "width:50%">
+<img src= "figs/data_9.png" style= "width:50%">
 
 
-## Controle de Qualidade
+### 3.8 Controle de Versão
 
- + Nome de espécies
- 
- + Nomes de locais
- 
- + Coordendas
+O controle de versão da informação em bancos de dados é uma prática muito importante e tornar isto parte do seu dia-a-dia pode evitar problemas futuros. Uma simples ação que pode ser empregada é **nunca alterar os dados originais**. Sempre que tiver um banco de dados em mãos, salve com outro nome e faça edições.
 
-## Exportação de Dados
+Outro cuidado que pode ser tomado também é seguir uma lógica de nomeação de arquivos. Procurar ser o mais informativo possível ajuda a organizar os arquivos e ajuda a organizar a informação.
+
+Abaixo algumas sugestões de nomeação de arquivos:
 
 
+| Nome pouco infomartivo               | Sugestão                             |
+|:------------------------------------:|:------------------------------------:|
+| dados_reef_fish.xls                  | reef_fish_pels_ThiagoS_2021_07_27.xls|            
+| dados_rocas_final.xls                | benthos_rocas_ThiagoS_2021_07_27.xls |                         
+
+
+
+Existem ferramentas que nos auxiliam no controle de versão e compartilhamento de arquivos como o [git](https://git-scm.com/) e [github](https://github.com/). Estas ferramentas serão abordadas na sessão [Github PELD -ILOC](github.html) juntamente com a apresentação do perfil do github do PELD ILOC
 
 
 ## Bibliografia

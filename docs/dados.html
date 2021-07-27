@@ -553,10 +553,12 @@ taxa_table1_df</code></pre>
 <ul>
 <li>Permitindo somente números inteiros</li>
 <li>Somente decimais</li>
-<li>Seguido itens de uma lista (útil para nomes de espécies, localidades e nome de observadores)</li>
+<li>Seguido itens de uma lista (útil para nomes de espécies, localidades, coordenadas e nomes de quem amostrou/processou)</li>
 <li>Tempo, data, etc…</li>
 </ul>
 <p>Ainda podem ser adiciondas mensagens de input e error.</p>
+<p>Para usar recurso de lista do Excel é preciso ter uma aba com as listas que serão usadas. Ter uma aba no mesmmo arquivo com a lista de ilhas, locais, coordendas para cada local e espécies com os nomes conferidos ajuda muito a evitar erros de digitação.</p>
+<p><img src= "figs/data_7.png" style= "width:100%"></p>
 </div>
 <div id="arquivo-readme" class="section level3">
 <h3>3.6 Arquivo README</h3>
@@ -568,24 +570,38 @@ taxa_table1_df</code></pre>
 <li>Data da última atualização da base de dados</li>
 <li>Como incorporar novos dados</li>
 </ul>
-<p><img src= "figs/data_7.png" style= "width:50%"></p>
+<p><img src= "figs/data_8.png" style= "width:50%"></p>
 </div>
 <div id="datas" class="section level3">
 <h3>3.7 Datas</h3>
 <p>Quanto a inserção de datas, sugere-se que se separe os valores de dia, mês e ano. Outros formatos também podem ser eficientes (11-05-2021, por exemplo), mas devem ter consistência em todo o banco de dados. O mais aconselhado é que havendo uma coluna para dia, mes e ano, evita-se confusões de formato dia/mes/ano ou mes/dia/ano, por exemplo.</p>
-<p><img src= "figs/data_8.png" style= "width:50%"></p>
+<p><img src= "figs/data_9.png" style= "width:50%"></p>
 </div>
+<div id="controle-de-versão" class="section level3">
+<h3>3.8 Controle de Versão</h3>
+<p>O controle de versão da informação em bancos de dados é uma prática muito importante e tornar isto parte do seu dia-a-dia pode evitar problemas futuros. Uma simples ação que pode ser empregada é <strong>nunca alterar os dados originais</strong>. Sempre que tiver um banco de dados em mãos, salve com outro nome e faça edições.</p>
+<p>Outro cuidado que pode ser tomado também é seguir uma lógica de nomeação de arquivos. Procurar ser o mais informativo possível ajuda a organizar os arquivos e ajuda a organizar a informação.</p>
+<p>Abaixo algumas sugestões de nomeação de arquivos:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Nome pouco infomartivo</th>
+<th align="center">Sugestão</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">dados_reef_fish.xls</td>
+<td align="center">reef_fish_pels_ThiagoS_2021_07_27.xls</td>
+</tr>
+<tr class="even">
+<td align="center">dados_rocas_final.xls</td>
+<td align="center">benthos_rocas_ThiagoS_2021_07_27.xls</td>
+</tr>
+</tbody>
+</table>
+<p>Existem ferramentas que nos auxiliam no controle de versão e compartilhamento de arquivos como o <a href="https://git-scm.com/">git</a> e <a href="https://github.com/">github</a>. Estas ferramentas serão abordadas na sessão <a href="github.html">Github PELD -ILOC</a> juntamente com a apresentação do perfil do github do PELD ILOC</p>
 </div>
-<div id="controle-de-qualidade" class="section level2">
-<h2>Controle de Qualidade</h2>
-<ul>
-<li><p>Nome de espécies</p></li>
-<li><p>Nomes de locais</p></li>
-<li><p>Coordendas</p></li>
-</ul>
-</div>
-<div id="exportação-de-dados" class="section level2">
-<h2>Exportação de Dados</h2>
 </div>
 <div id="bibliografia" class="section level2">
 <h2>Bibliografia</h2>
