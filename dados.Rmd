@@ -16,9 +16,9 @@ library(tidyverse)
 
 Todo e qualquer projeto de pesquisa terá como uma parte importante a coleta de dados. Os dados obtidos em amostragens (organismos bentos, peixes recifas,...) são de alguma maneira registrados em campo e posteriormente digitalizados em forma de planilhas (excel, e.g.). Após a digitação dos dados, o passo seguinte é explorarmos de alguma maneira estas informações. As informações podem ser visualizadas em gráficos em tabelas...
 
-No entanto, a leitura dos dados pelo olhar humano e a leitura realizada por uma "máquina" são realizadas de maneiras completamente distintas. A leitura humanda de planilhas é visual, tendemos a destacar informações com cores e tabulações. Já a leitura dos dados realizadas por algoritmos opera de uma maneira completamente diferente. 
+No entanto, a leitura dos dados pelo olhar humano e a leitura realizada por uma "máquina" são realizadas de maneiras completamente distintas. A leitura humana de planilhas é visual, tendemos a destacar informações com cores e tabulações etc... Já a leitura dos dados realizada por algoritmos opera de uma maneira completamente diferente. 
 
-Para que possamos processar os dados coletados, primeiramente estes devem lidos por algoritmos de maneira correta. Sendo realizada a leitura precisamos ainda estruturá-los de forma que possam ser lidos, formatados e recodificados para a leitura humana. Exitem inúmeras maneiras organizar um banco de dados e algumas estruturas de dados tornam quase que impossível a leitura e manipulação. Nesse sentido, o objetivo desta sessão e apresentar um guia de boas práticas de formatação de planilhas de dados da maneira mais simples e lógica possível, possibilitando a fácil leitura e manipulação. 
+Para que possamos processar os dados coletados, primeiramente estes devem lidos por algoritmos de maneira correta. Sendo realizada a leitura precisamos ainda estruturá-los de forma que possam ser lidos, formatados e recodificados para a leitura humana. Exitem inúmeras maneiras organizar um banco de dados e algumas estruturas de dados se tornam quase que impossível a leitura e manipulação. Nesse sentido, o objetivo desta sessão e apresentar um guia de boas práticas de formatação de planilhas de dados da maneira mais simples e lógica possível, possibilitando a fácil leitura e manipulação. 
 
 
 ## 2. Objetivos
@@ -30,9 +30,9 @@ Para que possamos processar os dados coletados, primeiramente estes devem lidos 
   + Estratégias para tornar o seu banco de dados compreessível por qualquer pessoa
 
 
-## 3. Estrutura de Planilhas
+## 3. Estruturação de Planilhas
 
-### Leitura Humana vs. Leitura dos Computadores
+### 3.1 Leitura Humana vs. Leitura dos Computadores
 
 Tenha em mente que o processo do uso da informação em pesquisas apresenta etapas bem distintas. 
 
@@ -41,17 +41,16 @@ Tenha em mente que o processo do uso da informação em pesquisas apresenta etap
 + Visualização - Produção de gráficos e tabelas com os dados obtidos
 + Modelagem - Emprego de análises estatísticas com o objetico de construção de modelos e testes de Hipóteses.
 
-Desta maneira, quando estiver estruturando seu banco de dados, não pule etapas ou mesmo misture estes passos em uma planilhas do excel. Isto torna a informação inviável de ser acessada por outros meios de leitura (R software, e.g.). Muitas vezes nos sentimos tentados a fazer uma gráfica ou uma formatação visual no excel que não contribuirão para a manipulação e visualização das informações.
+Desta maneira, quando estiver estruturando seu banco de dados, não pule etapas ou mesmo misture estes passos em uma planilhas do excel. Isto torna a informação inviável de ser acessada por outros meios de leitura (R software, e.g.). Muitas vezes nos sentimos tentados a fazer uma formatação gráfica ou uma visual no excel, estas não contribuirão para a manipulação e visualização das informações.
 
 <img src= "figs/data_1.png" style= "width:100%">
-
 *Exemplo de uma planilha "mista"*
 
 
 Portanto, tente fazer uma etapa de cada vez e nunca misture dados coletados com tentativas de visualização, análises estatísticas e formatações visuais.
 
 
-### Formatos
+### 3.2 Formatos
 
 Existem diversas maneiras de organizar dados e alguns formatos são muito difíceis de intepretar e manipular. Abaixo são apresentadas algumas formas de organização de dados de um mesmo conjunto de informações.
 
@@ -76,13 +75,14 @@ table4a
 table4b
 ```
 
-Analizando os conjuntos de dados acima, qqual vocês julga ser o mais fácil de ler e interpretar? Provavelmente vocês escolheu a a `table1`. Esta conformação de dados é maneira mais simples e a fácil de se manipular. Este formato também é conhecido pelo formato "longo". 
+Analizando os conjuntos de dados acima, qual você julga ser o mais fácil de ler e interpretar? Provavelmente vocês escolheu a `table1`. Esta conformação de dados é maneira mais simples e fácil de manipular. Este formato também é conhecido pelo formato "longo". Os outros formatos são possíveis de serem manipulados, mas esta tarefa pode ser bem mais desafiadora.
 
-Este tipo de organização de dados é denominda por Wickham e Grolemund (2017) do "tidy data". Segundo os autores, esta organização de dados é regida por três regras:
+
+O tipo de oraganização apresentada no primeiro exemplo é denominda por Wickham e Grolemund (2017) como "tidy data". Segundo os autores, esta organização de dados é regida por três regras:
 
 + Cada variável deve ter sua própria coluna
 
-+ Cada observação deve ter sua própria linhas
++ Cada observação deve ter sua própria linha
 
 + Cada valor único deve ter sua própria célula
 
@@ -90,36 +90,113 @@ Este tipo de organização de dados é denominda por Wickham e Grolemund (2017) 
 
 *As tres regras para um conjunto de dados "tidy" (Wickham e Grolemund, 2017)*
 
+**Se um conjunto de dados seguir estar três regras, o processamento da informação será muito mais fácil.**
+
+Existem outros tipos de arranjos de dados e um dos formatos que rotineiramente precisamos para análises estatísticas é o formato "largo". Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna a esquerda. Este formato é o utilizado na grande maioria das análises estatísticas e geralmente advém de uma banco de dados em formato "tidy".
+
+Imagine a construção de uma tabela com os dados da `table1` onde queremos a soma dos casos em cada país nos anos 1999 e 2000.
+```{r}
+# Criando uma tabela com a soma de casos nos países 
+taxa_table1_df = table1 %>% 
+  group_by(country) %>% 
+  summarize(sum_cases = sum(cases))
+taxa_table1_df
+
+```
+
+Essa seria uma demonstração de criação e uma planilha larga oriunda de um banco de dados "tidy". 
+
+### 3.3 Lógica de Construção Hierárquica
+
+O emprego de uma lógica hierárquica na construção dos bancos de dados ajuda muito no momento da digitação dos dados e na sua compreessão quanto a estrutura. Entende-se por lógica hirárquica a estruturação do banco de dados com as primeiras colunas com variáveis mais abrangentes para variáveis mais detalhadas.
+
+
+Abaixo um exemplo baseado nos dados de peixes recifais.
+
+<img src= "figs/data_3.png" style= "width:100%">
+
+*Hierarquia quanto a abrangência das variáveis*
+
+No exemplo, vemos que as colunas mais a esquerda representam as ilhas e locais nas ilhas. Ao passo que as colunas vão sendo acrescentadas, as variáveis começam a detalhar cada vez mais a informação (coordenadas, profundidade, espécies, etc...)
+
+### 3.4 Nomes de Variáveis
+
+Nomes de variáveis são uma informação chave para que o banco de dados seja lido com maior facilidade por qualquer pessoa. Nomes muito abreviados ou com informação incompleta tendem a dificultar o preenchimento das planilhas e a compreenssão.
+
+A sugestão é utilizar nomes curtos e informativos. Por exemplo, um bom nome para a variável temperatua pode ser "temp", nome curto e informativo. No entanto, com esse nome não está explícita a unidade da variável. Uma sugestão que atenderia requisitos de simplicidade com informação completa poderia ser "temp_c", temperatura em graus Celsius. 
+
+
+Abaixo algumas sugestões de nomes de variáveis:
+
+| Variável                             | Boa opção          | Evitar             |
+|:-----------------------------------: |:------------------:|:------------------:|
+| Temperatura máxima (graus Celsius)   | max_temp_c         | Maximun Temp (C°)  |
+| Precipitação (mm)                    | precip_mm          | prec               |
+| Massa (Kg)                           | massa_kg           | Massa (Kg)         |
+| Visibilidade horizontal (metros)     | visib_m            | visib (m)          | 
+| Latitude (graus decimais)            | lat_DD             | lat                |
+
+
+Em resumo:
++ Nomes curtos e informativos - informando variável e unidaed
++ Evitar espaços em branco
++ Evitar caracteres especiais (acentos, ", # e º, por exemplo)
++ Evitar mistura caixa alta com caixa baixa
+
+### 3.5 Consistência de formato de variáveis 
+
+As variáveis em um banco de dados podem ser de diferentes tipos (categóricas, numéricas, continuas, por exemplo). Para evitar problemas com a manipulação e processamento é preciso prestar atenção ao formato e ser consistente.
+
+Pricipais problemas:
+
++ Separador do decimal (vírgula ou ponto)
++ Estado de variáveis - ("noronha" é diferente de "Noronha")
+
+Uma ferramenta do Excel que pode ajudar a evitar erros de digitação enconmtra-se na aba Dados => Validação de Dados.
 
 
 
-
- 
-  + Largo: Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna. Este formato é o utilizado na grande maioria das análises estatísticas.
-
-Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna. Este formato é o utilizado na grande maioria das análises estatísticas.
-  
-  + Longo
-  
-  
-  fig
-    
-  + mixto (CPCe, PhotoQuad)
-
-  fig
+<img src= "figs/data_4.png" style= "width:100%">
 
 
-
-### Logica de construção Hierárquica
-
-O emprego de uma lógica hierárquica na construção dos bancos de dados ajuda muito no momento da digitação dos dados e na compreessão da estruturea dos dados.
-
-### Nomes de Variáveis
-
-### Estados de Variáveis
+<img src= "figs/data_5.png" style= "width:50%">
 
 
-## Datas
+Na opção "Validação de Dados" estarão disponíveis algumas ferramentas para controle do que pode ser preenchido nas células.
+
+
+<img src= "figs/data_6.png" style= "width:50%">
+
+
+A validação de dados pode ser realizada de diferentes maneiras:
+
++ Permitindo somente números inteiros
++ Somente decimais
++ Seguido itens de uma lista (útil para nomes de espécies, localidades e nome de observadores)
++ Tempo, data, etc...
+
+Ainda podem ser adiciondas mensagens de input e error. 
+
+### 3.6 Arquivo README
+
+Outrea eestratégia para evitar erros de digitação e torar a informação de fávil compreenssão para pessoas é ter sempre com os dados um arquivo sou aba **README**. Estes arquivos são inforções que não fazem parte do banco de dados, mas ajudam na comprenssão do que é apresentado.
+
+Neste tipo de arquivo, que podem ser chamados também de metadados, pode ser apresentadas as seguintes informações:
+
++ Como foram obtidas as variáveis
++ Explicação contendo a unidade das variáveis
++ Data da última atualização da base de dados
++ Como incorporar novos dados
+
+<img src= "figs/data_7.png" style= "width:50%">
+
+
+### 3.7 Datas
+
+Quanto a inserção de datas, sugere-se que se separe os valores de dia, mês e ano. Outros formatos também podem ser eficientes (11-05-2021, por exemplo),  mas devem ter consistência em todo o banco de dados. O mais aconselhado é que havendo uma coluna para dia, mes e ano, evita-se confusões de formato dia/mes/ano ou mes/dia/ano, por exemplo.  
+
+<img src= "figs/data_8.png" style= "width:50%">
+
 
 ## Controle de Qualidade
 
