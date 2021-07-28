@@ -49,7 +49,7 @@ Tenha em mente que o processo do uso da informação em pesquisas apresenta etap
 + Visualização - Produção de gráficos e tabelas com os dados obtidos
 + Modelagem - Emprego de análises estatísticas, construção de modelos e testes de hipóteses.
 
-<img src= "figs/data_10.png" style= "width:100%">
+<img src= "figs/data_11.png" style= "width:100%">
 
 Desta maneira, quando estiver estruturando seu banco de dados, não pule etapas ou mesmo misture estes passos em uma planilhas do excel. Isto torna a informação inviável de ser acessada por outros meios de leitura (R software, e.g.). Muitas vezes nos sentimos tentados a fazer uma formatação gráfica ou uma visual no excel, mas estas não contribuirão para a manipulação e visualização das informações.
 
