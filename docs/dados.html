@@ -375,6 +375,10 @@ div.tocify {
 </div>
 
 
+<style>
+body {
+text-align: justify}
+</style>
 <div id="introdução" class="section level2">
 <h2>1. Introdução</h2>
 <p>Todo e qualquer projeto de pesquisa terá como uma parte importante a coleta de dados. Os dados obtidos em amostragens (organismos bentos, peixes recifas,…) são de alguma maneira registrados em campo e posteriormente digitalizados em forma de planilhas (excel, e.g.). Após a digitação dos dados, o passo seguinte é explorarmos de alguma maneira estas informações. As informações podem ser visualizadas em gráficos em tabelas…</p>
@@ -402,9 +406,10 @@ div.tocify {
 <li>Aquisição - Obtenção propriamente dita dos dados (coletas, fotos, entrevistas,…)</li>
 <li>Organização - Organização da informação para que possa ser lida e interpretada (logica no armazenamento: estrutura dos dados)</li>
 <li>Visualização - Produção de gráficos e tabelas com os dados obtidos</li>
-<li>Modelagem - Emprego de análises estatística, construção de modelos e testes de hipóteses.</li>
+<li>Modelagem - Emprego de análises estatísticas, construção de modelos e testes de hipóteses.</li>
 </ul>
-<p>Desta maneira, quando estiver estruturando seu banco de dados, não pule etapas ou mesmo misture estes passos em uma planilhas do excel. Isto torna a informação inviável de ser acessada por outros meios de leitura (R software, e.g.). Muitas vezes nos sentimos tentados a fazer uma formatação gráfica ou uma visual no excel, estas não contribuirão para a manipulação e visualização das informações.</p>
+<p><img src= "figs/data_10.png" style= "width:100%"></p>
+<p>Desta maneira, quando estiver estruturando seu banco de dados, não pule etapas ou mesmo misture estes passos em uma planilhas do excel. Isto torna a informação inviável de ser acessada por outros meios de leitura (R software, e.g.). Muitas vezes nos sentimos tentados a fazer uma formatação gráfica ou uma visual no excel, mas estas não contribuirão para a manipulação e visualização das informações.</p>
 <p><img src= "figs/data_1.png" style= "width:100%"></p>
 <p><em>Evite planilhas de dados “mistos”</em></p>
 <p>Portanto, tente executar uma etapa de cada vez e evite misturar dados coletados com tentativas de visualização, análises estatísticas e formatações visuais.</p>
@@ -473,7 +478,7 @@ table4a</code></pre>
 <p><img src= "figs/data_2.png" style= "width:100%"></p>
 <p><em>As tres regras para um conjunto de dados “tidy” (Wickham e Grolemund, 2017)</em></p>
 <p><strong>Se um conjunto de dados seguir estar três regras, o processamento da informação será muito mais fácil.</strong></p>
-<p>Existem outros tipos de arranjos de dados e um dos formatos que rotineiramente precisamos para análises estatísticas é o formato “largo”, ou uma tabela de dados. Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna a esquerda. Este formato é o utilizado na grande maioria das análises estatísticas e geralmente advém de uma banco de dados em formato “tidy”.Portanto, quando falamos em bancos de dados, estamos nos referindo a um conjunto de informações que podem ser transformadas em tabelas. Ainda, os bancos de dados a que nos referimos nesta seção são simples arquivos com uma lógica de armazenamento que permite o fácil acesso e manipulação.</p>
+<p>Existem outros tipos de arranjos de dados e um dos formatos que rotineiramente precisamos para análises estatísticas é o formato “largo”, ou uma tabela de dados. Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna a esquerda. Este formato é o utilizado na grande maioria das análises estatísticas e geralmente advém de uma banco de dados em formato “tidy”. Portanto, quando falamos em bancos de dados, estamos nos referindo a um conjunto de informações que podem ser transformadas em tabelas. Ainda, os bancos de dados a que nos referimos nesta seção são simples arquivos com uma lógica de armazenamento que permite o fácil acesso e manipulação.</p>
 <p>Imagine a construção de uma tabela com os dados da <code>table1</code> onde queremos a soma dos casos em cada país nos anos 1999 e 2000.</p>
 <pre class="r"><code># Criando uma tabela com a soma de casos nos países 
 taxa_table1_df = table1 %&gt;% 
@@ -486,7 +491,7 @@ taxa_table1_df</code></pre>
 ## 1 Afghanistan      3411
 ## 2 Brazil         118225
 ## 3 China          426024</code></pre>
-<p>Essa seria uma demonstração de criação e uma planilha larga oriunda de um banco de dados “tidy”.</p>
+<p>Essa seria uma demonstração de criação e uma tabela larga oriunda de um banco de dados “tidy”.</p>
 </div>
 <div id="lógica-de-construção-hierárquica" class="section level3">
 <h3>3.3 Lógica de Construção Hierárquica</h3>
@@ -527,7 +532,7 @@ taxa_table1_df</code></pre>
 </tr>
 <tr class="even">
 <td align="center">Visibilidade horizontal (metros)</td>
-<td align="center">visib_m</td>
+<td align="center">vis_hrz_m</td>
 <td align="center">visib (m)</td>
 </tr>
 <tr class="odd">
@@ -563,10 +568,15 @@ taxa_table1_df</code></pre>
 <p>Para usar recurso de lista do Excel é preciso ter uma aba com as listas que serão usadas. Ter uma aba no mesmmo arquivo com a lista de ilhas, locais, coordendas para cada local e espécies com os nomes conferidos ajuda muito a evitar erros de digitação.</p>
 <p><img src= "figs/data_7.png" style= "width:100%"></p>
 </div>
+<div id="datas" class="section level3">
+<h3>3.6 Datas</h3>
+<p>Quanto a inserção de datas, sugere-se que se separe os valores de dia, mês e ano. Outros formatos também podem ser eficientes (11-05-2021, por exemplo), mas devem ter consistência em todo o banco de dados. Havendo uma coluna para dia, mes e ano, evita-se confusões de formato dia/mes/ano ou mes/dia/ano, por exemplo.</p>
+<p><img src= "figs/data_9.png" style= "width:100%"></p>
+</div>
 <div id="arquivo-readme" class="section level3">
-<h3>3.6 Arquivo README</h3>
-<p>Outrea eestratégia para evitar erros de digitação e torar a informação de fávil compreenssão para pessoas é ter sempre com os dados um arquivo sou aba <strong>README</strong>. Estes arquivos são inforções que não fazem parte do banco de dados, mas ajudam na comprenssão do que é apresentado.</p>
-<p>Neste tipo de arquivo, que podem ser chamados também de metadados, pode ser apresentadas as seguintes informações:</p>
+<h3>3.7 Arquivo README</h3>
+<p>Outra estratégia para evitar erros de digitação e tornar a informação de fácil compreenssão para pessoas é ter sempre disponível com os dados um arquivo ou uma aba <strong>README</strong>. Estes arquivos são informações que não fazem parte do banco de dados, mas ajudam na comprenssão do que é apresentado.</p>
+<p>Neste tipo de arquivo, que podem ser chamados também de <em>metadados</em>, podem ser apresentadas as seguintes informações:</p>
 <ul>
 <li>Como foram obtidas as variáveis</li>
 <li>Explicação contendo a unidade das variáveis</li>
@@ -575,15 +585,10 @@ taxa_table1_df</code></pre>
 </ul>
 <p><img src= "figs/data_8.png" style= "width:50%"></p>
 </div>
-<div id="datas" class="section level3">
-<h3>3.7 Datas</h3>
-<p>Quanto a inserção de datas, sugere-se que se separe os valores de dia, mês e ano. Outros formatos também podem ser eficientes (11-05-2021, por exemplo), mas devem ter consistência em todo o banco de dados. O mais aconselhado é que havendo uma coluna para dia, mes e ano, evita-se confusões de formato dia/mes/ano ou mes/dia/ano, por exemplo.</p>
-<p><img src= "figs/data_9.png" style= "width:100%"></p>
-</div>
 <div id="controle-de-versão" class="section level3">
 <h3>3.8 Controle de Versão</h3>
-<p>O controle de versão da informação em bancos de dados é uma prática muito importante e tornar isto parte do seu dia-a-dia pode evitar problemas futuros. Uma simples ação que pode ser empregada é <strong>nunca alterar os dados originais</strong>. Sempre que tiver um banco de dados em mãos, salve com outro nome e faça edições.</p>
-<p>Outro cuidado que pode ser tomado também é seguir uma lógica de nomeação de arquivos. Procurar ser o mais informativo possível ajuda a organizar os arquivos e ajuda a organizar a informação.</p>
+<p>O controle de versão da informação é uma prática muito importante e tornar isto parte do seu dia-a-dia pode evitar problemas futuros. Uma simples ação que pode ser empregada é <strong>nunca alterar os dados originais</strong>. Sempre que tiver um banco de dados em mãos, salve com outro nome e faça edições.</p>
+<p>Outro cuidado que pode ser tomado também é seguir uma lógica de nomeação de arquivos. Procurar ser o mais informativo possível ajuda a organizar os arquivos e o acesso a informação.</p>
 <p>Abaixo algumas sugestões de nomeação de arquivos:</p>
 <table>
 <thead>
@@ -595,7 +600,7 @@ taxa_table1_df</code></pre>
 <tbody>
 <tr class="odd">
 <td align="center">dados_reef_fish.xlsx</td>
-<td align="center">peld_reef_fish_pels_ThiagoS_2021_07_27.xlsx</td>
+<td align="center">peld_reef_fish_peld_ThiagoS_2021_07_27.xlsx</td>
 </tr>
 <tr class="even">
 <td align="center">dados_rocas_final.xlsx</td>

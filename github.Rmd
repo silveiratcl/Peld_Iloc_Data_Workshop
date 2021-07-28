@@ -6,7 +6,10 @@ output:
         toc_float: TRUE
 
 ---
-
+<style>
+body {
+text-align: justify}
+</style>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
