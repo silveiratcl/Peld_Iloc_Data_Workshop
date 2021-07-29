@@ -48,8 +48,11 @@ Tenha em mente que o processo do uso da informação em pesquisas apresenta etap
 + Organização - Organização da informação para que possa ser lida e interpretada (logica no armazenamento: estrutura dos dados)
 + Visualização - Produção de gráficos e tabelas com os dados obtidos
 + Modelagem - Emprego de análises estatísticas, construção de modelos e testes de hipóteses.
++ Comunicação - Resultados dos passos anteriores
 
 <img src= "figs/data_11.png" style= "width:100%">
+
+*Etapas do processamento da informação [R for Data Science](https://r4ds.had.co.nz)*
 
 Desta maneira, quando estiver estruturando seu banco de dados, não pule etapas ou mesmo misture estes passos em uma planilhas do excel. Isto torna a informação inviável de ser acessada por outros meios de leitura (R software, e.g.). Muitas vezes nos sentimos tentados a fazer uma formatação gráfica ou uma visual no excel, mas estas não contribuirão para a manipulação e visualização das informações.
 
@@ -99,7 +102,7 @@ O tipo de oraganização apresentada no primeiro exemplo é denominda por Wickha
 
 <img src= "figs/data_2.png" style= "width:100%">
 
-*As tres regras para um conjunto de dados "tidy" (Wickham e Grolemund, 2017)*
+*As tres regras para um conjunto de dados "tidy" [R for Data Science](https://r4ds.had.co.nz)*
 
 **Se um conjunto de dados seguir estar três regras, o processamento da informação será muito mais fácil.**
 
@@ -224,11 +227,11 @@ Outro cuidado que pode ser tomado também é seguir uma lógica de nomeação de
 
 Abaixo algumas sugestões de nomeação de arquivos:
 
-| Nome pouco informativo               | Sugestão                                     |
-|:------------------------------------:|:--------------------------------------------:|
-| dados_reef_fish.xlsx                 | peld_reef_fish_peld_ThiagoS_2021_07_27.xlsx  |            
-| dados_rocas_final.xlsx               | peld_benthos_rocas_ThiagoS_2021_07_27.xlsx   |  
-| data_Rocas_final_bentos.xlsx         | peld_bentos_rocas_análises_2021_07_27.xlsx   |
+| Nome pouco informativo               | Sugestão                                             |
+|:------------------------------------:|:----------------------------------------------------:|
+| dados_reef_fish.xlsx                 | peld_reef_fish_peld_ThiagoS_2021_07_27.xlsx          |            
+| dados_rocas_final.xlsx               | peld_benthos_rocas_ThiagoS_2021_07_27.xlsx           |  
+| data_Rocas_final_bentos.xlsx         | peld_bentos_rocas_analises_ThiagoS_2021_07_27.xlsx   |
 
 
 Existem ferramentas que nos auxiliam no controle de versão e compartilhamento de arquivos como o [git](https://git-scm.com/) e [github](https://github.com/). Estas ferramentas serão abordadas na sessão [Github PELD -ILOC](github.html) juntamente com a apresentação do perfil do github do PELD ILOC.  

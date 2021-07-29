@@ -4,7 +4,7 @@ navbar:
   title: "Banco de Dados Peld Iloc"
   left:
     - text: "Organização de Bancos de Dados"
-      href: blank.html
+      href: dados.html
       icon: fa-database fa-lg
     - text: "Github Peld-Iloc"
       href: blank.html

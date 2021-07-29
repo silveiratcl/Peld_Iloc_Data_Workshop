@@ -320,7 +320,7 @@ div.tocify {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="blank.html">
+  <a href="dados.html">
     <span class="fa fa-database fa-lg"></span>
      
     Organização de Bancos de Dados
@@ -407,8 +407,10 @@ text-align: justify}
 <li>Organização - Organização da informação para que possa ser lida e interpretada (logica no armazenamento: estrutura dos dados)</li>
 <li>Visualização - Produção de gráficos e tabelas com os dados obtidos</li>
 <li>Modelagem - Emprego de análises estatísticas, construção de modelos e testes de hipóteses.</li>
+<li>Comunicação - Resultados dos passos anteriores</li>
 </ul>
 <p><img src= "figs/data_11.png" style= "width:100%"></p>
+<p><em>Etapas do processamento da informação <a href="https://r4ds.had.co.nz">R for Data Science</a></em></p>
 <p>Desta maneira, quando estiver estruturando seu banco de dados, não pule etapas ou mesmo misture estes passos em uma planilhas do excel. Isto torna a informação inviável de ser acessada por outros meios de leitura (R software, e.g.). Muitas vezes nos sentimos tentados a fazer uma formatação gráfica ou uma visual no excel, mas estas não contribuirão para a manipulação e visualização das informações.</p>
 <p><img src= "figs/data_1.png" style= "width:100%"></p>
 <p><em>Evite planilhas de dados “mistos”</em></p>
@@ -476,7 +478,7 @@ table4a</code></pre>
 <li><p>Cada valor único deve ter sua própria célula</p></li>
 </ul>
 <p><img src= "figs/data_2.png" style= "width:100%"></p>
-<p><em>As tres regras para um conjunto de dados “tidy” (Wickham e Grolemund, 2017)</em></p>
+<p><em>As tres regras para um conjunto de dados “tidy” <a href="https://r4ds.had.co.nz">R for Data Science</a></em></p>
 <p><strong>Se um conjunto de dados seguir estar três regras, o processamento da informação será muito mais fácil.</strong></p>
 <p>Existem outros tipos de arranjos de dados e um dos formatos que rotineiramente precisamos para análises estatísticas é o formato “largo”, ou uma tabela de dados. Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna a esquerda. Este formato é o utilizado na grande maioria das análises estatísticas e geralmente advém de uma banco de dados em formato “tidy”. Portanto, quando falamos em bancos de dados, estamos nos referindo a um conjunto de informações que podem ser transformadas em tabelas. Ainda, os bancos de dados a que nos referimos nesta seção são simples arquivos com uma lógica de armazenamento que permite o fácil acesso e manipulação.</p>
 <p>Imagine a construção de uma tabela com os dados da <code>table1</code> onde queremos a soma dos casos em cada país nos anos 1999 e 2000.</p>
@@ -591,6 +593,10 @@ taxa_table1_df</code></pre>
 <p>Outro cuidado que pode ser tomado também é seguir uma lógica de nomeação de arquivos. Procurar ser o mais informativo possível ajuda a organizar os arquivos e o acesso a informação.</p>
 <p>Abaixo algumas sugestões de nomeação de arquivos:</p>
 <table>
+<colgroup>
+<col width="41%" />
+<col width="58%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="center">Nome pouco informativo</th>
@@ -608,7 +614,7 @@ taxa_table1_df</code></pre>
 </tr>
 <tr class="odd">
 <td align="center">data_Rocas_final_bentos.xlsx</td>
-<td align="center">peld_bentos_rocas_análises_2021_07_27.xlsx</td>
+<td align="center">peld_bentos_rocas_analises_ThiagoS_2021_07_27.xlsx</td>
 </tr>
 </tbody>
 </table>
