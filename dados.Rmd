@@ -28,6 +28,7 @@ Nesse sentido, o objetivo desta sessão e apresentar um guia de boas práticas d
 
 *Dados desorganizados não tem serventia alguma (tidy: "Given to keeping things clean and in order")*
 
+***
 
 ## 2. Objetivos específicos
 
@@ -37,6 +38,7 @@ Nesse sentido, o objetivo desta sessão e apresentar um guia de boas práticas d
   + Apresentar estratégias para minimização de erros de digitação
   + Tornar o seu banco de dados compreessível por qualquer pessoa
 
+***
 
 ## 3. Estruturação de Planilhas
 
@@ -192,7 +194,7 @@ A validação de dados pode ser realizada de diferentes maneiras:
 Ainda podem ser adiciondas mensagens de input e error. 
 
 
-Para usar recurso de lista do Excel é preciso ter uma aba com as listas que serão usadas. Ter uma aba no mesmmo arquivo com a lista de ilhas, locais, coordendas para cada local e espécies com os nomes conferidos ajuda muito a evitar erros de digitação.
+Para usar recurso de lista do Excel é preciso ter uma aba com as listas que serão usadas. Ter uma aba no mesmo arquivo com a lista de ilhas, locais, coordendas para cada local e espécies com os nomes conferidos ajuda muito a evitar erros de digitação.
 
 <img src= "figs/data_7.png" style= "width:100%">
 
@@ -215,7 +217,7 @@ Neste tipo de arquivo, que podem ser chamados também de *metadados*, podem ser 
 + Data da última atualização da base de dados
 + Como incorporar novos dados
 
-<img src= "figs/data_8.png" style= "width:50%">
+<img src= "figs/data_8.png" style= "width:100%">
 
 
 
@@ -236,6 +238,7 @@ Abaixo algumas sugestões de nomeação de arquivos:
 
 Existem ferramentas que nos auxiliam no controle de versão e compartilhamento de arquivos como o [git](https://git-scm.com/) e [github](https://github.com/). Estas ferramentas serão abordadas na sessão [Github PELD -ILOC](github.html) juntamente com a apresentação do perfil do github do PELD ILOC.  
 
+***
 
 ## Bibliografia
 
