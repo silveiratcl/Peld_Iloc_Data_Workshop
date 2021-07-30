@@ -94,7 +94,7 @@ table4b
 Analizando os conjuntos de dados acima, qual você julga ser o mais fácil de ler e interpretar? Provavelmente vocês escolheu a `table1`. Esta conformação de dados é maneira mais simples e fácil de manipular. Este formato também é conhecido pelo formato "longo". Os outros formatos são possíveis de serem manipulados, mas esta tarefa pode ser bem mais desafiadora.  
 
 
-O tipo de oraganização apresentada no primeiro exemplo é denominda por Wickham e Grolemund (2017) como "tidy data".Esta organização de dados é regida por três regras:  
+O tipo de organização apresentada no primeiro exemplo é denominda por Wickham e Grolemund (2017) como "tidy data".Esta organização de dados é regida por três regras:  
 
 + Cada variável deve ter sua própria coluna
 
@@ -208,7 +208,7 @@ Quanto a inserção de datas, sugere-se que se separe os valores de dia, mês e 
 
 ### 3.7 Arquivo README
 
-Outra estratégia para evitar erros de digitação e tornar a informação de fácil compreenssão para pessoas é ter sempre disponível com os dados um arquivo ou uma aba **README**. Estes arquivos são informações que não fazem parte do banco de dados, mas ajudam na comprenssão do que é apresentado.  
+Outra estratégia para evitar erros de digitação e tornar a informação de fácil compreenssão para pessoas é ter sempre disponível com os dados um arquivo, ou uma aba no excel, **README**. Estes arquivos são informações que não fazem parte do banco de dados, mas ajudam na comprenssão do que é apresentado.  
 
 Neste tipo de arquivo, que podem ser chamados também de *metadados*, podem ser apresentadas as seguintes informações:
 

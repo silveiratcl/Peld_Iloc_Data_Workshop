@@ -21,25 +21,28 @@ knitr::opts_chunk$set(echo = TRUE)
 
 *[Phd Comics](http://phdcomics.com/)*
 
-Quem nunca nomeou um arquivo como "final"? Depois de algumas releituras e correções você salva com outro nome "final_2". Depois desta versão alguém analisa e faz observações, e você salva o arquivo como "final_2_fulano_version", e assim por diante. Imagine que o documento ficou na "geladeira" por alguns meses e você quer retorar de onde parou. Neste momento fica muito difícil saber onde paraou, ou você pode ficar em dúvida de qual é o arquivo mais antigo.  
+Quem nunca nomeou um arquivo como "final"? Depois de algumas releituras e correções você salva com outro nome, "final_2". Depois desta versão, alguém analisa e faz observações, e você prontamente salva o arquivo como "final_2_fulano_version", e assim por diante. Imagine que o documento ficou na "geladeira" por alguns meses e você quer retornar de onde parou. Ainda existe a opção de alguém fazer alterações e **não mudar o nome do arquivo**. Neste momento fica muito difícil saber onde parau, ou ainda pode gerar dúvidas de qual é o arquivo mais antigo.  
 
-Essa é uma maneira intuitiva de se fazer controle de versão de arquivos e até pode funcionar para problemas menos complexos. Quando trabalhamos em grupos de pesquisa com várias pessoas editanto textos e códigos fica difícil gerenciar o histórico de versões de uma arquivo ou vários. Felizmente existem hoje ferramentas quer nos auxiliam no controle de versão, tanto em nossas maquinas e repositórios on line.  
+Nomear arquivos com diferentes nomes é uma maneira intuitiva de se fazer **controle de versão** de arquivos, até pode funcionar para problemas menos complexos. No entanto, quando trabalhamos em grupos de pesquisa, com várias pessoas editando textos e códigos, fica difícil gerenciar o histórico de versões de um arquivo, ainda mais ou vários. Felizmente, hoje existem ferramentas que nos auxiliam no controle de versão, tanto em nossas máquinas quanto em repositórios on line.  
 
 ***
 
 ## 2. Git
 
-Lançado em 2005, [GIT](https://git-scm.com/) é um software de controle de versões livre. Esta ferramenta permite o rastreio de altereações em qualquer tipo de conjundo de arquivos. O uso do controle de versão permite velocidade no trabalho e integridade de dados, muito bem empregado em trabalhos em grupo. Ainda, permite e evolução dos projetos de forma não linear, possibilitando a criação de diferentes frentes de trabalho sem comprometer os dados originais. Todo o diretório de arquivos onde o Git está operando, toda e qualquer mundança é identificada e recuperável.   
+Lançado em 2005, [GIT](https://git-scm.com/) é um software de controle de versões livre. Esta ferramenta permite o rastreio de alterações em qualquer tipo de conjundo de arquivos. O uso do controle de versão permite velocidade no trabalho e integridade de dados, muito indicado em trabalhos em grupo. Ainda, permite a evolução dos projetos de forma não linear, possibilitando a criação de diferentes abordagens sem comprometer os dados originais. Todo o diretório de arquivos onde o Git está operando toda e qualquer mundança é identificada e recuperável.   
 
 <img src= "figs/git_2.png" style= "width:60%">
 
-Linus Torvalds criou o Git, que segundo o próprio, significa [Git - Thes Stupid content tracker] (https://linux.die.net/man/1/git), para o desenvolvimento do sistema operacional Linux Kernel. Existem outros programas de controle de versões, no momento o Git é o mais utilizado pela comunidade de desenvolvedores.  
+Linus Torvalds criou o Git para o desenvolvimento do sistema operacional Linux Kernel. Segundo o próprio autor Git significa [Git - The Stupid Content Tracker] (https://linux.die.net/man/1/git). Existem outros programas de controle de versão, no momento o Git é um dos mais utilizados pela comunidade de desenvolvedores.  
 
-O controle de versão Git funciona como uma árvore, com um ramo principal `master`. O master pode ter ramos paralelos que podem evoluir juntamente com o `master`, estes são chamados de `branch` e cada um deles pode ter um nome. Cada círculo na figura corresponde a uma versão do diretório. Os ramos `branch` podem ser criados por diferentes pessoas ou por uma mesmo usuário. A aplicação prática da criação de ramos é, por exemplo, explorar diferentes tipos de abordagens estatísticas distintas da usada no `master`. Imagine que após alguns testes, os usuários que estão trabalhando neste diretório discutem e avaliam que as contribuições podem ser incorporadas ao master. Note que a versão original antes da criação dos `branch`#1 e #2 permanece preservada. Caso nenhuma das abordagens seja ideal, os usuários podem decidir a voltar a versões anteriores, criar um novo `branch` e explorar outras alternativas. Tudo isso sem comprometer o que já foi realizado.       
+O controle de versão Git assemlha-se a uma árvore, tendo um ramo principal chamado de `master`. O master pode ter ramos paralelos que podem evoluir juntamente com o `master`, estes são chamados de `branch`, e cada um deles pode ter um nome. Cada círculo na figura corresponde a uma versão do diretório. Os ramos `branch` podem ser criados por diferentes pessoas ou por um mesmo usuário. A aplicação prática da criação de ramos é, por exemplo, explorar diferentes tipos de abordagens estatísticas distintas da usada no `master`.  
 
 <img src= "figs/git_3.png" style= "width:100%">  
 
 *"Branching" em um repositório Git*      
+
+Imagine que após alguns testes, os usuários que estão trabalhando neste diretório discutem e avaliam que as contribuições podem ser incorporadas ao master. Note que a versão original antes da criação dos `branch`#1 e #2 permanece preservada. Caso nenhuma das abordagens seja ideal, os usuários podem decidir a voltar para as versões anteriores, criar um novo `branch` e explorar outras alternativas. Tudo isso sem comprometer o que já foi realizado.       
+
 
 ***
 
@@ -49,7 +52,7 @@ O controle de versão Git funciona como uma árvore, com um ramo principal `mast
 
 
 
-[Github](https://github.com/) é um serviço de hospedagem na internet para desenvolvimento de software e controle de versão(Git). Em uma definição mais simplificada seria uma rede social onde desenvolvedores compartilham repositórios de arquivos e trabalham em equipe. No Github é possivel seguir e acompanhar perfis pessoais e de organizações, além de acompanhar projetos em desenvolvimento. Cientistas esstão cada vez mais usando o Github para compartilhamento de dados e códigos de publicações em revistas científicas.
+[Github](https://github.com/) é um serviço de hospedagem na internet para desenvolvimento de software e controle de versão (Git). Em uma definição mais simplificada, pode-se dizer que o Github seria uma rede social onde desenvolvedores compartilham repositórios de arquivos e trabalham em equipe. No Github é possivel seguir e acompanhar perfis pessoais e de organizações, além de acompanhar projetos em desenvolvimento. Cientistas estão cada vez mais usando o Github para compartilhamento de dados e códigos de publicações em revistas científicas.
 
 
 Diferenças entre Git e GitHub:
@@ -65,7 +68,7 @@ Diferenças entre Git e GitHub:
 
 ***
 
-## 4. Workflow Git-Github-RStudio 
+## 4. Instalando Git-Github-RStudio 
 
 Para poder utilizar o Git, Github e compartilhar projeto realizados com o Rstudio você precisa antes fazer o seguinte:  
 
@@ -73,11 +76,127 @@ Para poder utilizar o Git, Github e compartilhar projeto realizados com o Rstudi
 2. Instalar o [R](https://cran.r-project.org/) e RStudio [RStudio](https://www.rstudio.com/)
 3. Criar uma conta no [Github](https://github.com/)
 
-### 4.1 Criando repositório no GitHub (ou REPO)
+### 4.1 Configurando o Git no RStudio
 
-### 4.2 Criando projeto com Version Control no RStudio
+Abra o R Studio e agora vamos configurar o Git para identifdicar você. No RStudio ache a aba Terminal e insira os seguintes comados.
 
-### 4.3 Básico: `push` e `pull` 
+Substitua `USER` e `USER@SEUEMAIL.COM` com o seu. No meu caso seria `silveira.tcl` e `silveira.tcl@gmail.com`; 
+
+```{r, eval=FALSE}
+
+# mostrando a versão do git em seu computador
+git --version
+
+# mostrando o caminho das pastas em seu Mac/Linux
+which git
+
+# mostrando o caminho das pastas no Windows
+where git
+
+# troque USER com o seu nome de usuário do Github
+git config –-global user.name USER
+
+# troque USER@SEUEMAIL com o seu email resgistrado no Github
+git config –-global user.email USER@SOMEWHERE.ORG
+
+# use git "merge" (default) para resolver possíveis conflitos git "pull" conflicts
+git config --global pull.rebase true
+
+# listando "config" para confirmar as variáveis de user.* 
+git config --list
+
+```
+
+Agora acesse Tools->Global Options e selecione Git/SVN no menu lateral.
+No campo *Git executable* insira o caminho das pastas baseados nos comandos anteriores (Note que eles são diferentes para Mac/Linux `which git` e Windows `where git`).  
+
+Essa configuração parece ser desafiadora em um primeiro momento, mas felizmente este procedimento é bem documentado em [Happy Git and GitHub for the useR](https://happygitwithr.com/rstudio-see-git.html#tell-rstudio-where-to-find-git) se tiver algum problema.
+
+### 4.2 Criando repositório no GitHub (ou REPO)
+
+Após a instalação e configuração do Git/R/RStudio e criar uma conta no Github, o próximo passo é criar repositório no Github.  
+
+Logo após fazer o login no Github você deverá ver a página inicial de seu perfil como abaixo.
+
+<img src= "figs/git_5.png" style= "width:100%">  
+
+
+A esquerda você poderá ver a lista com alguns repositórios e o botão **New**. Clique neste botão para criarmos um novo repositório. Nesta página você vai configurar o seu repositório:
+
+1. Dê um nome para seu repo
+2. Especifique se será público ou privado
+3. Especifique se você quer adicionar um aquivo README, .gitinore e o tipo de licença (caso seja público. Mais detalhes no link "learn more")
+
+<img src= "figs/git_6.png" style= "width:100%">  
+
+Depois de configurado você pode clicar em "Create respository".
+
+
+Agora que temos o repositório no Github, o próximo passo é cloná-lo e conctá-lo com um projeto com controle de versão no RStudio. Deixe a página acima aberta no seu navegador, pois vamos precisar dela no próximo passo.
+
+### 4.3 Criando projeto no RStudio e conetando e clonando o repo do Github
+
+1. Abra o RStudio e clique em File -> New Project
+
+2. Uma caixa irá abrir, selecione **Version Control**
+
+<img src= "figs/git_7.png" style= "width:100%">
+
+3. Logo após abrirá em outra janela, selecione Git. Uma nova janela abrirá.
+
+<img src= "figs/git_8.png" style= "width:100%">
+
+4. Volte ao Github, copie a URL do repo
+
+<img src= "figs/git_9.png" style= "width:100%">
+
+5. Volte ao RStudio e Cole a URL do repo **Repository URL**
+
+<img src= "figs/git_10.png" style= "width:100%">
+
+6. Na mesma janela digite  o nome do diretório em **Project directory name**
+
+7. Ainda na mesma janela, selecione a pasta onde colocar o repositório clonado do github no campo 
+**Create project as subdirectory of**
+
+Se tudo ocorreu sem problemas até aqui, você clonou o repo do Github em sua máquina. A partir de agora você está apto a realizar mundanças controladas pelo Git e sincronizar tudo no repositório na rede.  
+
+Nas próximas seções veremos alguns comandos básicos de controle de versão no nosso repo recém criado.
+
+## Workflow RStudio/Github
+
+### 4.3 Básico: `commit` e `push` 
+
+Agora podemos criar um script teste para fazermos o primeiro `commit` e `push`.
+
+Observando o painel de **Files** você verá que alguns arquivos foram adicionados. Temos um .gitignore, .Rhistory e teste_repositorio.Rproj. Criando um script e salvando, o painel **Files** ficará como abaixo.
+
+<img src= "figs/git_11.png" style= "width:100%">
+
+Após a criar e salvar um script teste, opainel **Git** deve estar parecido como o abaixo:
+
+<img src= "figs/git_12.png" style= "width:100%">
+
+Veja que estão listados alguns arquivos, toda e qualquer alteração salva neste diretório serão listadas neste painel.
+Se você selecionar **Staged** você está aprovando a mundança no arquivo para ter controle de versão. **Status** pode ser **A** de "added", **M** significa modificado e ainda não adicionado. 
+
+<img src= "figs/git_13.png" style= "width:100%">
+
+Com todos os arquivo marcados como **A**, o próximo passo é fazer um `commit`, que seria algo como anotar todas as alterações realizadas. Todo o commit deve ter uma mensagem. Clicando em commit  
+
+<img src= "figs/git_14.png" style= "width:100%">
+
+Após isso estamos prontos fazer o `push`, esse comando é similar ao velho e bom email avisando seus colegas que você alterou os arquivos para uma nova versão (mandando link de googledrive, dropbox, etc). Neste caso você está enviando a nova versão para o seu repo no Github. 
+
+<img src= "figs/git_15.png" style= "width:100%"> 
+ 
+<img src= "figs/git_16.png" style= "width:100%"> 
+
+<img src= "figs/git_17.png" style= "width:100%"> 
+
+
+
+
 
 ### 4.3 Intermediário: `branch`  e `merge`
 
