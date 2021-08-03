@@ -236,7 +236,7 @@ Voltando para o repositório no Github podemos visualizar a versão atualizada, 
 
 Agora que já vimos como fazer as principais ações usando o **Git** e **Github**, agora podemos executar uma tarefa que consiste na grande vantagem de se usar o Githua: a colaboração.
 
-Para colaborar em um repositório primeiramente você tem copiar os arquivos de algum repositório para o seu **Github**. Essa ação é executada com com o comando `fork`. Por exemplo, se dirija ao [respositório de teste](https://github.com/peld-iloc/teste_repositorio) e localize no alto da página o botão `fork`. Depois escolha onde você gostaria de colocar, escolha seu usuário.
+Para colaborar em um repositório primeiramente você tem copiar os arquivos de algum repositório para o seu **Github**. Essa ação é executada com com o comando `fork`. Por exemplo, se dirija ao [respositório de teste](https://github.com/peld-iloc/repo_test) e localize no alto da página o botão `fork`. Depois escolha onde você gostaria de colocar, escolha seu usuário.
 
 <img src= "figs/git_22.png" style= "width:60%"> 
 
@@ -246,16 +246,35 @@ No canto esquerdo da página mostrará que o repo está em seu usuário também.
 
 Agora faça novamente os passos descritos em  **4.2 Criando repositório no GitHub (ou REPO)**. Tenha certeza de criar uma nova pasta fora das pastas que você já está trabalhando.
 
+Faça alguma alteração no script, depois faça `commit` e `push`. Note que seu repositório será atualizado. Clique em "Contribute"
+
+<img src= "figs/git_23.png" style= "width:60%"> 
+
+Aparecerá uma nova página comparando o script antigo com o novo
 
 
+<img src= "figs/git_24.png" style= "width:60%"> 
 
-[Github Guides](https://guides.github.com/introduction/flow/)
+Clique em **Create pull request**. Com o objetivo de facilitar a colaboração, é eficiente você comentar o objetivo da sua contribuição.
+
+
+<img src= "figs/git_25.png" style= "width:60%"> 
+
+
+Clique novamente no botão **Create pull request** para confirmar sua contribuição. Se você visitar agora a página [https://github.com/peld-iloc/repo_test](https://github.com/peld-iloc/repo_test)
+
+<img src= "figs/git_26.png" style= "width:60%"> 
+
+Agora que você fez um **pull request**, basta você aguardar o adminstrado do repositório analisar sua sugestão e fazer o `merge` no ramo **master**.
+
+
+Esse foi um exercício simples de colaboração usando Git e Github. Para mais informações dobre o workflow usando o Github acesse [Github Guides](https://guides.github.com/introduction/flow/)
 
 ***
 
 ## Github PELD ILOC
 
-
+Explicar o objetivo do github do peld
 
 
 

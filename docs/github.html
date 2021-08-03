@@ -541,7 +541,7 @@ git config --list</code></pre>
 <p>Os comandos <code>branch</code> e <code>merge</code> são muito úteis quando queremos testar diferentes caminhos. Imagine que você quer fazer uma figura e segue uma linha de raciocínio. Depois de se deparar com o resultado final, você percebe que poderia seguir um caminho diferente. Para não perder a primeira versão, que está no ramo <strong>master</strong>, você pode criar um <code>branch</code>, uma outra abordagem paralela.</p>
 <p>O comando git no terminal é <code>git branch</code>. No RStudio você pode criar um novo <code>branch</code> clicando botão de criação de um novo <code>branch</code>.</p>
 <p><img src= "figs/git_18.png" style= "width:70%"></p>
-<p>Depois de criar o novo <code>branch</code> nomeado “Caminho_2”, fora realizadas algumas mudanças no script, fazendo um <code>commit</code> e <code>push</code> neste ramo. Depois disso, será feito um <code>merge</code> incorporando as modificações ao ramo principal <strong>master</strong>. No RStudio é possível somente criar os ramos pela aba Git, para fazer o merge você terá que usar linha de comando no Terminal. Note que na interface de <code>commit</code>, temos sempre que preencher o campo <strong>commit message</strong>. Abaixo, em verde, são destacadas as mudanças realizadas.</p>
+<p>Depois de criar o novo <code>branch</code> nomeado “Caminho_2”, foram realizadas algumas mudanças no script, fazendo um <code>commit</code> e <code>push</code> neste ramo. Depois disso, será feito um <code>merge</code> incorporando as modificações ao ramo principal <strong>master</strong>. No RStudio é possível somente criar os ramos pela aba Git, para fazer o merge você terá que usar linha de comando no <strong>Terminal</strong>. Note que na interface de <code>commit</code>, temos sempre que preencher o campo <strong>commit message</strong>. Abaixo, em verde, são destacadas as mudanças realizadas.</p>
 <p><img src= "figs/git_19.png" style= "width:70%"></p>
 <p>Para fazer o merge do ramo “Caminho_2”, primeiro você precisa voltar para o ramo <strong>master</strong>. Na aba git do RStudio troque de <strong>Caminho_2</strong> para <strong>master</strong>. Depois disso digite os seguintes comandos no <strong>Terminal</strong>.</p>
 <pre class="r"><code># Fazendo o merge de &quot;Caminho_2&quot; ao &quot;master&quot;
@@ -554,20 +554,30 @@ git push</code></pre>
 <p>Voltando para o repositório no Github podemos visualizar a versão atualizada, mais <strong>upstream</strong> do repositório no <code>master</code>.</p>
 <p><img src= "figs/git_21.png" style= "width:60%"></p>
 </div>
-<div id="pro-fork-branch-pull-request-e-merge" class="section level3">
-<h3>4.5 PRO: <code>fork</code>, <code>branch</code>, <code>pull request</code> e <code>merge</code></h3>
+<div id="avançado-fork-branch-pull-request-e-merge" class="section level3">
+<h3>4.5 Avançado: <code>fork</code>, <code>branch</code>, <code>pull request</code> e <code>merge</code></h3>
 <p>Agora que já vimos como fazer as principais ações usando o <strong>Git</strong> e <strong>Github</strong>, agora podemos executar uma tarefa que consiste na grande vantagem de se usar o Githua: a colaboração.</p>
-<p>Para colaborar em um repositório primeiramente você tem copiar os arquivos de algum repositório para o seu <strong>Github</strong>. Essa ação é executada com com o comando <code>fork</code>. Por exemplo, se dirija ao <a href="https://github.com/peld-iloc/teste_repositorio">respositório de teste</a> e localize no alto da página o botão <code>fork</code>. Depois escolha onde você gostaria de colocar, escolha seu usuário.</p>
+<p>Para colaborar em um repositório primeiramente você tem copiar os arquivos de algum repositório para o seu <strong>Github</strong>. Essa ação é executada com com o comando <code>fork</code>. Por exemplo, se dirija ao <a href="https://github.com/peld-iloc/repo_test">respositório de teste</a> e localize no alto da página o botão <code>fork</code>. Depois escolha onde você gostaria de colocar, escolha seu usuário.</p>
 <p><img src= "figs/git_22.png" style= "width:60%"></p>
 <p>No canto esquerdo da página mostrará que o repo está em seu usuário também.</p>
 <p><img src= "figs/git_22.png" style= "width:60%"></p>
 <p>Agora faça novamente os passos descritos em <strong>4.2 Criando repositório no GitHub (ou REPO)</strong>. Tenha certeza de criar uma nova pasta fora das pastas que você já está trabalhando.</p>
-<p><a href="https://guides.github.com/introduction/flow/">Github Guides</a></p>
+<p>Faça alguma alteração no script, depois faça <code>commit</code> e <code>push</code>. Note que seu repositório será atualizado. Clique em “Contribute”</p>
+<p><img src= "figs/git_23.png" style= "width:60%"></p>
+<p>Aparecerá uma nova página comparando o script antigo com o novo</p>
+<p><img src= "figs/git_24.png" style= "width:60%"></p>
+<p>Clique em <strong>Create pull request</strong>. Com o objetivo de facilitar a colaboração, é eficiente você comentar o objetivo da sua contribuição.</p>
+<p><img src= "figs/git_25.png" style= "width:60%"></p>
+<p>Clique novamente no botão <strong>Create pull request</strong> para confirmar sua contribuição. Se você visitar agora a página <a href="https://github.com/peld-iloc/repo_test">https://github.com/peld-iloc/repo_test</a></p>
+<p><img src= "figs/git_26.png" style= "width:60%"></p>
+<p>Agora que você fez um <strong>pull request</strong>, basta você aguardar o adminstrado do repositório analisar sua sugestão e fazer o <code>merge</code> no ramo <strong>master</strong>.</p>
+<p>Esse foi um exercício simples de colaboração usando Git e Github. Para mais informações dobre o workflow usando o Github acesse <a href="https://guides.github.com/introduction/flow/">Github Guides</a></p>
 <hr />
 </div>
 </div>
 <div id="github-peld-iloc" class="section level2">
 <h2>Github PELD ILOC</h2>
+<p>Explicar o objetivo do github do peld</p>
 </div>
 <div id="objetivos" class="section level2">
 <h2>Objetivos</h2>
