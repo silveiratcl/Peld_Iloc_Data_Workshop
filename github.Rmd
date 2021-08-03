@@ -3,7 +3,7 @@ title: "Github PELD -ILOC"
 output: 
     html_document:
         toc: TRUE
-        toc_float: TRUE
+        toc_float: TRUE 
 
 ---
 <style>
@@ -63,7 +63,7 @@ Diferenças entre Git e GitHub:
 | Instalado localmente em sua máquina                  | Está na rede                                         |  
 | Usado em linha de comando                            | Apresenta uma interface gráfica                      |
 | Gereciar diferentes versões em um repo Git           | Armazenar uma cópia de seu repositório Git           |
-| Funcionalidades VCS gerenciar versões                | Funcionalidades VCS mais outras funcionalidades      |
+| Funcionalidades VCS para gerenciar versões           | Funcionalidades VCS dentre outras                    |
 *VCS - Version Control System
 
 ***
@@ -127,7 +127,7 @@ A esquerda você poderá ver a lista com alguns repositórios e o botão **New**
 2. Especifique se será público ou privado
 3. Especifique se você quer adicionar um aquivo README, .gitinore e o tipo de licença (caso seja público. Mais detalhes no link "learn more")
 
-<img src= "figs/git_6.png" style= "width:100%">  
+<img src= "figs/git_6.png" style= "width:70%">  
 
 Depois de configurado você pode clicar em "Create respository".
 
@@ -140,11 +140,11 @@ Agora que temos o repositório no Github, o próximo passo é cloná-lo e conct�
 
 2. Uma caixa irá abrir, selecione **Version Control**
 
-<img src= "figs/git_7.png" style= "width:100%">
+<img src= "figs/git_7.png" style= "width:70%">
 
 3. Logo após abrirá em outra janela, selecione Git. Uma nova janela abrirá.
 
-<img src= "figs/git_8.png" style= "width:100%">
+<img src= "figs/git_8.png" style= "width:70%">
 
 4. Volte ao Github, copie a URL do repo
 
@@ -152,7 +152,7 @@ Agora que temos o repositório no Github, o próximo passo é cloná-lo e conct�
 
 5. Volte ao RStudio e Cole a URL do repo **Repository URL**
 
-<img src= "figs/git_10.png" style= "width:100%">
+<img src= "figs/git_10.png" style= "width:70%">
 
 6. Na mesma janela digite  o nome do diretório em **Project directory name**
 
@@ -171,36 +171,81 @@ Agora podemos criar um script teste para fazermos o primeiro `commit` e `push`.
 
 Observando o painel de **Files** você verá que alguns arquivos foram adicionados. Temos um .gitignore, .Rhistory e teste_repositorio.Rproj. Criando um script e salvando, o painel **Files** ficará como abaixo.
 
-<img src= "figs/git_11.png" style= "width:100%">
+<img src= "figs/git_11.png" style= "width:70%">
 
 Após a criar e salvar um script teste, opainel **Git** deve estar parecido como o abaixo:
 
-<img src= "figs/git_12.png" style= "width:100%">
+<img src= "figs/git_12.png" style= "width:70%">
 
 Veja que estão listados alguns arquivos, toda e qualquer alteração salva neste diretório serão listadas neste painel.
 Se você selecionar **Staged** você está aprovando a mundança no arquivo para ter controle de versão. **Status** pode ser **A** de "added", **M** significa modificado e ainda não adicionado. 
 
-<img src= "figs/git_13.png" style= "width:100%">
+<img src= "figs/git_13.png" style= "width:70%">
 
-Com todos os arquivo marcados como **A**, o próximo passo é fazer um `commit`, que seria algo como anotar todas as alterações realizadas. Todo o commit deve ter uma mensagem. Clicando em commit  
+Com todos os arquivos marcados como **A**, o próximo passo é fazer um `commit`, ou seja, registrar (ou anotar) todas as alterações realizadas. Todo o commit deve ter uma mensagem. Clicando em commit você registra as alterações e pode comentar as pricipais mudanças, por exemplo.   
 
-<img src= "figs/git_14.png" style= "width:100%">
+<img src= "figs/git_14.png" style= "width:70%">
 
-Após isso estamos prontos fazer o `push`, esse comando é similar ao velho e bom email avisando seus colegas que você alterou os arquivos para uma nova versão (mandando link de googledrive, dropbox, etc). Neste caso você está enviando a nova versão para o seu repo no Github. 
+<img src= "figs/git_15.png" style= "width:70%"> 
 
-<img src= "figs/git_15.png" style= "width:100%"> 
+Após isso estamos prontos fazer o `push`, esse comando é similar ao velho e bom email avisando seus colegas que você alterou os arquivos para uma nova versão (mandando link de googledrive, dropbox, etc). Neste caso você está enviando a nova versão para o seu repo no Github. Clicando em `push` você acaba de mandar a versão mais atualizada de seu repo.  
+
+<img src= "figs/git_16.png" style= "width:70%"> 
+
+Depois de chegar até aqui, confira seu repositório e veja a versão atualizada. Deve estar parecida como a figura abaixo
+
+
+<img src= "figs/git_17.png" style= "width:70%"> 
+
+
+
+
+
+### 4.4 Intermediário: `branch` e `merge`
+
+Os comandos `branch` e `merge` são muito úteis quando queremos testar diferentes caminhos. Imagine que você quer fazer uma figura e segue uma linha de raciocínio. Depois de se deparar com o resultado final, você percebe que poderia seguir um caminho diferente. Para não perder a primeira versão, que está no ramo **master**,  você pode criar um `branch`, uma outra abordagem paralela.  
+
+O comando git no terminal é `git branch`. No RStudio você pode criar um novo `branch` clicando botão de criação de um novo `branch`. 
+
+<img src= "figs/git_18.png" style= "width:70%"> 
+
+
+Depois de criar o novo `branch` nomeado "Caminho_2", foram realizadas algumas mudanças no script, fazendo um `commit` e `push` neste ramo. Depois disso, será feito um `merge` incorporando as modificações ao ramo principal **master**. No RStudio é possível somente criar os ramos pela aba Git, para fazer o merge você terá que usar linha de comando no **Terminal**. Note que na interface de `commit`, temos sempre que preencher o campo  **commit message**. Abaixo, em verde, são destacadas as mudanças realizadas. 
+
+<img src= "figs/git_19.png" style= "width:70%">
+
+Para fazer o merge do ramo "Caminho_2", primeiro você precisa voltar para o ramo **master**. Na aba git do RStudio troque de **Caminho_2** para **master**. Depois disso digite os seguintes comandos no **Terminal**.
+```{r, eval = FALSE}
+# Fazendo o merge de "Caminho_2" ao "master"
+git merge Caminho_2
+
+# Fazendo o "push" para o repositório
+git push
+
+```
+
+Você verá na aba **Terminal** algo semelhante a figura abaixo
+
+<img src= "figs/git_20.png" style= "width:100%">
+
+Voltando para o repositório no Github podemos visualizar a versão atualizada, mais **upstream** do repositório no `master`.
+
+<img src= "figs/git_21.png" style= "width:60%"> 
  
-<img src= "figs/git_16.png" style= "width:100%"> 
+### 4.5 Avançado: `fork`, `branch`, `pull request` e `merge`
 
-<img src= "figs/git_17.png" style= "width:100%"> 
+Agora que já vimos como fazer as principais ações usando o **Git** e **Github**, agora podemos executar uma tarefa que consiste na grande vantagem de se usar o Githua: a colaboração.
 
+Para colaborar em um repositório primeiramente você tem copiar os arquivos de algum repositório para o seu **Github**. Essa ação é executada com com o comando `fork`. Por exemplo, se dirija ao [respositório de teste](https://github.com/peld-iloc/teste_repositorio) e localize no alto da página o botão `fork`. Depois escolha onde você gostaria de colocar, escolha seu usuário.
 
+<img src= "figs/git_22.png" style= "width:60%"> 
 
+No canto esquerdo da página mostrará que o repo está em seu usuário também. 
 
+<img src= "figs/git_22.png" style= "width:60%"> 
 
-### 4.3 Intermediário: `branch`  e `merge`
+Agora faça novamente os passos descritos em  **4.2 Criando repositório no GitHub (ou REPO)**. Tenha certeza de criar uma nova pasta fora das pastas que você já está trabalhando.
 
-### 4.4 PRO: `branch`,  `pull request` e `merge`
 
 
 

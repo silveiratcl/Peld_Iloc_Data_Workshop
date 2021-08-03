@@ -22,7 +22,8 @@ Com intuito de relatar e discutir as propostas de organização dos bancos de da
 
 A dinâmica do workshop será composta por apresentações conceituais, relatos de atividades e rodadas de discussão com os integrantes da rede. As discussões terão um importante papel no mapeamento de dificuldades, detalhamento de formatação e método de armazenamento de dados. 
 
-Ao final serão encaminhadas ações necessárias para dinamizar o acesso e a curadoria de dados obtidos.
+Ao final serão encaminhadas ações necessárias para dinamizar o acesso e a curadoria de dados obtidos pelo **PELD-ILOC**.
+ 
  \br
 
 **A data prevista para o encontro:**
@@ -34,9 +35,9 @@ Ao final serão encaminhadas ações necessárias para dinamizar o acesso e a cu
 
 \br
 
-### Programação
+## Programação
 
-## **Terça-feira - Dia 17 - MANHÃ** [9:00 - 12:00]
+### **Terça-feira - Dia 17/08 - MANHÃ** [9:00 - 12:00]
       
 1. Abertura - Contextualização (20 min)
 
@@ -50,7 +51,7 @@ Ao final serão encaminhadas ações necessárias para dinamizar o acesso e a cu
 4. Dados da Biodiversidade das Ilhas Oceânicas integrados ao OBIS - Recursos empregados na construção do Darwin Core-A PELD ILOC (30 min) 
 
 
-## **Quinta-feira - Dia 17 - TARDE ** [13:30 - 15:30]
+### **Quinta-feira - Dia 17/08 - TARDE ** [13:30 - 15:30]
 
 1. Relato sobre padronização das bases de dados - principais problemas e soluções  (20 min)
 
