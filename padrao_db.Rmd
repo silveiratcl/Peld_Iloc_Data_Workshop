@@ -14,6 +14,39 @@ text-align: justify}
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+## Visão Geral
+
+Este documento tem como objetivo registrar os padrões a serem seguidos para a formatação das bases de dados produzidas no âmbito do **PELD-ILOC**. Os formatos e procedimentos aqui descritos são um resultado do *workshop* realizado em 17 de setembro de 2021.
+
+## Diagnóstico Base de Dados
+
+Os banco de dados do **PELD-ILOC** é constituído por diferentes fontes, e está atrelado ao grupo taxômico ou variável amostrada. Basicamente são constituídos pelas últimas versões dos arquivos excel, alguns estão separados por ilhas e outros por grupo taxonômico.
+
+Neste momento está sendo realizada uma conferência dos dados disponíveis e algumas bases foram adequadas visando a a consistência dos dados. Os ítens de verificação foram os seguintes:
+
+| Item de verificação             | Ação necessária                                             |
+|:-------------------------------:|:-----------------------------------------------------------:|
+| Coordendas geográficas          | Inspeção de formato e correção (graus decimais)             |
+| Nomes das Ilhas (Island)        | Inspeção e padronização ortográfica                         |
+| Nomes de locais (site)          | Inspeção e padronização ortográfica                         |
+| Datas                           | Padronização de formato (DD, MM e YYYY em colunas separadas)|
+| Nomes de variáveis              | Ortografia e sugestão de nome para facilitar a leitura      |
+| Nomes de espécies               | Correção de nomes de espécies (via Worms)                   |
+| Adição de aba README            | Criação desta aba (Ver [Organização de bancos de dados](https://peld-iloc.github.io/Peld_Iloc_Data_WS/dados.html)| 
+
+
+Até o momento temos arquivado nos repositorio de dados on-line os seguintes grupos e são apresentados o status de conferência.
+
+### Tipo de arquivo
+
+Os dados dos diferentes grupos e variáveis amostradas no **PELD-ILOC** são armazendas em arquivos excel. Os arquivos tipo .xlsx são adequados para o armazenamento dos dados e são de fácil acesso e edição por todos os usuários das rede. 
+
+### Nomeação de arquivos
+
+Sugere-se que os arquivos sejam nomeaf
+
+
+
 
 ## Back up dos dados
 
@@ -26,8 +59,11 @@ Drop box
 Hard drive/computador
 
 
+## 
 
 ## Peixes Recifais
+
+
 
 ## Benthos
 

@@ -15,27 +15,56 @@ text-align: justify}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+## Github PELD ILOC
+
+Com o objetivo de documentar procedimentos e armazenar recursos para processamento, divulgação e análise dos dados obtidos pelo **PELD-ILOC** foi idealizada a criação de um perfil no [Github](https://github.com/).
+
+### Objetivos
+
++ Armazenar recursos para curadoria e acesso aos bancos de dados
++ Atuar como um respositório de dados públicos e privados do projeto (sites, manuais, etc...)
++ Ser um repositório para o compartilhamento de dados e código entre os participantes da rede 
++ Pode ser também um repositório de dados de publicações 
+
+
+### Sugestão de uso
+
+A conta criada no Github apresenta dois perfis: um pessoal e um institucional, os dois acessados com uma mesma senha e login.
+
+<img src= "figs/git_27.png" style= "width:60%">
+
+
++ peld-iloc (perfil pessoal)
++ Peld-Oceanic-Islands (perfil institucional)
+
+Sugere-se que o perfil **pessoal** seja usado para a criação de repositórios privados, ou seja de uso interno do **PELD-ILOC**. Para o **perfil institucional** sugere-se que sejam depositados repositórios públicos. Os repositórios públicos podem ser usados para publicação de dados, scripts e sites.
+
+Para quem não está familiarizado com o controle de versão e as ferramentas Git e Github, a seguir é feita uma introdução ao tema.
+
+***
+
 ## 1. Introdução ao Controle de Versão
 
 <img src= "figs/git_1.png" style= "width:60%">
 
 *[Phd Comics](http://phdcomics.com/)*
 
-Quem nunca nomeou um arquivo como "final"? Depois de algumas releituras e correções você salva com outro nome, "final_2". Depois desta versão, alguém analisa e faz observações, e você prontamente salva o arquivo como "final_2_fulano_version", e assim por diante. Imagine que o documento ficou na "geladeira" por alguns meses e você quer retornar de onde parou. Ainda existe a opção de alguém fazer alterações e **não mudar o nome do arquivo**. Neste momento fica muito difícil saber onde parau, ou ainda pode gerar dúvidas de qual é o arquivo mais antigo.  
+Quem nunca nomeou um arquivo como "final"? Depois de algumas releituras e correções você salva com outro nome, "final_2". Depois desta versão, alguém analisa e faz observações, e você prontamente salva o arquivo como "final_2_fulano_version", e assim por diante. Imagine este mesmo documento ficando na "geladeira" por alguns meses e você quer retornar de onde parou. Ainda existe a opção de alguém fazer alterações e **não mudar o nome do arquivo**. Neste momento fica muito difícil saber onde parou, ou ainda podendo gerar dúvidas de qual é o arquivo mais antigo.  
 
-Nomear arquivos com diferentes nomes é uma maneira intuitiva de se fazer **controle de versão** de arquivos, até pode funcionar para problemas menos complexos. No entanto, quando trabalhamos em grupos de pesquisa, com várias pessoas editando textos e códigos, fica difícil gerenciar o histórico de versões de um arquivo, ainda mais ou vários. Felizmente, hoje existem ferramentas que nos auxiliam no controle de versão, tanto em nossas máquinas quanto em repositórios on line.  
+Nomear arquivos com diferentes nomes é uma maneira intuitiva de se fazer **controle de versão** de arquivos, até pode funcionar para problemas menos complexos. No entanto, quando trabalhamos em grupos de pesquisa, com várias pessoas editando textos e códigos, fica difícil gerenciar o histórico de versões de um arquivo, ainda mais vários. Felizmente, hoje existem ferramentas que nos auxiliam no controle de versão, tanto em nossas máquinas quanto em repositórios *online*.  
 
 ***
 
 ## 2. Git
 
-Lançado em 2005, [GIT](https://git-scm.com/) é um software de controle de versões livre. Esta ferramenta permite o rastreio de alterações em qualquer tipo de conjundo de arquivos. O uso do controle de versão permite velocidade no trabalho e integridade de dados, muito indicado em trabalhos em grupo. Ainda, permite a evolução dos projetos de forma não linear, possibilitando a criação de diferentes abordagens sem comprometer os dados originais. Todo o diretório de arquivos onde o Git está operando toda e qualquer mundança é identificada e recuperável.   
+Lançado em 2005, [GIT](https://git-scm.com/) é um software de controle de versões livre. Esta ferramenta permite o rastreio de alterações em qualquer tipo de conjundo de arquivos. O uso do controle de versão permite velocidade no trabalho e integridade de dados, muito indicado em trabalhos em grupo. Ainda, permite a evolução dos projetos de forma não linear, possibilitando a criação de diferentes abordagens sem comprometer os dados originais. Todo o diretório de arquivos onde o **Git** está operando toda e qualquer mundança é identificada e recuperável.   
 
 <img src= "figs/git_2.png" style= "width:60%">
 
-Linus Torvalds criou o Git para o desenvolvimento do sistema operacional Linux Kernel. Segundo o próprio autor Git significa [Git - The Stupid Content Tracker] (https://linux.die.net/man/1/git). Existem outros programas de controle de versão, no momento o Git é um dos mais utilizados pela comunidade de desenvolvedores.  
+Linus Torvalds criou o **Git** para o desenvolvimento do sistema operacional Linux Kernel. Segundo o próprio autor Git significa [Git - The Stupid Content Tracker] (https://linux.die.net/man/1/git). Existem outros programas de controle de versão, no momento o Git é um dos mais utilizados pela comunidade de desenvolvedores.  
 
-O controle de versão Git assemlha-se a uma árvore, tendo um ramo principal chamado de `master`. O master pode ter ramos paralelos que podem evoluir juntamente com o `master`, estes são chamados de `branch`, e cada um deles pode ter um nome. Cada círculo na figura corresponde a uma versão do diretório. Os ramos `branch` podem ser criados por diferentes pessoas ou por um mesmo usuário. A aplicação prática da criação de ramos é, por exemplo, explorar diferentes tipos de abordagens estatísticas distintas da usada no `master`.  
+O controle de versão Git assemlha-se a uma árvore, tendo um ramo principal chamado de `master`. O master pode ter ramos paralelos que podem evoluir juntamente com o `master`, estes são chamados de `branch`, e cada um deles tem um nome. Cada círculo na figura corresponde a uma versão do diretório, ou um `commit`. Os ramos `branch` podem ser criados por diferentes pessoas ou por um mesmo usuário. A aplicação prática da criação de ramos é , por exemplo, explorar diferentes tipos de abordagens estatísticas distintas da usada no `master`.  
 
 <img src= "figs/git_3.png" style= "width:100%">  
 
@@ -70,7 +99,7 @@ Diferenças entre Git e GitHub:
 
 ## 4. Instalando Git-Github-RStudio 
 
-Para poder utilizar o Git, Github e compartilhar projeto realizados com o Rstudio você precisa antes fazer o seguinte:  
+Para poder utilizar o Git, Github e compartilhar projeto realizados com o Rstudio, você precisa antes fazer o seguinte:  
 
 1. Instalar em seu o computador o [Git](https://git-scm.com/)
 2. Instalar o [R](https://cran.r-project.org/) e RStudio [RStudio](https://www.rstudio.com/)
@@ -78,7 +107,7 @@ Para poder utilizar o Git, Github e compartilhar projeto realizados com o Rstudi
 
 ### 4.1 Configurando o Git no RStudio
 
-Abra o R Studio e agora vamos configurar o Git para identifdicar você. No RStudio ache a aba Terminal e insira os seguintes comados.
+Abra o R Studio e agora vamos configurar o Git para identifdicar você. No RStudio ache a aba Terminal e insira os seguintes comados, um de cada vez.
 
 Substitua `USER` e `USER@SEUEMAIL.COM` com o seu. No meu caso seria `silveira.tcl` e `silveira.tcl@gmail.com`; 
 
@@ -97,7 +126,7 @@ where git
 git config –-global user.name USER
 
 # troque USER@SEUEMAIL com o seu email resgistrado no Github
-git config –-global user.email USER@SOMEWHERE.ORG
+git config –-global user.email USER@SEUEMAIL.COM
 
 # use git "merge" (default) para resolver possíveis conflitos git "pull" conflicts
 git config --global pull.rebase true
@@ -107,19 +136,18 @@ git config --list
 
 ```
 
-Agora acesse Tools->Global Options e selecione Git/SVN no menu lateral.
+Agora acesse **Tools->Global** Options e selecione **Git/SVN** no menu lateral.
 No campo *Git executable* insira o caminho das pastas baseados nos comandos anteriores (Note que eles são diferentes para Mac/Linux `which git` e Windows `where git`).  
 
 Essa configuração parece ser desafiadora em um primeiro momento, mas felizmente este procedimento é bem documentado em [Happy Git and GitHub for the useR](https://happygitwithr.com/rstudio-see-git.html#tell-rstudio-where-to-find-git) se tiver algum problema.
 
 ### 4.2 Criando repositório no GitHub (ou REPO)
 
-Após a instalação e configuração do Git/R/RStudio e criar uma conta no Github, o próximo passo é criar repositório no Github.  
+Após a instalação e configuração do **Git/R/RStudio** e criar uma conta no **Github**, o próximo passo é criar repositório.  
 
 Logo após fazer o login no Github você deverá ver a página inicial de seu perfil como abaixo.
 
 <img src= "figs/git_5.png" style= "width:100%">  
-
 
 A esquerda você poderá ver a lista com alguns repositórios e o botão **New**. Clique neste botão para criarmos um novo repositório. Nesta página você vai configurar o seu repositório:
 
@@ -132,7 +160,7 @@ A esquerda você poderá ver a lista com alguns repositórios e o botão **New**
 Depois de configurado você pode clicar em "Create respository".
 
 
-Agora que temos o repositório no Github, o próximo passo é cloná-lo e conctá-lo com um projeto com controle de versão no RStudio. Deixe a página acima aberta no seu navegador, pois vamos precisar dela no próximo passo.
+Agora que temos o repositório no Github, o próximo passo é cloná-lo com um projeto com controle de versão no RStudio. Deixe a página acima aberta no seu navegador, pois vamos precisar dela no próximo passo.
 
 ### 4.3 Criando projeto no RStudio e conetando e clonando o repo do Github
 
@@ -154,18 +182,20 @@ Agora que temos o repositório no Github, o próximo passo é cloná-lo e conct�
 
 <img src= "figs/git_10.png" style= "width:70%">
 
-6. Na mesma janela digite  o nome do diretório em **Project directory name**
+6. Na mesma janela digite o nome do diretório em **Project directory name**
 
 7. Ainda na mesma janela, selecione a pasta onde colocar o repositório clonado do github no campo 
 **Create project as subdirectory of**
 
-Se tudo ocorreu sem problemas até aqui, você clonou o repo do Github em sua máquina. A partir de agora você está apto a realizar mundanças controladas pelo Git e sincronizar tudo no repositório na rede.  
+Se tudo ocorreu sem problemas até aqui, você clonou o repo do **Github** em sua máquina. A partir de agora você está apto a realizar mundanças controladas pelo **Git** e sincronizar tudo no repositório *on line*  
 
 Nas próximas seções veremos alguns comandos básicos de controle de versão no nosso repo recém criado.
 
-## Workflow RStudio/Github
+***
 
-### 4.3 Básico: `commit` e `push` 
+## 5. Workflow RStudio/Github
+
+### 5.1 Básico: `commit` e `push` 
 
 Agora podemos criar um script teste para fazermos o primeiro `commit` e `push`.
 
@@ -173,35 +203,32 @@ Observando o painel de **Files** você verá que alguns arquivos foram adicionad
 
 <img src= "figs/git_11.png" style= "width:70%">
 
-Após a criar e salvar um script teste, opainel **Git** deve estar parecido como o abaixo:
+Após a criar e salvar um script teste, o painel **Git** deve estar parecido como o abaixo:
 
 <img src= "figs/git_12.png" style= "width:70%">
 
 Veja que estão listados alguns arquivos, toda e qualquer alteração salva neste diretório serão listadas neste painel.
-Se você selecionar **Staged** você está aprovando a mundança no arquivo para ter controle de versão. **Status** pode ser **A** de "added", **M** significa modificado e ainda não adicionado. 
+Se você selecionar **Staged** você está aprovando a mundança no arquivo para ter controle de versão. **Status** pode ser **A** de "added", **M** significa "modified" e ainda não adicionado. 
 
 <img src= "figs/git_13.png" style= "width:70%">
 
-Com todos os arquivos marcados como **A**, o próximo passo é fazer um `commit`, ou seja, registrar (ou anotar) todas as alterações realizadas. Todo o commit deve ter uma mensagem. Clicando em commit você registra as alterações e pode comentar as pricipais mudanças, por exemplo.   
+Com todos os arquivos marcados **Staged**, o próximo passo é fazer um `commit`, ou seja, registrar (ou anotar) todas as alterações realizadas. Todo o commit deve ter uma mensagem. Clicando em **commit** você registra as alterações e pode comentar as principais mudanças no campo **Commit message**, por exemplo.   
 
 <img src= "figs/git_14.png" style= "width:70%">
 
+Janela mostrando a execução do comando `commit`.
+
 <img src= "figs/git_15.png" style= "width:70%"> 
 
-Após isso estamos prontos fazer o `push`, esse comando é similar ao velho e bom email avisando seus colegas que você alterou os arquivos para uma nova versão (mandando link de googledrive, dropbox, etc). Neste caso você está enviando a nova versão para o seu repo no Github. Clicando em `push` você acaba de mandar a versão mais atualizada de seu repo.  
+Após isso estamos prontos fazer o `push`. Clicando em `push` você envia de fato a nova versão para o seu repo no Github.  
 
 <img src= "figs/git_16.png" style= "width:70%"> 
 
-Depois de chegar até aqui, confira seu repositório e veja a versão atualizada. Deve estar parecida como a figura abaixo
-
+Depois de chegar até aqui, confira seu repositório e veja a versão atualizada. Deve estar similar a figura abaixo.
 
 <img src= "figs/git_17.png" style= "width:70%"> 
 
-
-
-
-
-### 4.4 Intermediário: `branch` e `merge`
+### 5.2 Intermediário: `branch` e `merge`
 
 Os comandos `branch` e `merge` são muito úteis quando queremos testar diferentes caminhos. Imagine que você quer fazer uma figura e segue uma linha de raciocínio. Depois de se deparar com o resultado final, você percebe que poderia seguir um caminho diferente. Para não perder a primeira versão, que está no ramo **master**,  você pode criar um `branch`, uma outra abordagem paralela.  
 
@@ -209,14 +236,14 @@ O comando git no terminal é `git branch`. No RStudio você pode criar um novo `
 
 <img src= "figs/git_18.png" style= "width:70%"> 
 
-
-Depois de criar o novo `branch` nomeado "Caminho_2", foram realizadas algumas mudanças no script, fazendo um `commit` e `push` neste ramo. Depois disso, será feito um `merge` incorporando as modificações ao ramo principal **master**. No RStudio é possível somente criar os ramos pela aba Git, para fazer o merge você terá que usar linha de comando no **Terminal**. Note que na interface de `commit`, temos sempre que preencher o campo  **commit message**. Abaixo, em verde, são destacadas as mudanças realizadas. 
+Depois de criar o novo `branch` nomeado "Caminho_2", foram realizadas algumas mudanças no script, fazendo um `commit` e `push` neste ramo. Depois disso, será feito um `merge` incorporando as modificações ao ramo principal **master**. No RStudio é possível somente criar os ramos pela aba **Git**, para fazer o `merge` você terá que usar linha de comando no **Terminal**. Note que na interface de `commit`, temos sempre que preencher o campo  **commit message**. Abaixo, em verde, são destacadas as mudanças realizadas. 
 
 <img src= "figs/git_19.png" style= "width:70%">
 
-Para fazer o merge do ramo "Caminho_2", primeiro você precisa voltar para o ramo **master**. Na aba git do RStudio troque de **Caminho_2** para **master**. Depois disso digite os seguintes comandos no **Terminal**.
+Para fazer o merge do ramo "Caminho_2", primeiro você precisa voltar para o ramo **master**. Na aba git do RStudio troque de **Caminho_2** para **master**. Depois disso digite os seguintes comandos no **Terminal**, um de cada vez.  
+
 ```{r, eval = FALSE}
-# Fazendo o merge de "Caminho_2" ao "master"
+# Fazendo o "merge" de "Caminho_2" ao "master"
 git merge Caminho_2
 
 # Fazendo o "push" para o repositório
@@ -224,17 +251,17 @@ git push
 
 ```
 
-Você verá na aba **Terminal** algo semelhante a figura abaixo
+Você verá na aba **Terminal** algo semelhante a figura abaixo.
 
 <img src= "figs/git_20.png" style= "width:100%">
 
-Voltando para o repositório no Github podemos visualizar a versão atualizada, mais **upstream** do repositório no `master`.
+Voltando para o repositório no Github podemos visualizar a versão atualizada, mais **upstream** do repositório no ramo `master`.
 
 <img src= "figs/git_21.png" style= "width:60%"> 
  
-### 4.5 Avançado: `fork`, `branch`, `pull request` e `merge`
+### 5.3 Avançado: `fork`, `branch`, `pull request` e `merge`
 
-Agora que já vimos como fazer as principais ações usando o **Git** e **Github**, agora podemos executar uma tarefa que consiste na grande vantagem de se usar o Githua: a colaboração.
+Agora que já vimos como fazer as principais ações usando o **Git** e **Github**, agora podemos executar uma tarefa que consiste na grande vantagem de se usar o **Github**: a colaboração com controle de versão.
 
 Para colaborar em um repositório primeiramente você tem copiar os arquivos de algum repositório para o seu **Github**. Essa ação é executada com com o comando `fork`. Por exemplo, se dirija ao [respositório de teste](https://github.com/peld-iloc/repo_test) e localize no alto da página o botão `fork`. Depois escolha onde você gostaria de colocar, escolha seu usuário.
 
@@ -246,40 +273,34 @@ No canto esquerdo da página mostrará que o repo está em seu usuário também.
 
 Agora faça novamente os passos descritos em  **4.2 Criando repositório no GitHub (ou REPO)**. Tenha certeza de criar uma nova pasta fora das pastas que você já está trabalhando.
 
-Faça alguma alteração no script, depois faça `commit` e `push`. Note que seu repositório será atualizado. Clique em "Contribute"
+Faça alguma alteração no script, insira uma linha de código, depois faça `commit` e `push`. Note que seu repositório será atualizado. Navegue até o  [respositório de teste](https://github.com/peld-iloc/repo_test) recpem clonado e clique em **Contribute**.
 
 <img src= "figs/git_23.png" style= "width:60%"> 
 
-Aparecerá uma nova página comparando o script antigo com o novo
-
+Aparecerá uma nova página comparando o script antigo com o novo.
 
 <img src= "figs/git_24.png" style= "width:60%"> 
 
 Clique em **Create pull request**. Com o objetivo de facilitar a colaboração, é eficiente você comentar o objetivo da sua contribuição.
 
-
 <img src= "figs/git_25.png" style= "width:60%"> 
 
-
-Clique novamente no botão **Create pull request** para confirmar sua contribuição. Se você visitar agora a página [https://github.com/peld-iloc/repo_test](https://github.com/peld-iloc/repo_test)
+Clique novamente no botão **Create pull request** para confirmar sua contribuição. Visualize a página   [https://github.com/peld-iloc/repo_test](https://github.com/peld-iloc/repo_test) e veja como ficou.
 
 <img src= "figs/git_26.png" style= "width:60%"> 
 
-Agora que você fez um **pull request**, basta você aguardar o adminstrado do repositório analisar sua sugestão e fazer o `merge` no ramo **master**.
+Agora que você fez um **pull request**, basta você aguardar o adminstrador do repositório analisar sua sugestão e fazer o `merge` no ramo **master**.
 
-
-Esse foi um exercício simples de colaboração usando Git e Github. Para mais informações dobre o workflow usando o Github acesse [Github Guides](https://guides.github.com/introduction/flow/)
+Esse foi um exercício simples de colaboração usando Git e Github. Para mais informações sobre o workflow usando o Github, acesse [Github Guides](https://guides.github.com/introduction/flow/). Um guia muito útil também é o [Happy Git and Github for the useR](https://happygitwithr.com/). 
 
 ***
 
-## Github PELD ILOC
+## Recursos 
 
-Explicar o objetivo do github do peld
-
-
-
-
-
++ [Guides Github](https://guides.github.com/)
++ [Version Contro with Git](http://swcarpentry.github.io/git-novice/)
++ [Happy Git and Github for the useR](https://happygitwithr.com/)
++ [Version Control with Git and SVN - RStudio](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)
 
 
 
@@ -290,5 +311,8 @@ Explicar o objetivo do github do peld
 
 
 
-## Objetivos
+
+
+
+
 
