@@ -17,7 +17,7 @@ Esta página tem como objetivo ser um documento de referência sobre procediment
 
 ## Workshop 
 
-Com intuito de relatar e discutir as propostas de organização dos bancos de dados do **PELD-ILOC**, foi idealizado um encontro com a rede de pesquisadores. Serão dois encontros com o objetivo de discutir as propostas de procedimentos que visam  dinamizar a curadoria e o acesso a informação dos dados obtidos nas expedições do **PELD-ILOC**.
+Com intuito de relatar e discutir as propostas de organização dos bancos de dados do **PELD-ILOC**, foi idealizado um encontro com a rede de pesquisadores. O workshop terá como objetivo de discutir as propostas de procedimentos que visam  dinamizar a curadoria e o acesso a informação dos dados obtidos nas expedições do **PELD-ILOC**.
 
 
 A dinâmica do workshop será composta por apresentações conceituais, relatos de atividades e rodadas de discussão com os integrantes da rede. As discussões terão um importante papel no mapeamento de dificuldades, detalhamento de formatação e método de armazenamento de dados. 
