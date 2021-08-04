@@ -33,7 +33,7 @@ Nesse sentido, o objetivo desta sessão e apresentar um guia de boas práticas d
 ## 2. Objetivos específicos
 
   + Apresentar um guia de estruturação de banco de dados que possa ser lido por qualquer algoritmo
-  + Identificar diferentes formato s de dados
+  + Identificar diferentes formatos de dados
   + Identificar possíveis armadilhas no momento da digitação 
   + Apresentar estratégias para minimização de erros de digitação
   + Tornar o seu banco de dados compreessível por qualquer pessoa
