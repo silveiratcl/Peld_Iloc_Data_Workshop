@@ -334,14 +334,14 @@ div.tocify {
   </a>
 </li>
 <li>
-  <a href="blank.html">
+  <a href="padrao_db.html">
     <span class="fa fa-file-excel fa-lg"></span>
      
     Padrão Bases de Dados
   </a>
 </li>
 <li>
-  <a href="blank.html">
+  <a href="dwc-a.html">
     <span class="fa fa-folder fa-lg"></span>
      
     Darwin Core-A
@@ -386,7 +386,6 @@ text-align: justify}
 <p>Para que possamos processar os dados coletados, primeiramente estes devem ser lidos por algoritmos de maneira correta. Sendo realizada a leitura precisamos ainda estruturá-los de forma que possam ser lidos, formatados e recodificados para a leitura humana. Exitem inúmeras maneiras organizar um banco de dados e algumas estruturas de dados se tornam quase impossívei de ler e manipular. Nesse sentido, o objetivo desta sessão e apresentar um guia de boas práticas de formatação de planilhas de dados possibilitando uma fácil leitura e manipulação.</p>
 <p><img src= "figs/data_10.png" style= "width 100%"></p>
 <p><em>Dados desorganizados não tem serventia alguma (tidy: “Given to keeping things clean and in order”)</em></p>
-<hr />
 </div>
 <div id="objetivos-específicos" class="section level2">
 <h2>2. Objetivos específicos</h2>
@@ -409,18 +408,19 @@ text-align: justify}
 <li>Organização - Organização da informação para que possa ser lida e interpretada (logica no armazenamento: estrutura dos dados)</li>
 <li>Visualização - Produção de gráficos e tabelas com os dados obtidos</li>
 <li>Modelagem - Emprego de análises estatísticas, construção de modelos e testes de hipóteses.</li>
-<li>Comunicação - Resultados dos passos anteriores</li>
+<li>Comunicação - Resultados dos passos anteriores <br><br></li>
 </ul>
 <p><img src= "figs/data_11.png" style= "width:100%"></p>
-<p><em>Etapas do processamento da informação <a href="https://r4ds.had.co.nz">R for Data Science</a></em></p>
-<p>Desta maneira, quando estiver estruturando seu banco de dados, não pule etapas ou mesmo misture estes passos em uma planilhas do excel. Isto torna a informação inviável de ser acessada por outros meios de leitura (R software, e.g.). Muitas vezes nos sentimos tentados a fazer uma formatação gráfica ou uma visual no excel, mas estas não contribuirão para a manipulação e visualização das informações.</p>
+<p><em>Etapas do processamento da informação <a href="https://r4ds.had.co.nz">R for Data Science</a></em> <br><br></p>
+<p>Desta maneira, quando estiver estruturando seu banco de dados, não pule etapas ou mesmo misture estes passos em uma planilhas do excel. Isto torna a informação inviável de ser acessada por outros meios de leitura (R software, e.g.). Muitas vezes nos sentimos tentados a fazer uma formatação gráfica ou uma visual no excel, mas estas não contribuirão para a manipulação e visualização das informações. <br><br></p>
 <p><img src= "figs/data_1.png" style= "width:100%"></p>
-<p><em>Evite planilhas de dados “mistos”</em></p>
-<p>Portanto, tente executar uma etapa de cada vez e evite misturar dados coletados com tentativas de visualização, análises estatísticas e formatações visuais.</p>
+<p><em>Evite planilhas de dados “mistos”</em> <br><br></p>
+<p>Portanto, tente executar uma etapa de cada vez e evite misturar dados coletados com tentativas de visualização, análises estatísticas e formatações visuais. <br><br></p>
 </div>
 <div id="formatos" class="section level3">
 <h3>3.2 Formatos</h3>
-<p>Existem diversas maneiras de organizar um banco de dados e alguns formatos são muito difíceis de intepretar e manipular. Abaixo são apresentadas algumas formas de organização de dados de um mesmo conjunto de informações.</p>
+<p>Existem diversas maneiras de organizar um banco de dados e alguns formatos são muito difíceis de intepretar e manipular. Abaixo são apresentadas algumas formas de organização de dados de um mesmo conjunto de informações.<br />
+<br><br></p>
 <pre class="r"><code>table1</code></pre>
 <pre><code>## # A tibble: 6 x 4
 ##   country      year  cases population
@@ -472,6 +472,7 @@ table4a</code></pre>
 ## 1 Afghanistan   19987071   20595360
 ## 2 Brazil       172006362  174504898
 ## 3 China       1272915272 1280428583</code></pre>
+<p><br><br></p>
 <p>Analizando os conjuntos de dados acima, qual você julga ser o mais fácil de ler e interpretar? Provavelmente vocês escolheu a <code>table1</code>. Esta conformação de dados é maneira mais simples e fácil de manipular. Este formato também é conhecido pelo formato “longo”. Os outros formatos são possíveis de serem manipulados, mas esta tarefa pode ser bem mais desafiadora.</p>
 <p>O tipo de organização apresentada no primeiro exemplo é denominda por Wickham e Grolemund (2017) como “tidy data”.Esta organização de dados é regida por três regras:</p>
 <ul>
@@ -481,7 +482,7 @@ table4a</code></pre>
 </ul>
 <p><img src= "figs/data_2.png" style= "width:100%"></p>
 <p><em>As tres regras para um conjunto de dados “tidy” <a href="https://r4ds.had.co.nz">R for Data Science</a></em></p>
-<p><strong>Se um conjunto de dados seguir estar três regras, o processamento da informação será muito mais fácil.</strong></p>
+<p><strong>Se um conjunto de dados seguir estar três regras, o processamento da informação será muito mais fácil.</strong> <br><br></p>
 <p>Existem outros tipos de arranjos de dados e um dos formatos que rotineiramente precisamos para análises estatísticas é o formato “largo”, ou uma tabela de dados. Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna a esquerda. Este formato é o utilizado na grande maioria das análises estatísticas e geralmente advém de uma banco de dados em formato “tidy”. Portanto, quando falamos em bancos de dados, estamos nos referindo a um conjunto de informações que podem ser transformadas em tabelas. Ainda, os bancos de dados a que nos referimos nesta seção são simples arquivos com uma lógica de armazenamento que permite o fácil acesso e manipulação.</p>
 <p>Imagine a construção de uma tabela com os dados da <code>table1</code> onde queremos a soma dos casos em cada país nos anos 1999 e 2000.</p>
 <pre class="r"><code># Criando uma tabela com a soma de casos nos países 
@@ -495,7 +496,8 @@ taxa_table1_df</code></pre>
 ## 1 Afghanistan      3411
 ## 2 Brazil         118225
 ## 3 China          426024</code></pre>
-<p>Essa seria uma demonstração de criação e uma tabela larga oriunda de um banco de dados “tidy”.</p>
+<p>Essa seria uma demonstração de criação e uma tabela larga oriunda de um banco de dados “tidy”.<br />
+<br><br></p>
 </div>
 <div id="lógica-de-construção-hierárquica" class="section level3">
 <h3>3.3 Lógica de Construção Hierárquica</h3>
@@ -503,7 +505,7 @@ taxa_table1_df</code></pre>
 <p>Abaixo um exemplo baseado nos dados de peixes recifais.</p>
 <p><img src= "figs/data_3.png" style= "width:100%"></p>
 <p><em>Hierarquia quanto a abrangência das variáveis</em></p>
-<p>No exemplo, vemos que as colunas mais a esquerda representam as ilhas e locais nas ilhas. Ao passo que as colunas vão sendo acrescentadas, as variáveis começam a detalhar cada vez mais a informação (coordenadas, profundidade, espécies, etc…)</p>
+<p>No exemplo, vemos que as colunas mais a esquerda representam as ilhas e locais nas ilhas. Ao passo que as colunas vão sendo acrescentadas, as variáveis começam a detalhar cada vez mais a informação (coordenadas, profundidade, espécies, etc…) <br><br></p>
 </div>
 <div id="nomes-de-variáveis" class="section level3">
 <h3>3.4 Nomes de Variáveis</h3>
@@ -546,7 +548,7 @@ taxa_table1_df</code></pre>
 </tr>
 </tbody>
 </table>
-<p>Em resumo: + Nomes curtos e informativos - informando variável e unidaed + Evitar espaços em branco + Evitar caracteres especiais (acentos, ", # e º, por exemplo) + Evitar mistura caixa alta com caixa baixa</p>
+<p>Em resumo: + Nomes curtos e informativos - informando variável e unidaed + Evitar espaços em branco + Evitar caracteres especiais (acentos, ", # e º, por exemplo) + Evitar mistura caixa alta com caixa baixa <br><br></p>
 </div>
 <div id="consistência-de-formato-de-variáveis" class="section level3">
 <h3>3.5 Consistência de formato de variáveis</h3>
@@ -568,14 +570,14 @@ taxa_table1_df</code></pre>
 <li>Seguido itens de uma lista (útil para nomes de espécies, localidades, coordenadas e nomes de quem amostrou/processou)</li>
 <li>Tempo, data, etc…</li>
 </ul>
-<p>Ainda podem ser adiciondas mensagens de input e error.</p>
+<p>Ainda podem ser adiciondas mensagens de <em>input</em> e <em>error</em>.</p>
 <p>Para usar recurso de lista do Excel é preciso ter uma aba com as listas que serão usadas. Ter uma aba no mesmo arquivo com a lista de ilhas, locais, coordendas para cada local e espécies com os nomes conferidos ajuda muito a evitar erros de digitação.</p>
-<p><img src= "figs/data_7.png" style= "width:100%"></p>
+<p><img src= "figs/data_7.png" style= "width:100%"> <br><br></p>
 </div>
 <div id="datas" class="section level3">
 <h3>3.6 Datas</h3>
 <p>Quanto a inserção de datas, sugere-se que se separe os valores de dia, mês e ano. Outros formatos também podem ser eficientes (11-05-2021, por exemplo), mas devem ter consistência em todo o banco de dados. Havendo uma coluna para dia, mes e ano, evita-se confusões de formato dia/mes/ano ou mes/dia/ano, por exemplo.</p>
-<p><img src= "figs/data_9.png" style= "width:100%"></p>
+<p><img src= "figs/data_9.png" style= "width:100%"> <br><br></p>
 </div>
 <div id="arquivo-readme" class="section level3">
 <h3>3.7 Arquivo README</h3>
@@ -587,7 +589,7 @@ taxa_table1_df</code></pre>
 <li>Data da última atualização da base de dados</li>
 <li>Como incorporar novos dados</li>
 </ul>
-<p><img src= "figs/data_8.png" style= "width:100%"></p>
+<p><img src= "figs/data_8.png" style= "width:100%"> <br><br></p>
 </div>
 <div id="controle-de-versão" class="section level3">
 <h3>3.8 Controle de Versão</h3>
@@ -625,7 +627,7 @@ taxa_table1_df</code></pre>
 </div>
 </div>
 <div id="bibliografia" class="section level2">
-<h2>Bibliografia</h2>
+<h2>4. Bibliografia</h2>
 <p>Wickham, H. &amp; Grolemund, G. R for Data Science - import, tidy, transform, visualize, and model data. (O’Reilly Media, 2017).</p>
 </div>
 

@@ -334,14 +334,14 @@ div.tocify {
   </a>
 </li>
 <li>
-  <a href="blank.html">
+  <a href="padrao_db.html">
     <span class="fa fa-file-excel fa-lg"></span>
      
     Padrão Bases de Dados
   </a>
 </li>
 <li>
-  <a href="blank.html">
+  <a href="dwc-a.html">
     <span class="fa fa-folder fa-lg"></span>
      
     Darwin Core-A
@@ -381,62 +381,157 @@ text-align: justify}
 </style>
 <div id="visão-geral" class="section level2">
 <h2>Visão Geral</h2>
-<p>Este documento tem como objetivo registrar os padrões a serem seguidos para a formatação das bases de dados produzidas no âmbito do <strong>PELD-ILOC</strong>. Os formatos e procedimentos aqui descritos são um resultado do <em>workshop</em> realizado em 17 de setembro de 2021.</p>
+<p>Este documento tem como objetivo registrar os padrões a serem seguidos para a formatação das bases de dados produzidas no âmbito do <strong>PELD-ILOC</strong>. Os formatos e procedimentos aqui descritos são um resultado do <em>workshop</em> realizado em 17 de setembro de 2021. <br><br></p>
 </div>
-<div id="diagnóstico-base-de-dados" class="section level2">
-<h2>Diagnóstico Base de Dados</h2>
-<p>Os banco de dados do <strong>PELD-ILOC</strong> é constituído por diferentes fontes, e está atrelado ao grupo taxômico ou variável amostrada. Basicamente são constituídos pelas últimas versões dos arquivos excel, alguns estão separados por ilhas e outros por grupo taxonômico.</p>
-<p>Neste momento está sendo realizada uma conferência dos dados disponíveis e algumas bases foram adequadas visando a a consistência dos dados. Os ítens de verificação foram os seguintes:</p>
+<div id="padronização-dados-peld-iloc" class="section level2">
+<h2>Padronização dados PELD-ILOC</h2>
+<p>Os banco de dados do <strong>PELD-ILOC</strong> é constituído por diferentes fontes se subdividindo quanto ao grupo taxômico ou variável amostrada. Basicamente são constituídos pelas últimas versões dos arquivos excel, alguns estão separados por ilhas e outros por grupo taxonômico.</p>
+<p>A partir da análise dos arquivos disponíveis verificou-se que alguns ítens não são padronizados e/ou precisam de algum ajuste. A tabela abaixo, lista os grupos de variáveis que precisam ser revisados. Os ítens de verificação são os seguintes:</p>
 <table>
 <colgroup>
-<col width="35%" />
-<col width="64%" />
+<col width="22%" />
+<col width="77%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th align="center">Item de verificação</th>
+<th align="left">Item de verificação</th>
 <th align="center">Ação necessária</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center">Coordendas geográficas</td>
-<td align="center">Inspeção de formato e correção (graus decimais)</td>
+<td align="left">Coordendas geográficas</td>
+<td align="center">Inspeção de formato (graus decimais) e conferência de localização</td>
 </tr>
 <tr class="even">
-<td align="center">Nomes das Ilhas (Island)</td>
+<td align="left">Nomes das Ilhas (Island)</td>
 <td align="center">Inspeção e padronização ortográfica</td>
 </tr>
 <tr class="odd">
-<td align="center">Nomes de locais (site)</td>
+<td align="left">Nomes de locais (site)</td>
 <td align="center">Inspeção e padronização ortográfica</td>
 </tr>
 <tr class="even">
-<td align="center">Datas</td>
+<td align="left">Datas</td>
 <td align="center">Padronização de formato (DD, MM e YYYY em colunas separadas)</td>
 </tr>
 <tr class="odd">
-<td align="center">Nomes de variáveis</td>
-<td align="center">Ortografia e sugestão de nome para facilitar a leitura</td>
+<td align="left">Nomes de variáveis</td>
+<td align="center">Verificar Ortografia e sugestão de nome para facilitar a leitura</td>
 </tr>
 <tr class="even">
-<td align="center">Nomes de espécies</td>
+<td align="left">Nomes de espécies</td>
 <td align="center">Correção de nomes de espécies (via Worms)</td>
 </tr>
 <tr class="odd">
-<td align="center">Adição de aba README</td>
-<td align="center">Criação desta aba (Ver <a href="https://peld-iloc.github.io/Peld_Iloc_Data_WS/dados.html">Organização de bancos de dados</a></td>
+<td align="left">Adição de aba README</td>
+<td align="center">Criação desta aba (Ver <a href="https://peld-iloc.github.io/Peld_Iloc_Data_WS/dados.html">Organização de bancos de dados</a>)</td>
+</tr>
+<tr class="even">
+<td align="left">Fotos analisadas</td>
+<td align="center">Verificar nome do arquvivo de foto e/ou vide e veficar se estão nas pastas <br><br></td>
 </tr>
 </tbody>
 </table>
-<p>Até o momento temos arquivado nos repositorio de dados on-line os seguintes grupos e são apresentados o status de conferência.</p>
-<div id="tipo-de-arquivo" class="section level3">
-<h3>Tipo de arquivo</h3>
-<p>Os dados dos diferentes grupos e variáveis amostradas no <strong>PELD-ILOC</strong> são armazendas em arquivos excel. Os arquivos tipo .xlsx são adequados para o armazenamento dos dados e são de fácil acesso e edição por todos os usuários das rede.</p>
+<div id="coordenadas-e-nomes-de-sites" class="section level3">
+<h3>Coordenadas e nomes de <em>sites</em></h3>
+<p>A conferência de coordenadas e nomes de locais gerou um arquivo de referência. Este arquivo foi obtido com informações pessoais de pesquisadores que estiveram nos locais e conferêncis com publicações. Es</p>
+</div>
+</div>
+<div id="padrão-geral-de-organização" class="section level2">
+<h2>Padrão Geral de Organização</h2>
+<div id="tipos-de-arquivos" class="section level3">
+<h3>Tipos de arquivos</h3>
+<p>Os dados dos diferentes grupos e variáveis amostradas no <strong>PELD-ILOC</strong> são armazenadas em arquivos <strong>excel</strong>. Os arquivos tipo .xlsx são adequados para o armazenamento dos dados e são de fácil acesso e edição por todos os usuários das rede. Também são aceitos arquivos do tipo .csv, desde de que sigam as orientações a seguir. Além dos arquivos de dados, são armazenados também arquivos de fotos e vídeos. <br><br></p>
+<p><img src= "figs/padrao_db_4.png" style= "width:90%"> <br><br></p>
+</div>
+<div id="estrutura-de-organização-de-arquivos" class="section level3">
+<h3>Estrutura de organização de arquivos</h3>
+<div id="banco-de-dados-simples" class="section level4">
+<h4>Banco de dados simples</h4>
+<p>Abaixo um modelo simples de organização de dados para os Peixes Recifais:</p>
+<p><img src= "figs/padrao_db_1.png" style= "width:70%"></p>
+<p>Ainda no mesmo arquivo, sugere-se fortemente que seja adicionada uma aba <strong>README</strong>.</p>
+<p>Caso sejam dados apresentados em formato .txt ou .csv, sugere-se a criação de uma pasta zip com dois arquivos: os dados e o arquivo <strong>README</strong></p>
+<p><img src= "figs/padrao_db_2.png" style= "width:70%"><br />
+<br><br><br></p>
+<p>(link modelo)[ ]</p>
+</div>
+</div>
+<div id="bancos-de-dados-acompanhados-de-outras-mídias-fotos-e-videos" class="section level3">
+<h3>Bancos de Dados acompanhados de outras mídias (Fotos e Videos)</h3>
+<p>Algumas bases de dados são mais complexas e apresentam além de um arquivo com os dados pastas com fotos analisadas em Photoquad ou Cpce.</p>
+<p>Abaixo um modelo de organização proposto para Comunidade de Bentos:</p>
+<p><img src= "figs/padrao_db_3.png" style= "width:70%"> <br><br></p>
+<p>(link modelo)[ ]</p>
 </div>
 <div id="nomeação-de-arquivos" class="section level3">
 <h3>Nomeação de arquivos</h3>
-<p>Sugere-se que os arquivos sejam nomeaf</p>
+<p>Considerando os tipos de dados disponíveis, sugere-se que os arquivos sejam nomeados da seguinte maneira:</p>
+<p><img src= "figs/padrao_db_5.png" style= "width:90%"> <br><br><br></p>
+<p>Com o objetivo de padronizar os nomes dios grupos, abaixo segue uma sugestão: <br><br></p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Grupo</th>
+<th align="center">Tipo de dado</th>
+<th align="right">Sugestão de código para o grupo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Peixes Recifais</td>
+<td align="center">Comunidade de peixes recifais</td>
+<td align="right">Peixes_Recifais</td>
+</tr>
+<tr class="even">
+<td align="center">Bentos</td>
+<td align="center">Fotoquadrados de Bentos</td>
+<td align="right">Bentos</td>
+</tr>
+<tr class="odd">
+<td align="center">Grapsus</td>
+<td align="center">Marcação e recaptura</td>
+<td align="right">MR_Grapsus</td>
+</tr>
+<tr class="even">
+<td align="center">Grapsus</td>
+<td align="center">Censo</td>
+<td align="right">Censo_Grapsus</td>
+</tr>
+<tr class="odd">
+<td align="center">Grapsus</td>
+<td align="center">Captura</td>
+<td align="right">Captura_Grapsus</td>
+</tr>
+<tr class="even">
+<td align="center">Zooxantelas</td>
+<td align="center">Registro de coleta</td>
+<td align="right">Zooxantelas</td>
+</tr>
+<tr class="odd">
+<td align="center">Interação peixes e Bentos</td>
+<td align="center">Análise de Video</td>
+<td align="right">IntBentospeixes</td>
+</tr>
+<tr class="even">
+<td align="center">Bruvis</td>
+<td align="center">Videos e planilhas</td>
+<td align="right">Bruvis</td>
+</tr>
+<tr class="odd">
+<td align="center">Dinoflagelados</td>
+<td align="center">Regitro de coleta</td>
+<td align="right">Dinoflagelados</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<p><br><br></p>
 </div>
 </div>
 <div id="back-up-dos-dados" class="section level2">
@@ -445,16 +540,7 @@ text-align: justify}
 <p>google drive</p>
 <p>Drop box</p>
 <p>Hard drive/computador</p>
-</div>
-<div id="section" class="section level2">
-<h2></h2>
-</div>
-<div id="peixes-recifais" class="section level2">
-<h2>Peixes Recifais</h2>
-</div>
-<div id="benthos" class="section level2">
-<h2>Benthos</h2>
-<p>##…</p>
+<p><img src= "figs/padrao_db_6.png" style= "width:70%"> <br><br><br></p>
 </div>
 
 

@@ -28,7 +28,6 @@ Nesse sentido, o objetivo desta sessão e apresentar um guia de boas práticas d
 
 *Dados desorganizados não tem serventia alguma (tidy: "Given to keeping things clean and in order")*
 
-***
 
 ## 2. Objetivos específicos
 
@@ -51,25 +50,33 @@ Tenha em mente que o processo do uso da informação em pesquisas apresenta etap
 + Visualização - Produção de gráficos e tabelas com os dados obtidos
 + Modelagem - Emprego de análises estatísticas, construção de modelos e testes de hipóteses.
 + Comunicação - Resultados dos passos anteriores
+<br><br>
+  
 
 <img src= "figs/data_11.png" style= "width:100%">
 
 *Etapas do processamento da informação [R for Data Science](https://r4ds.had.co.nz)*
+<br><br>
+  
 
 Desta maneira, quando estiver estruturando seu banco de dados, não pule etapas ou mesmo misture estes passos em uma planilhas do excel. Isto torna a informação inviável de ser acessada por outros meios de leitura (R software, e.g.). Muitas vezes nos sentimos tentados a fazer uma formatação gráfica ou uma visual no excel, mas estas não contribuirão para a manipulação e visualização das informações.
-
+<br><br>
+  
 <img src= "figs/data_1.png" style= "width:100%">
 
 *Evite planilhas de dados "mistos"*
-
+<br><br>
+  
 
 Portanto, tente executar uma etapa de cada vez e evite misturar dados coletados com tentativas de visualização, análises estatísticas e formatações visuais.
-
+<br><br>
+  
 
 ### 3.2 Formatos
 
 Existem diversas maneiras de organizar um banco de dados e alguns formatos são muito difíceis de intepretar e manipular. Abaixo são apresentadas algumas formas de organização de dados de um mesmo conjunto de informações.  
-
+<br><br>
+  
 ```{r}
 table1
 ```
@@ -90,7 +97,8 @@ table4a
 ```{r}
 table4b
 ```
-
+<br><br>
+  
 Analizando os conjuntos de dados acima, qual você julga ser o mais fácil de ler e interpretar? Provavelmente vocês escolheu a `table1`. Esta conformação de dados é maneira mais simples e fácil de manipular. Este formato também é conhecido pelo formato "longo". Os outros formatos são possíveis de serem manipulados, mas esta tarefa pode ser bem mais desafiadora.  
 
 
@@ -107,6 +115,8 @@ O tipo de organização apresentada no primeiro exemplo é denominda por Wickham
 *As tres regras para um conjunto de dados "tidy" [R for Data Science](https://r4ds.had.co.nz)*
 
 **Se um conjunto de dados seguir estar três regras, o processamento da informação será muito mais fácil.**
+<br><br>
+  
 
 Existem outros tipos de arranjos de dados e um dos formatos que rotineiramente precisamos para análises estatísticas é o formato "largo", ou uma tabela de dados. Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna a esquerda. Este formato é o utilizado na grande maioria das análises estatísticas e geralmente advém de uma banco de dados em formato "tidy". Portanto, quando falamos em bancos de dados, estamos nos referindo a um conjunto de informações que podem ser transformadas em tabelas. Ainda, os bancos de dados a que nos referimos nesta seção são simples arquivos com uma lógica de armazenamento que permite o fácil acesso e manipulação.  
 
@@ -121,6 +131,8 @@ taxa_table1_df
 ```
 
 Essa seria uma demonstração de criação e uma tabela larga oriunda de um banco de dados "tidy".   
+<br><br>
+  
 
 ### 3.3 Lógica de Construção Hierárquica
 
@@ -134,6 +146,8 @@ Abaixo um exemplo baseado nos dados de peixes recifais.
 *Hierarquia quanto a abrangência das variáveis*
 
 No exemplo, vemos que as colunas mais a esquerda representam as ilhas e locais nas ilhas. Ao passo que as colunas vão sendo acrescentadas, as variáveis começam a detalhar cada vez mais a informação (coordenadas, profundidade, espécies, etc...)
+<br><br>
+  
 
 ### 3.4 Nomes de Variáveis
 
@@ -159,6 +173,8 @@ Em resumo:
 + Evitar espaços em branco
 + Evitar caracteres especiais (acentos, ", # e º, por exemplo)
 + Evitar mistura caixa alta com caixa baixa
+<br><br>
+  
 
 ### 3.5 Consistência de formato de variáveis 
 
@@ -191,12 +207,14 @@ A validação de dados pode ser realizada de diferentes maneiras:
 + Seguido itens de uma lista (útil para nomes de espécies, localidades, coordenadas e nomes de quem amostrou/processou)
 + Tempo, data, etc...
 
-Ainda podem ser adiciondas mensagens de input e error. 
+Ainda podem ser adiciondas mensagens de *input* e *error*. 
 
 
 Para usar recurso de lista do Excel é preciso ter uma aba com as listas que serão usadas. Ter uma aba no mesmo arquivo com a lista de ilhas, locais, coordendas para cada local e espécies com os nomes conferidos ajuda muito a evitar erros de digitação.
 
 <img src= "figs/data_7.png" style= "width:100%">
+<br><br>
+  
 
 
 ### 3.6 Datas
@@ -204,6 +222,8 @@ Para usar recurso de lista do Excel é preciso ter uma aba com as listas que ser
 Quanto a inserção de datas, sugere-se que se separe os valores de dia, mês e ano. Outros formatos também podem ser eficientes (11-05-2021, por exemplo),  mas devem ter consistência em todo o banco de dados. Havendo uma coluna para dia, mes e ano, evita-se confusões de formato dia/mes/ano ou mes/dia/ano, por exemplo.    
 
 <img src= "figs/data_9.png" style= "width:100%">
+<br><br>
+  
 
 
 ### 3.7 Arquivo README
@@ -218,7 +238,8 @@ Neste tipo de arquivo, que podem ser chamados também de *metadados*, podem ser 
 + Como incorporar novos dados
 
 <img src= "figs/data_8.png" style= "width:100%">
-
+<br><br>
+  
 
 
 ### 3.8 Controle de Versão
@@ -240,6 +261,6 @@ Existem ferramentas que nos auxiliam no controle de versão e compartilhamento d
 
 ***
 
-## Bibliografia
+## 4. Bibliografia
 
 Wickham, H. & Grolemund, G. R for Data Science - import, tidy, transform, visualize, and model data. (O’Reilly Media, 2017).

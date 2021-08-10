@@ -10,10 +10,10 @@ navbar:
       href: github.html
       icon: fa-github fa-lg
     - text: "Padrão Bases de Dados"
-      href: blank.html
+      href: padrao_db.html
       icon: fa-file-excel fa-lg
     - text: "Darwin Core-A"
-      href: blank.html
+      href: dwc-a.html
       icon: fa-folder fa-lg
   right: 
     - icon: fa-envelope fa-lg
