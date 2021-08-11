@@ -342,11 +342,11 @@ Voltando para o repositório no Github podemos visualizar a versão atualizada, 
  
 ### 5.3 Avançado: `fork`, `branch`, `pull request` e `merge`
 
-Agora que já vimos como fazer as principais ações usando o **Git** e **Github**, agora podemos executar um grupo de comandos que consiste na grande vantagem de se usar o **Github**: a colaboração com controle de versão. Abaixo um resumo dos comandos serão abordados:
+Agora que já vimos como fazer as principais ações usando o **Git** e **Github**, agora podemos executar um grupo de comandos que consiste na grande vantagem de se usar o **Github**: a colaboração com controle de versão. Abaixo um resumo dos comandos abordados:
 
 |Comando                     | Ação                                                        |
 |:--------------------------:|:-----------------------------------------------------------:|
-|`fork` `fork` `r icon_fork` | Copia um diretório do Github                                |
+|`fork` `r icon_fork`        | Copia um diretório do Github                                |
 |`branch` `r icon_branch`    | Cria um novo "ramo" em seu repositório                      |
 |`pull request` `r icon_pr`  | Solitação de contribuição                                   |
 |`merge` `r icon_merge`      | Incorporar um ramo criado ao ramo "master"                  |

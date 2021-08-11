@@ -23,12 +23,13 @@ library(icons)
 
 ```{r, include=FALSE}
 icon_check   <- icons::fontawesome$solid$`check`
-icon_check   <- icons::fontawesome$solid$`times`
+icon_times   <- icons::fontawesome$solid$`times`
+icon_alert   <- icons::fontawesome$solid$`exclamation-triangle`
 ```
 
 ## Visão Geral
 
-Este documento tem como objetivo registrar os padrões a serem seguidos para a formatação das bases de dados produzidas no âmbito do **PELD-ILOC**. Os formatos e procedimentos aqui descritos são um resultado do *workshop* realizado em 17 de setembro de 2021.
+Este documento tem como objetivo registrar os padrões a serem seguidos pelos pesquisadores da rede para a formatação das bases de dados produzidas no âmbito do **PELD-ILOC**. Os formatos e procedimentos aqui descritos são um resultado do *workshop* realizado em 17 de setembro de 2021.
 <br><br>
   
 ## Padronização dados PELD-ILOC
@@ -45,21 +46,100 @@ A partir da análise dos arquivos disponíveis verificou-se que alguns ítens n�
 | Datas                           | Padronização de formato (DD, MM e YYYY em colunas separadas)                                                       |
 | Nomes de variáveis              | Verificar Ortografia e sugestão de nome para facilitar a leitura                                                   |
 | Nomes de espécies               | Correção de nomes de espécies (via Worms)                                                                          |
-| Adição de aba README            | Criação desta aba (Ver [Organização de bancos de dados](https://peld-iloc.github.io/Peld_Iloc_Data_WS/dados.html)) |
-| Fotos analisadas                | Verificar nome do arquvivo de foto e/ou vide e veficar se estão nas pastas                                         <br><br>
-  
+| Adição de aba README            | Criação desta aba                                                                                                  |
+| Fotos analisadas                | Verificar nome do arquivo de foto e/ou video e verificar se estão nas pastas                                       |
+<br><br>
+    
 
 ### Coordenadas e nomes de *sites*
 
-A conferência de coordenadas e nomes de locais gerou um arquivo de referência. Este arquivo foi obtido com informações pessoais de pesquisadores que estiveram nos locais e conferêncis com publicações. Es
+A conferência de coordenadas e nomes de locais gerou um arquivo de referência. Este arquivo foi obtido com informações pessoais de pesquisadores que estiveram nos locais e com base em publicações do **PELD-ILOC**.
 
-  
-  
-  
-  
-  
-## Padrão Geral de Organização
+Arquivo excel com as coordendas confirmadas para cada *site*.  
 
+[peld_iloc_site_coordinates_Thiago_Silveira_2021_08_11.xlsx](https://github.com/peld-iloc/site_coordinates)
+
+A idéia é que este arquivo seja atualizado ao passo que bases de dados sejam revisadas e conferidas.
+
+A tabela abaixo lista o status de confirmação de nomes de sites e coordenadas do **PELD-ILOC**:
+
+| Grupo                           | Status                                |                          
+|:--------------------------------|:-------------------------------------:|
+| Peixes Recifais                 | `r icon_check`                        |           
+| Bentos (Noronha e Rocas)        | `r icon_check`                        | 
+| Grapsus                         | `r icon_times`                        | 
+| Bioprospecção                   | `r icon_times`                        |
+| Bruv                            | `r icon_times`                        |
+| Colônias de Coral (G.longo)     | `r icon_times`                        |
+| Dinoflagelados                  | `r icon_times`                        |
+| Interação Peixes-Bentos         | `r icon_times`                        |
+| Zooxantelas                     | `r icon_times`                        |
+<br>
+ 
+`r icon_alert`Uma dica importante na hora da revisão das coordendas é formatar a coluna como **texto**. Isso evita a formatação automática que o **excel** faz caso você esteja usando o padrão de linguagem em Português.
+<br><br>
+  
+### Datas
+
+O formato de registro de datas a ser adotado é dia, mês e ano em colunas separadas.
+
+
+### Nomes de variáveis
+
+Sugere-se que se use somente letras minúsculas com separação entre palavras usando "_".
+
+Abaixo algumas sugestões de nomes de variáveis:
+
+| Variável                             | Boa opção          | Evitar             |
+|:-----------------------------------: |:------------------:|:------------------:|
+| Temperatura máxima (graus Celsius)   | max_temp_c         | Maximun Temp (C°)  |
+| Precipitação (mm)                    | precip_mm          | prec               |
+| Massa (Kg)                           | massa_kg           | Massa (Kg)         |
+| Visibilidade horizontal (metros)     | vis_hrz_m          | visib (m)          | 
+| Latitude (graus decimais)            | lat_DD             | lat                |
+
+### Nomes de espécies
+
+Os nomes das identificações taxonômicas podem ser confirmados utilizando-se funções do pacote worms e rfishbase.
+
+Abaixo um exemplo de como fazer a validação de nomes de espécies usando o pacote **worms**. O mesmo procedimento pode ser realizado também usando o pacote **rfishbase**. Scripts de exemplo podem ser acessados [neste repositório](https://github.com/peld-iloc/taxonomic_validation) do **PELD-ILOC**.
+
+```{r, eval=FALSE, include=TRUE}
+library(worms)
+# Criando o vetor de táxons
+sp_Names = unique(DF.benthos$name) 
+
+# Passo 1
+# Extraindo taxon rank do WoRMS e identificando os nomes inválidos
+scNames_rank = wormsbynames(sp_Names, verbose = F)
+
+# Passo 2 - listando os nomes não aceitos
+scNames_rank %>% 
+  filter( status == "unaccepted")
+
+# Alterando os nomes manualmente para os nomes válidos indicados pelo WoRMS 
+DF.benthos = DF.benthos %>%
+    mutate(name = str_replace(name, pattern = "favia_leptophylla", replacement = "mussismilia_leptophylla")) %>%
+    mutate(name = str_replace(name, pattern = "protopalythoa", replacement = "palythoa")) %>%  
+
+#  Passo 3  - Rodando novamente para confirmar 
+sp_Names = unique(DF.benthos$name)
+scNames_rank = wormsbynames(sp_Names, verbose = F)
+
+scNames_rank %>% 
+  filter( status == "unaccepted")
+# Zero issues - ok
+
+```
+<br><br>
+  
+### Arquivo ou aba README
+
+Será adotado pelo PELD-ILOC que todos os arquivos de dados produzidos apresentem uma aba ou arquivo **README**. A adição destas informações, ou **metadados**. é importante compreenssão do que está sendo apresentado no arquivo. 
+
+Neste [respositório](https://github.com/peld-iloc/data_example) você pode acessar dois exemplos de bancos de dados com os **dados** e **metadados (README)**.  
+<br><br>
+  
 ### Tipos de arquivos
 
 Os dados dos diferentes grupos e variáveis amostradas no **PELD-ILOC** são armazenadas em arquivos **excel**. Os arquivos tipo .xlsx são adequados para o armazenamento dos dados e são de fácil acesso e edição por todos os usuários das rede. Também são aceitos arquivos do tipo .csv, desde de que sigam as orientações a seguir. Além dos arquivos de dados, são armazenados também arquivos de fotos e vídeos.
@@ -70,9 +150,9 @@ Os dados dos diferentes grupos e variáveis amostradas no **PELD-ILOC** são arm
 <br><br>
   
 
-### Estrutura de organização de arquivos
+## Estrutura de organização de arquivos
 
-#### Banco de dados simples
+### Banco de dados simples
 
 Abaixo um modelo simples de organização de dados para os Peixes Recifais:
 
@@ -85,8 +165,9 @@ Caso sejam dados apresentados em formato .txt ou .csv, sugere-se a criação de 
 <img src= "figs/padrao_db_2.png" style= "width:70%">  
 <br><br><br>
 
-(link modelo)[ ]
-
+[Exemplo](https://github.com/peld-iloc/data_example)
+<br><br>
+  
    
 ### Bancos de Dados acompanhados de outras mídias (Fotos e Videos)
 
@@ -97,9 +178,9 @@ Abaixo um modelo de organização proposto para Comunidade de Bentos:
 <img src= "figs/padrao_db_3.png" style= "width:70%">
 <br><br>
   
-(link modelo)[ ]   
+[Exemplo](https://github.com/peld-iloc/data_example)   
   
-### Nomeação de arquivos
+### Nomeando de arquivos
 
 Considerando os tipos de dados disponíveis, sugere-se que os arquivos sejam nomeados da seguinte maneira:
 
@@ -107,10 +188,10 @@ Considerando os tipos de dados disponíveis, sugere-se que os arquivos sejam nom
 <img src= "figs/padrao_db_5.png" style= "width:90%">
 <br><br><br>
    
-Com o objetivo de padronizar os nomes dios grupos, abaixo segue uma sugestão:
+Com o objetivo de padronizar os nomes dos grupos, abaixo segue uma sugestão:
 <br><br>
   
-| Grupo                           | Tipo de dado                          | Sugestão de código para o grupo  |                           
+| Grupo                           | Tipo de informação                    | Sugestão de código para o grupo  |                           
 |:-------------------------------:|:-------------------------------------:|---------------------------------:|
 | Peixes Recifais                 | Comunidade de peixes recifais         | Peixes_Recifais          
 | Bentos                          | Fotoquadrados de Bentos               | Bentos
@@ -126,15 +207,19 @@ Com o objetivo de padronizar os nomes dios grupos, abaixo segue uma sugestão:
   
 ## Back up dos dados
 
-Seguindo a regra dos 3-2-1
-
-google drive 
-
-Drop box
-
-Hard drive/computador
+Os dados enviados de cada grupo estão sendo salvos em um repositório do Google Drive. Estes arquivos enviados também são salvos nos nos computadores dos pesquisadores que estão analisando os dados, obviamente. No entanto, não foi detectado um protocolo formal de como e onde estes arquivos estão sendo salvos com a curadoria do **PELD-ILOC**.
 
 
+A sugestão é que se aplique a regra do 3-2-1. 
+
++ 3 cópias diferentes ou versões: três cópias com versões de diferentes períodos. Por exemplo, atualmente temos uma **versão 1** da pasta com todos os dados enviados. Após o workshop teremos uma **versão 2** com todos o bancos de dados atualizados e conferidos. Depois de tabular todos os dados de uma próxima expedição poderemos ter a **versão 3** temporal do conjunto de dados;
+
++ 2 tipos de mídias: Ter a cópia das versões em mais de um tipo de mídia, por exemplo, HD/pen drive e um computador. De preferência que estes não fiquem no mesmo local.
+
++ 1 cópia em local externo: Serviços como Google Drive ou DropBox. 
+<br><br>
+  
+  
 <img src= "figs/padrao_db_6.png" style= "width:70%">
 <br><br><br>
    
