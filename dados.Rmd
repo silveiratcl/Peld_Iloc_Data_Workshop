@@ -1,5 +1,5 @@
 ---
-title: "Organização de Bancos de Dados"
+title: "Boas práticas para Bancos de Dados"
 output: 
     html_document:
         toc: TRUE
@@ -12,7 +12,14 @@ text-align: justify}
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+remotes::install_github("mitchelloharawild/icons")
+library(icons)
 library(tidyverse)
+
+```
+
+```{r, include=FALSE}
+icon_alert   <- icons::fontawesome$solid$`exclamation-triangle`
 ```
 
 ## 1. Introdução
@@ -59,7 +66,7 @@ Tenha em mente que o processo do uso da informação em pesquisas apresenta etap
 <br><br>
   
 
-Desta maneira, quando estiver estruturando seu banco de dados, não pule etapas ou mesmo misture estes passos em uma planilhas do excel. Isto torna a informação inviável de ser acessada por outros meios de leitura (R software, e.g.). Muitas vezes nos sentimos tentados a fazer uma formatação gráfica ou uma visual no excel, mas estas não contribuirão para a manipulação e visualização das informações.
+`r icon_alert`Desta maneira, quando estiver estruturando seu banco de dados, não pule etapas ou mesmo misture estes passos em uma planilhas do excel. Isto torna a informação inviável de ser acessada por outros meios de leitura (R software, e.g.). Muitas vezes nos sentimos tentados a fazer uma formatação gráfica ou uma visual no excel, mas estas não contribuirão para a manipulação e visualização das informações.
 <br><br>
   
 <img src= "figs/data_1.png" style= "width:100%">
@@ -114,11 +121,14 @@ O tipo de organização apresentada no primeiro exemplo é denominda por Wickham
 
 *As tres regras para um conjunto de dados "tidy" [R for Data Science](https://r4ds.had.co.nz)*
 
-**Se um conjunto de dados seguir estar três regras, o processamento da informação será muito mais fácil.**
+
+`r icon_alert`**Se um conjunto de dados seguir estar três regras, o processamento da informação será muito mais fácil.**
 <br><br>
   
 
-Existem outros tipos de arranjos de dados e um dos formatos que rotineiramente precisamos para análises estatísticas é o formato "largo", ou uma tabela de dados. Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna a esquerda. Este formato é o utilizado na grande maioria das análises estatísticas e geralmente advém de uma banco de dados em formato "tidy". Portanto, quando falamos em bancos de dados, estamos nos referindo a um conjunto de informações que podem ser transformadas em tabelas. Ainda, os bancos de dados a que nos referimos nesta seção são simples arquivos com uma lógica de armazenamento que permite o fácil acesso e manipulação.  
+Existem outros tipos de arranjos de dados e um dos formatos que rotineiramente precisamos para análises estatísticas é o formato "largo", ou uma **tabela de dados**. Neste formato cada linha é uma unidade amostral e as colunas são as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna a esquerda. Este formato é o utilizado na grande maioria das análises estatísticas e geralmente advém de uma banco de dados em formato "tidy". 
+
+`r icon_alert` Portanto, quando falamos em bancos de dados, estamos nos referindo a um conjunto de informações que podem ser transformadas em **tabelas**. Ainda, os bancos de dados podem apresentar estruturas bem complexa e com diferentes arranjos. Para os nossos problemas diários, nos referimos nesta seção a simples arquivos com uma lógica de armazenamento que permite o fácil acesso e manipulação.  
 
 Imagine a construção de uma tabela com os dados da `table1` onde queremos a soma dos casos em cada país nos anos 1999 e 2000.  
 ```{r}
@@ -130,14 +140,13 @@ taxa_table1_df
 
 ```
 
-Essa seria uma demonstração de criação e uma tabela larga oriunda de um banco de dados "tidy".   
+Essa é uma demonstração de criação e uma tabela larga oriunda de um banco de dados "tidy".   
 <br><br>
   
 
 ### 3.3 Lógica de Construção Hierárquica
 
-O emprego de uma lógica hierárquica na construção dos bancos de dados ajuda muito no momento da digitação dos dados e na sua compreessão quanto a estrutura. Entende-se por lógica hirárquica a estruturação do banco de dados com as primeiras colunas com variáveis mais abrangentes para variáveis mais detalhadas.  
-
+O emprego de uma lógica hierárquica na construção dos bancos de dados ajuda muito no momento da digitação dos dados e na sua compreessão quanto a estrutura. Entende-se por lógica hirárquica a estruturação do banco de dados com as colunas a esquerda com variáveis mais abrangentes e colunas com maior detalhamento sendo adicionadas a esquerda.  
 
 Abaixo um exemplo baseado nos dados de peixes recifais.
 
@@ -151,9 +160,9 @@ No exemplo, vemos que as colunas mais a esquerda representam as ilhas e locais n
 
 ### 3.4 Nomes de Variáveis
 
-Nomes de variáveis são uma informação chave para que o banco de dados seja lido com maior facilidade por qualquer pessoa. Nomes muito abreviados ou com informação incompleta tendem a dificultar o preenchimento das planilhas e a compreenssão.  
+**Nomes de variáveis** são uma informação chave para que o banco de dados seja lido com maior facilidade por qualquer pessoa. Nomes muito abreviados ou com informação incompleta tendem a dificultar o preenchimento das planilhas e a compreenssão.  
 
-A sugestão é utilizar nomes curtos e informativos. Por exemplo, um bom nome para a variável temperatua pode ser "temp", nome curto e informativo. No entanto, com esse nome não está explícita a unidade da variável. Uma sugestão que atenderia requisitos de simplicidade com informação completa poderia ser "temp_c", temperatura em graus Celsius.   
+A sugestão é utilizar **nomes curtos e informativos**. Por exemplo, um bom nome para a variável temperatua pode ser "temp", nome curto e informativo. No entanto, com esse nome não está explícita a unidade da variável. Uma sugestão que atenderia requisitos de simplicidade com informação completa poderia ser "temp_c", temperatura em graus Celsius.   
 
 
 Abaixo algumas sugestões de nomes de variáveis:
@@ -180,13 +189,15 @@ Em resumo:
 
 As variáveis em um banco de dados podem ser de diferentes tipos (categóricas, numéricas, continuas, por exemplo). Para evitar problemas com a manipulação e processamento é preciso prestar atenção ao formato e ser consistente.
 
-Pricipais problemas:
+
+`r icon_alert`Principais problemas:
 
 + Separador do decimal (vírgula ou ponto)
 + Estado de variáveis - ("noronha" é diferente de "Noronha")
 
-Uma ferramenta do Excel que pode ajudar a evitar erros de digitação enconmtra-se na aba Dados => Validação de Dados.
-
+Uma ferramenta do Excel que pode ajudar a evitar erros de digitação encontra-se na aba Dados => Validação de Dados.
+<br>
+ 
 
 <img src= "figs/data_4.png" style= "width:100%">
 
@@ -239,14 +250,15 @@ Neste tipo de arquivo, que podem ser chamados também de *metadados*, podem ser 
 
 <img src= "figs/data_8.png" style= "width:100%">
 <br><br>
-  
+
+Exemplo arquivo [**README**](https://github.com/peld-iloc/data_example/blob/main/peld_iloc_peixes_recifais_EXEMPLO_Thiago_Silveira_2020_08_11.zip)    
 
 
 ### 3.8 Controle de Versão
 
 O controle de versão da informação é uma prática muito importante e tornar isto parte do seu dia-a-dia pode evitar problemas futuros. Uma simples ação que pode ser empregada é **nunca alterar os dados originais**. Sempre que tiver um banco de dados em mãos, salve com outro nome e faça edições.  
 
-Outro cuidado que pode ser tomado também é seguir uma lógica de nomeação de arquivos. Procurar ser o mais informativo possível ajuda a organizar os arquivos e o acesso a informação.  
+Outro cuidado que pode ser tomado também é seguir uma lógica de nomeação de arquivos. Procurar ser o mais informativo possíve,l ajuda a organizar os arquivos e o acesso a informação.  
 
 Abaixo algumas sugestões de nomeação de arquivos:
 
@@ -261,6 +273,8 @@ Existem ferramentas que nos auxiliam no controle de versão e compartilhamento d
 
 ***
 
-## 4. Bibliografia
+## 4. Referências e links úteis
 
 Wickham, H. & Grolemund, G. R for Data Science - import, tidy, transform, visualize, and model data. (O’Reilly Media, 2017).
+
+https://datacarpentry.org/spreadsheet-ecology-lesson/

@@ -15,9 +15,6 @@ text-align: justify}
 knitr::opts_chunk$set(echo = TRUE)
 remotes::install_github("mitchelloharawild/icons")
 library(icons)
-
-
-
 ```
 
 
@@ -27,12 +24,14 @@ icon_times   <- icons::fontawesome$solid$`times`
 icon_alert   <- icons::fontawesome$solid$`exclamation-triangle`
 ```
 
-## Visão Geral
+## 1. Visão Geral
 
-Este documento tem como objetivo registrar os padrões a serem seguidos pelos pesquisadores da rede para a formatação das bases de dados produzidas no âmbito do **PELD-ILOC**. Os formatos e procedimentos aqui descritos são um resultado do *workshop* realizado em 17 de setembro de 2021.
+Este documento tem como objetivo registrar os padrões a serem seguidos pelos pesquisadores da rede para a formatação das bases de dados produzidas no âmbito do **PELD-ILOC**. Os formatos e procedimentos aqui descritos são um resultado do **workshop** realizado em **17 de setembro de 2021**.
 <br><br>
-  
-## Padronização dados PELD-ILOC
+
+***
+
+## 2. Padronização dados PELD-ILOC
 
 Os banco de dados do **PELD-ILOC** é constituído por diferentes fontes se subdividindo quanto ao grupo taxômico ou variável amostrada. Basicamente são constituídos pelas últimas versões dos arquivos excel, alguns estão separados por ilhas e outros por grupo taxonômico.
 
@@ -49,17 +48,14 @@ A partir da análise dos arquivos disponíveis verificou-se que alguns ítens n�
 | Adição de aba README            | Criação desta aba                                                                                                  |
 | Fotos analisadas                | Verificar nome do arquivo de foto e/ou video e verificar se estão nas pastas                                       |
 <br><br>
-    
+  
+### 2.1 Coordenadas e nomes de *sites*
 
-### Coordenadas e nomes de *sites*
+A conferência de coordenadas e nomes de locais gerou um arquivo de referência. Este arquivo foi obtido com informações pessoais de pesquisadores que estiveram nos locais e com base em publicações do **PELD-ILOC**.A idéia é que este arquivo seja atualizado ao passo que bases de dados sejam revisadas e conferidas.
 
-A conferência de coordenadas e nomes de locais gerou um arquivo de referência. Este arquivo foi obtido com informações pessoais de pesquisadores que estiveram nos locais e com base em publicações do **PELD-ILOC**.
-
-Arquivo excel com as coordendas confirmadas para cada *site*.  
+Arquivo excel com as coordendas confirmadas para cada **site**.  
 
 [peld_iloc_site_coordinates_Thiago_Silveira_2021_08_11.xlsx](https://github.com/peld-iloc/site_coordinates)
-
-A idéia é que este arquivo seja atualizado ao passo que bases de dados sejam revisadas e conferidas.
 
 A tabela abaixo lista o status de confirmação de nomes de sites e coordenadas do **PELD-ILOC**:
 
@@ -76,15 +72,15 @@ A tabela abaixo lista o status de confirmação de nomes de sites e coordenadas 
 | Zooxantelas                     | `r icon_times`                        |
 <br>
  
-`r icon_alert`Uma dica importante na hora da revisão das coordendas é formatar a coluna como **texto**. Isso evita a formatação automática que o **excel** faz caso você esteja usando o padrão de linguagem em Português.
+`r icon_alert`Uma dica importante: Na hora da revisão das coordendas é sugerido que se formate esta coluna como **texto**. Isso evita a formatação automática que o **excel** faz caso você esteja usando o padrão de linguagem em Português.
 <br><br>
   
-### Datas
+### 2.2 Datas
 
 O formato de registro de datas a ser adotado é dia, mês e ano em colunas separadas.
 
 
-### Nomes de variáveis
+### 2.3 Nomes de variáveis
 
 Sugere-se que se use somente letras minúsculas com separação entre palavras usando "_".
 
@@ -98,9 +94,9 @@ Abaixo algumas sugestões de nomes de variáveis:
 | Visibilidade horizontal (metros)     | vis_hrz_m          | visib (m)          | 
 | Latitude (graus decimais)            | lat_DD             | lat                |
 
-### Nomes de espécies
+### 2.4 Nomes de espécies
 
-Os nomes das identificações taxonômicas podem ser confirmados utilizando-se funções do pacote worms e rfishbase.
+Os nomes das identificações taxonômicas podem ser confirmados utilizando-se funções do pacote **worms** e **rfishbase**. Devem ser revisados os casos de espécies novas.
 
 Abaixo um exemplo de como fazer a validação de nomes de espécies usando o pacote **worms**. O mesmo procedimento pode ser realizado também usando o pacote **rfishbase**. Scripts de exemplo podem ser acessados [neste repositório](https://github.com/peld-iloc/taxonomic_validation) do **PELD-ILOC**.
 
@@ -133,26 +129,26 @@ scNames_rank %>%
 ```
 <br><br>
   
-### Arquivo ou aba README
+### 2.5 Arquivo ou aba README
 
 Será adotado pelo PELD-ILOC que todos os arquivos de dados produzidos apresentem uma aba ou arquivo **README**. A adição destas informações, ou **metadados**. é importante compreenssão do que está sendo apresentado no arquivo. 
+
+<img src= "figs/padrao_db_4.png" style= "width:90%">
+<br><br>
 
 Neste [respositório](https://github.com/peld-iloc/data_example) você pode acessar dois exemplos de bancos de dados com os **dados** e **metadados (README)**.  
 <br><br>
   
-### Tipos de arquivos
+### 2.6 Tipos de arquivos
 
 Os dados dos diferentes grupos e variáveis amostradas no **PELD-ILOC** são armazenadas em arquivos **excel**. Os arquivos tipo .xlsx são adequados para o armazenamento dos dados e são de fácil acesso e edição por todos os usuários das rede. Também são aceitos arquivos do tipo .csv, desde de que sigam as orientações a seguir. Além dos arquivos de dados, são armazenados também arquivos de fotos e vídeos.
 <br><br>
   
-   
-<img src= "figs/padrao_db_4.png" style= "width:90%">
-<br><br>
-  
+***
 
-## Estrutura de organização de arquivos
+## 3. Estrutura dos arquivos
 
-### Banco de dados simples
+### 3.1 Banco de dados simples
 
 Abaixo um modelo simples de organização de dados para os Peixes Recifais:
 
@@ -165,25 +161,28 @@ Caso sejam dados apresentados em formato .txt ou .csv, sugere-se a criação de 
 <img src= "figs/padrao_db_2.png" style= "width:70%">  
 <br><br><br>
 
-[Exemplo](https://github.com/peld-iloc/data_example)
+[Arquivos de Exemplo](https://github.com/peld-iloc/data_example)
 <br><br>
   
    
-### Bancos de Dados acompanhados de outras mídias (Fotos e Videos)
+### 3.2 Bancos de Dados acompanhados de outras mídias (Fotos e Videos)
 
 Algumas bases de dados são mais complexas e apresentam além de um arquivo com os dados pastas com fotos analisadas em Photoquad ou Cpce.
 
 Abaixo um modelo de organização proposto para Comunidade de Bentos:
 
-<img src= "figs/padrao_db_3.png" style= "width:70%">
+<img src= "figs/padrao_db_3.png" style= "width:50%">
 <br><br>
   
-[Exemplo](https://github.com/peld-iloc/data_example)   
+[Arquivos de Exemplo](https://github.com/peld-iloc/data_example)
+<br><br>
   
-### Nomeando de arquivos
+  
+### 3.3 Nomeando de arquivos
 
 Considerando os tipos de dados disponíveis, sugere-se que os arquivos sejam nomeados da seguinte maneira:
-
+<br>
+ 
 
 <img src= "figs/padrao_db_5.png" style= "width:90%">
 <br><br><br>
@@ -205,18 +204,18 @@ Com o objetivo de padronizar os nomes dos grupos, abaixo segue uma sugestão:
 |
 <br><br>
   
-## Back up dos dados
+## 4. Back up dos dados
 
-Os dados enviados de cada grupo estão sendo salvos em um repositório do Google Drive. Estes arquivos enviados também são salvos nos nos computadores dos pesquisadores que estão analisando os dados, obviamente. No entanto, não foi detectado um protocolo formal de como e onde estes arquivos estão sendo salvos com a curadoria do **PELD-ILOC**.
+Os dados enviados de cada grupo estão sendo salvos em um repositório do **Google Drive**. Estes arquivos enviados também são salvos nos nos computadores dos pesquisadores que estão analisando os dados, obviamente. No entanto, não foi detectado um protocolo formal de como e onde estes arquivos estão sendo salvos com a curadoria do **PELD-ILOC**.
 
 
 A sugestão é que se aplique a regra do 3-2-1. 
 
-+ 3 cópias diferentes ou versões: três cópias com versões de diferentes períodos. Por exemplo, atualmente temos uma **versão 1** da pasta com todos os dados enviados. Após o workshop teremos uma **versão 2** com todos o bancos de dados atualizados e conferidos. Depois de tabular todos os dados de uma próxima expedição poderemos ter a **versão 3** temporal do conjunto de dados;
++ **3 cópias diferentes ou versões**: três cópias com versões de diferentes períodos. Por exemplo, atualmente temos uma **versão 1** da pasta com todos os dados enviados. Após o workshop teremos uma **versão 2** com todos o bancos de dados atualizados e conferidos. Depois de tabular todos os dados de uma próxima expedição poderemos ter a **versão 3** temporal do conjunto de dados;
 
-+ 2 tipos de mídias: Ter a cópia das versões em mais de um tipo de mídia, por exemplo, HD/pen drive e um computador. De preferência que estes não fiquem no mesmo local.
++ **2 tipos de mídias**: Ter a cópia das versões em mais de um tipo de mídia, por exemplo, HD/pen drive e um computador. De preferência que estes não fiquem no mesmo local.
 
-+ 1 cópia em local externo: Serviços como Google Drive ou DropBox. 
++ **1 cópia em local externo**: Serviços como Google Drive ou DropBox. 
 <br><br>
   
   

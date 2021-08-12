@@ -11,7 +11,7 @@
 
 
 
-<title>Organização de Bancos de Dados</title>
+<title>Boas práticas para Bancos de Dados</title>
 
 <script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -370,7 +370,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Organização de Bancos de Dados</h1>
+<h1 class="title toc-ignore">Boas práticas para Bancos de Dados</h1>
 
 </div>
 
@@ -412,6 +412,9 @@ text-align: justify}
 </ul>
 <p><img src= "figs/data_11.png" style= "width:100%"></p>
 <p><em>Etapas do processamento da informação <a href="https://r4ds.had.co.nz">R for Data Science</a></em> <br><br></p>
+<svg viewBox="0 0 576 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg">
+<path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path>
+</svg>
 <p>Desta maneira, quando estiver estruturando seu banco de dados, não pule etapas ou mesmo misture estes passos em uma planilhas do excel. Isto torna a informação inviável de ser acessada por outros meios de leitura (R software, e.g.). Muitas vezes nos sentimos tentados a fazer uma formatação gráfica ou uma visual no excel, mas estas não contribuirão para a manipulação e visualização das informações. <br><br></p>
 <p><img src= "figs/data_1.png" style= "width:100%"></p>
 <p><em>Evite planilhas de dados “mistos”</em> <br><br></p>
@@ -482,8 +485,15 @@ table4a</code></pre>
 </ul>
 <p><img src= "figs/data_2.png" style= "width:100%"></p>
 <p><em>As tres regras para um conjunto de dados “tidy” <a href="https://r4ds.had.co.nz">R for Data Science</a></em></p>
+<svg viewBox="0 0 576 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg">
+<path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path>
+</svg>
 <p><strong>Se um conjunto de dados seguir estar três regras, o processamento da informação será muito mais fácil.</strong> <br><br></p>
-<p>Existem outros tipos de arranjos de dados e um dos formatos que rotineiramente precisamos para análises estatísticas é o formato “largo”, ou uma tabela de dados. Entende-se pela formatos onde cada linha é uma unidade amostral e as coluna as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna a esquerda. Este formato é o utilizado na grande maioria das análises estatísticas e geralmente advém de uma banco de dados em formato “tidy”. Portanto, quando falamos em bancos de dados, estamos nos referindo a um conjunto de informações que podem ser transformadas em tabelas. Ainda, os bancos de dados a que nos referimos nesta seção são simples arquivos com uma lógica de armazenamento que permite o fácil acesso e manipulação.</p>
+<p>Existem outros tipos de arranjos de dados e um dos formatos que rotineiramente precisamos para análises estatísticas é o formato “largo”, ou uma <strong>tabela de dados</strong>. Neste formato cada linha é uma unidade amostral e as colunas são as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna a esquerda. Este formato é o utilizado na grande maioria das análises estatísticas e geralmente advém de uma banco de dados em formato “tidy”.</p>
+<svg viewBox="0 0 576 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg">
+<path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path>
+</svg>
+<p>Portanto, quando falamos em bancos de dados, estamos nos referindo a um conjunto de informações que podem ser transformadas em <strong>tabelas</strong>. Ainda, os bancos de dados podem apresentar estruturas bem complexa e com diferentes arranjos. Para os nossos problemas diários, nos referimos nesta seção a simples arquivos com uma lógica de armazenamento que permite o fácil acesso e manipulação.</p>
 <p>Imagine a construção de uma tabela com os dados da <code>table1</code> onde queremos a soma dos casos em cada país nos anos 1999 e 2000.</p>
 <pre class="r"><code># Criando uma tabela com a soma de casos nos países 
 taxa_table1_df = table1 %&gt;% 
@@ -496,12 +506,12 @@ taxa_table1_df</code></pre>
 ## 1 Afghanistan      3411
 ## 2 Brazil         118225
 ## 3 China          426024</code></pre>
-<p>Essa seria uma demonstração de criação e uma tabela larga oriunda de um banco de dados “tidy”.<br />
+<p>Essa é uma demonstração de criação e uma tabela larga oriunda de um banco de dados “tidy”.<br />
 <br><br></p>
 </div>
 <div id="lógica-de-construção-hierárquica" class="section level3">
 <h3>3.3 Lógica de Construção Hierárquica</h3>
-<p>O emprego de uma lógica hierárquica na construção dos bancos de dados ajuda muito no momento da digitação dos dados e na sua compreessão quanto a estrutura. Entende-se por lógica hirárquica a estruturação do banco de dados com as primeiras colunas com variáveis mais abrangentes para variáveis mais detalhadas.</p>
+<p>O emprego de uma lógica hierárquica na construção dos bancos de dados ajuda muito no momento da digitação dos dados e na sua compreessão quanto a estrutura. Entende-se por lógica hirárquica a estruturação do banco de dados com as colunas a esquerda com variáveis mais abrangentes e colunas com maior detalhamento sendo adicionadas a esquerda.</p>
 <p>Abaixo um exemplo baseado nos dados de peixes recifais.</p>
 <p><img src= "figs/data_3.png" style= "width:100%"></p>
 <p><em>Hierarquia quanto a abrangência das variáveis</em></p>
@@ -509,8 +519,8 @@ taxa_table1_df</code></pre>
 </div>
 <div id="nomes-de-variáveis" class="section level3">
 <h3>3.4 Nomes de Variáveis</h3>
-<p>Nomes de variáveis são uma informação chave para que o banco de dados seja lido com maior facilidade por qualquer pessoa. Nomes muito abreviados ou com informação incompleta tendem a dificultar o preenchimento das planilhas e a compreenssão.</p>
-<p>A sugestão é utilizar nomes curtos e informativos. Por exemplo, um bom nome para a variável temperatua pode ser “temp”, nome curto e informativo. No entanto, com esse nome não está explícita a unidade da variável. Uma sugestão que atenderia requisitos de simplicidade com informação completa poderia ser “temp_c”, temperatura em graus Celsius.</p>
+<p><strong>Nomes de variáveis</strong> são uma informação chave para que o banco de dados seja lido com maior facilidade por qualquer pessoa. Nomes muito abreviados ou com informação incompleta tendem a dificultar o preenchimento das planilhas e a compreenssão.</p>
+<p>A sugestão é utilizar <strong>nomes curtos e informativos</strong>. Por exemplo, um bom nome para a variável temperatua pode ser “temp”, nome curto e informativo. No entanto, com esse nome não está explícita a unidade da variável. Uma sugestão que atenderia requisitos de simplicidade com informação completa poderia ser “temp_c”, temperatura em graus Celsius.</p>
 <p>Abaixo algumas sugestões de nomes de variáveis:</p>
 <table>
 <thead>
@@ -553,12 +563,15 @@ taxa_table1_df</code></pre>
 <div id="consistência-de-formato-de-variáveis" class="section level3">
 <h3>3.5 Consistência de formato de variáveis</h3>
 <p>As variáveis em um banco de dados podem ser de diferentes tipos (categóricas, numéricas, continuas, por exemplo). Para evitar problemas com a manipulação e processamento é preciso prestar atenção ao formato e ser consistente.</p>
-<p>Pricipais problemas:</p>
+<svg viewBox="0 0 576 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg">
+<path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path>
+</svg>
+<p>Principais problemas:</p>
 <ul>
 <li>Separador do decimal (vírgula ou ponto)</li>
 <li>Estado de variáveis - (“noronha” é diferente de “Noronha”)</li>
 </ul>
-<p>Uma ferramenta do Excel que pode ajudar a evitar erros de digitação enconmtra-se na aba Dados =&gt; Validação de Dados.</p>
+<p>Uma ferramenta do Excel que pode ajudar a evitar erros de digitação encontra-se na aba Dados =&gt; Validação de Dados. <br></p>
 <p><img src= "figs/data_4.png" style= "width:100%"></p>
 <p><img src= "figs/data_5.png" style= "width:50%"></p>
 <p>Na opção “Validação de Dados” estarão disponíveis algumas ferramentas para controle do que pode ser preenchido nas células.</p>
@@ -590,11 +603,12 @@ taxa_table1_df</code></pre>
 <li>Como incorporar novos dados</li>
 </ul>
 <p><img src= "figs/data_8.png" style= "width:100%"> <br><br></p>
+<p>Exemplo arquivo <a href="https://github.com/peld-iloc/data_example/blob/main/peld_iloc_peixes_recifais_EXEMPLO_Thiago_Silveira_2020_08_11.zip"><strong>README</strong></a></p>
 </div>
 <div id="controle-de-versão" class="section level3">
 <h3>3.8 Controle de Versão</h3>
 <p>O controle de versão da informação é uma prática muito importante e tornar isto parte do seu dia-a-dia pode evitar problemas futuros. Uma simples ação que pode ser empregada é <strong>nunca alterar os dados originais</strong>. Sempre que tiver um banco de dados em mãos, salve com outro nome e faça edições.</p>
-<p>Outro cuidado que pode ser tomado também é seguir uma lógica de nomeação de arquivos. Procurar ser o mais informativo possível ajuda a organizar os arquivos e o acesso a informação.</p>
+<p>Outro cuidado que pode ser tomado também é seguir uma lógica de nomeação de arquivos. Procurar ser o mais informativo possíve,l ajuda a organizar os arquivos e o acesso a informação.</p>
 <p>Abaixo algumas sugestões de nomeação de arquivos:</p>
 <table>
 <colgroup>
@@ -626,9 +640,10 @@ taxa_table1_df</code></pre>
 <hr />
 </div>
 </div>
-<div id="bibliografia" class="section level2">
-<h2>4. Bibliografia</h2>
+<div id="referências-e-links-úteis" class="section level2">
+<h2>4. Referências e links úteis</h2>
 <p>Wickham, H. &amp; Grolemund, G. R for Data Science - import, tidy, transform, visualize, and model data. (O’Reilly Media, 2017).</p>
+<p><a href="https://datacarpentry.org/spreadsheet-ecology-lesson/" class="uri">https://datacarpentry.org/spreadsheet-ecology-lesson/</a></p>
 </div>
 
 
