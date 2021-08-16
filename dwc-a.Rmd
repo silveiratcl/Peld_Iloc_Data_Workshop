@@ -39,7 +39,7 @@ Tendo em vista a importância dos dados obtidos até o momento, é de extrema im
 
 ## 3. Construção do DwC-A a partir de dados do PELD-ILOC (Peixes Recifais)
 
-Este item visa apresentar um exemplo de conversão de um arquivo em formato **tidy**, ou longo, para os arquivos necessários na criação de um **Darwin Core Archive (DwC-A)**. Para reproduzir o exemplo acesse uma amostra dos dados fictícios [neste repositório](https://github.com/peld-iloc/DwC-A_example).
+Este item visa apresentar um exemplo de conversão de um arquivo em formato **tidy**, ou longo, para os arquivos necessários na criação de um **Darwin Core Archive (DwC-A)**. Para reproduzir o exemplo acesse uma amostra dos dados fictícios [neste repositório](https://github.com/peld-iloc/DwC-A_example). Os scripts usados para a construção dos **DwC-As** dos dados do **PELD-ILOC** estarão disponíveis no **Github** em repositórios privados. 
 <br><br>
   
 
@@ -388,7 +388,7 @@ write_csv(files[[i]], paste0(path,"/",data_names[i],".csv"), )
 ```
 <br><br>
   
-## 4 Referências
+## 4. Referências
 
 https://obis.org/manual/dataformat/
 

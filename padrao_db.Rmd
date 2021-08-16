@@ -65,7 +65,7 @@ A tabela abaixo lista o status de confirmação de nomes de sites e coordenadas 
 | Bentos (Noronha e Rocas)        | `r icon_check`                        | 
 | Grapsus                         | `r icon_times`                        | 
 | Bioprospecção                   | `r icon_times`                        |
-| Bruv                            | `r icon_times`                        |
+| BRUVs                           | `r icon_times`                        |
 | Colônias de Coral (G.longo)     | `r icon_times`                        |
 | Dinoflagelados                  | `r icon_times`                        |
 | Interação Peixes-Bentos         | `r icon_times`                        |
@@ -77,7 +77,7 @@ A tabela abaixo lista o status de confirmação de nomes de sites e coordenadas 
   
 ### 2.2 Datas
 
-O formato de registro de datas a ser adotado é dia, mês e ano em colunas separadas.
+O formato de registro de datas a ser adotado é dia, mês e ano (DD/MM/AAAA) em **colunas separadas**.
 
 
 ### 2.3 Nomes de variáveis
@@ -127,8 +127,72 @@ scNames_rank %>%
 # Zero issues - ok
 
 ```
+### 2.4.1 Bases de dados com morfotipos e gêneros/espécies
+
+Alguns bancos de dados possuem classificações em **morfotipos**. Além disso, no caso planilhas da comunidade bentônica, as planilhas apresentam um formato mixto de organização, fruto da saída de softwares como o CPCe. As primeiras colunas com variáveis descrevendo os locais de coleta seguido por e repetições de colunas com nomes de espécies com os respectivos valores de cobertura relativa. Essa estrutura dificulta o uso dos dados, pois não há uma coluna **filtro** para separar as classificações em espécie, gênero, areia e frame, por exemplo.  
+  
+  Com o objetivo de armazenar dados gerados pelo PELD-ILOC somente em planilhas longas (Tidy data; ver item [3.2 Formatos](https://peld-iloc.github.io/Peld_Iloc_Data_WS/dados.html)) são necessários alguns passos para chegar a este formato. Abaixo um guia com uma das maneira de chegar ao formato longo com **rótulo de classificação**. Acesse neste repositório um set de dados fictícios para rodar o exemplo.
+  
+  
+1. No excel, agrupe as colunas de táxons, morfotipos e outras categorias que estiverem disponíveis conforme abaixo. O arquivo de dados de exemplo já está nesta organização.
+  
+<img src= "figs/padrao_db_7.png" style= "width: 70%">
 <br><br>
   
+2. Após agrupar as variáveis use o script abaixo para reorganizar a planilha em um formato longo com rótulo de classificação.
+<br><br>
+  
+```{r eval = FALSE}
+library(tidyverse)
+
+DF.sites_rocas = read_delim("data_Rocas_final_EXEMPLO_SP-MORFO_TEST.CSV",
+             na="NA",
+             delim = ",",
+             skip_empty_rows = TRUE)
+
+# Pivoting rocas data Genus and species
+
+DF.sites_rocas_sp = DF.sites_rocas %>% 
+  pivot_longer(
+  cols = dragmacidon_reticulata:polymastia_janeirensis,
+  values_to = "count"
+) %>% 
+  add_column(cat = "genus or species") %>% 
+  select(-coral:-aborescente_3)
+  
+# Pivoting rocas data morfotype
+
+DF.sites_rocas_morfo = DF.sites_rocas %>% 
+  pivot_longer(
+  cols = coral:aborescente_3,
+  values_to = "count"
+) %>% 
+  add_column(cat = "morfotype") %>% 
+  select(-dragmacidon_reticulata:-polymastia_janeirensis)
+
+# Pivoting rocas data substrate
+
+DF.sites_rocas_subs = DF.sites_rocas %>% 
+  pivot_longer(
+  cols = frame:areia,
+  values_to = "count"
+) %>% 
+  add_column(cat = "substrate") %>% 
+  select(-dragmacidon_reticulata:-aborescente_3)
+
+DF.benthos_rocas_long = bind_rows(DF.sites_rocas_sp, DF.sites_rocas_morfo, DF.sites_rocas_subs)
+
+write_csv(DF.benthos_rocas_long, "DF.benthos_rocas_long.csv") 
+```
+<br><br>
+  
+  
+3. Foram criadas três colunas: **name** (nome da espécie ou classe de cobertura), **count** (contagem, cobertura relativa,...) e **cat** (categoria: genus or species, morfotype ou subtrate). Após rodar este script o resultado deve estar como o esquema abaixo.
+  
+<img src= "figs/padrao_db_8.png" style= "width:70%">
+<br><br>
+  
+ 
 ### 2.5 Arquivo ou aba README
 
 Será adotado pelo PELD-ILOC que todos os arquivos de dados produzidos apresentem uma aba ou arquivo **README**. A adição destas informações, ou **metadados**. é importante compreenssão do que está sendo apresentado no arquivo. 
@@ -167,7 +231,7 @@ Caso sejam dados apresentados em formato .txt ou .csv, sugere-se a criação de 
    
 ### 3.2 Bancos de Dados acompanhados de outras mídias (Fotos e Videos)
 
-Algumas bases de dados são mais complexas e apresentam além de um arquivo com os dados pastas com fotos analisadas em Photoquad ou Cpce.
+Algumas bases de dados são mais complexas e apresentam além de um arquivo com os dados, apresentam também pastas com fotos analisadas em Photoquad ou CPCe.
 
 Abaixo um modelo de organização proposto para Comunidade de Bentos:
 
@@ -178,7 +242,7 @@ Abaixo um modelo de organização proposto para Comunidade de Bentos:
 <br><br>
   
   
-### 3.3 Nomeando de arquivos
+### 3.3 Nomeando arquivos
 
 Considerando os tipos de dados disponíveis, sugere-se que os arquivos sejam nomeados da seguinte maneira:
 <br>
@@ -200,13 +264,13 @@ Com o objetivo de padronizar os nomes dos grupos, abaixo segue uma sugestão:
 | Zooxantelas                     | Registro de coleta                    | Zooxantelas
 | Interação peixes e Bentos       | Análise de Video                      | IntBentospeixes  
 | Bruvis                          | Videos e planilhas                    | Bruvis
-| Dinoflagelados                  | Regitro de coleta                     | Dinoflagelados
+| Dinoflagelados                  | Registro de coleta                    | Dinoflagelados
 |
 <br><br>
   
-## 4. Back up dos dados
+## 4. Backup dos dados
 
-Os dados enviados de cada grupo estão sendo salvos em um repositório do **Google Drive**. Estes arquivos enviados também são salvos nos nos computadores dos pesquisadores que estão analisando os dados, obviamente. No entanto, não foi detectado um protocolo formal de como e onde estes arquivos estão sendo salvos com a curadoria do **PELD-ILOC**.
+Os dados enviados de cada grupo estão sendo salvos em um repositório do **Google Drive**. Estes arquivos enviados também são salvos nos computadores dos pesquisadores que estão analisando os dados, obviamente. No entanto, não foi detectado um protocolo formal de como e onde estes arquivos estão sendo salvos com a curadoria do **PELD-ILOC**.
 
 
 A sugestão é que se aplique a regra do 3-2-1. 
@@ -219,7 +283,7 @@ A sugestão é que se aplique a regra do 3-2-1.
 <br><br>
   
   
-<img src= "figs/padrao_db_6.png" style= "width:70%">
+<img src= "figs/padrao_db_6.png" style= "width:50%">
 <br><br><br>
    
 

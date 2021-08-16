@@ -50,7 +50,7 @@ Nesse sentido, o objetivo desta sessão e apresentar um guia de boas práticas d
 
 ### 3.1 Leitura Humana vs. Leitura dos Computadores
 
-Tenha em mente que o processo do uso da informação em pesquisas apresenta etapas bem distintas. 
+Tenha em mente que o processo do uso da informação em pesquisas apresenta etapas bem distintas.
 
 + Aquisição - Obtenção propriamente dita dos dados (coletas, fotos, entrevistas,...)
 + Organização - Organização da informação para que possa ser lida e interpretada (logica no armazenamento: estrutura dos dados)
@@ -106,7 +106,7 @@ table4b
 ```
 <br><br>
   
-Analizando os conjuntos de dados acima, qual você julga ser o mais fácil de ler e interpretar? Provavelmente vocês escolheu a `table1`. Esta conformação de dados é maneira mais simples e fácil de manipular. Este formato também é conhecido pelo formato "longo". Os outros formatos são possíveis de serem manipulados, mas esta tarefa pode ser bem mais desafiadora.  
+Analisando os conjuntos de dados acima, qual você julga ser o mais fácil de ler e interpretar? Provavelmente você escolheu a `table1`. Esta conformação de dados é maneira mais simples e fácil de manipular. Este formato também é conhecido pelo formato "longo". Os outros formatos são possíveis de serem manipulados, mas esta tarefa pode ser bem mais desafiadora.  
 
 
 O tipo de organização apresentada no primeiro exemplo é denominda por Wickham e Grolemund (2017) como "tidy data".Esta organização de dados é regida por três regras:  
@@ -119,16 +119,16 @@ O tipo de organização apresentada no primeiro exemplo é denominda por Wickham
 
 <img src= "figs/data_2.png" style= "width:100%">
 
-*As tres regras para um conjunto de dados "tidy" [R for Data Science](https://r4ds.had.co.nz)*
+*As três regras para um conjunto de dados "tidy" [R for Data Science](https://r4ds.had.co.nz)*
 
 
-`r icon_alert`**Se um conjunto de dados seguir estar três regras, o processamento da informação será muito mais fácil.**
+`r icon_alert`**Se um conjunto de dados seguir estas três regras, o processamento da informação será muito mais fácil.**
 <br><br>
   
 
 Existem outros tipos de arranjos de dados e um dos formatos que rotineiramente precisamos para análises estatísticas é o formato "largo", ou uma **tabela de dados**. Neste formato cada linha é uma unidade amostral e as colunas são as variáveis. Cada unidade amostral adicionada acrescenta uma linha para baixo. Cada variável adicionada acrescenta uma coluna a esquerda. Este formato é o utilizado na grande maioria das análises estatísticas e geralmente advém de uma banco de dados em formato "tidy". 
 
-`r icon_alert` Portanto, quando falamos em bancos de dados, estamos nos referindo a um conjunto de informações que podem ser transformadas em **tabelas**. Ainda, os bancos de dados podem apresentar estruturas bem complexa e com diferentes arranjos. Para os nossos problemas diários, nos referimos nesta seção a simples arquivos com uma lógica de armazenamento que permite o fácil acesso e manipulação.  
+`r icon_alert` Portanto, quando falamos em bancos de dados, estamos nos referindo a um conjunto de informações que podem ser transformadas em **tabelas**. Ainda, os bancos de dados podem apresentar estruturas bem complexas e com diferentes arranjos. Para os nossos problemas diários, nos referimos nesta seção a simples arquivos com uma lógica de armazenamento que permite o fácil acesso e manipulação.  
 
 Imagine a construção de uma tabela com os dados da `table1` onde queremos a soma dos casos em cada país nos anos 1999 e 2000.  
 ```{r}
@@ -253,8 +253,11 @@ Neste tipo de arquivo, que podem ser chamados também de *metadados*, podem ser 
 
 Exemplo arquivo [**README**](https://github.com/peld-iloc/data_example/blob/main/peld_iloc_peixes_recifais_EXEMPLO_Thiago_Silveira_2020_08_11.zip)    
 
+### 3.8 Ausência de informação 
 
-### 3.8 Controle de Versão
+A ausência de uma informação em um banco de dados não quer dizer que ela é zero, e sim que esta não está acessível ou **não foi amostrada**. A recomendação é que sempre se use **Na** quando uma informação não estiver disponível. Simplesmente deixar em **branco** pode gerar confusão. pois não se sabe se foi esquecimento ou de fato um **Na**. 
+
+### 3.9 Controle de Versão
 
 O controle de versão da informação é uma prática muito importante e tornar isto parte do seu dia-a-dia pode evitar problemas futuros. Uma simples ação que pode ser empregada é **nunca alterar os dados originais**. Sempre que tiver um banco de dados em mãos, salve com outro nome e faça edições.  
 
