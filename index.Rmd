@@ -15,25 +15,30 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Esta página tem como objetivo ser um documento de referência sobre procedimentos empregados na sistematização e publicação dos bancos de dados construídos pelo **PELD-ILOC (Pesquisa Ecológica de Longa Duração nas Ilhas Oceânicas Brasileiras)**.
 
-## Workshop 
+## Workshop agosto/2021
 
-Com intuito de relatar e discutir as propostas de organização dos bancos de dados do **PELD-ILOC**, foi idealizado um encontro com a rede de pesquisadores. O workshop terá como objetivo discutir as propostas de procedimentos que visam dinamizar a curadoria e o acesso a informação dos dados obtidos nas expedições do **PELD-ILOC**.
+Com intuito de relatar e discutir as propostas de organização dos bancos de dados do **PELD-ILOC**, foi idealizado um encontro com a rede de pesquisadores. O workshop teve como objetivo discutir as propostas de procedimentos que visam dinamizar a curadoria e o acesso a informação dos dados obtidos nas expedições do **PELD-ILOC**.
 
 
-A dinâmica do workshop será composta por apresentações conceituais, relatos de atividades e rodadas de discussão com os integrantes da rede. As discussões terão um importante papel no mapeamento de dificuldades, detalhamento de formatação e método de armazenamento de dados. 
-
-Ao final serão encaminhadas ações necessárias para dinamizar o acesso e a curadoria de dados obtidos pelo **PELD-ILOC**.
+A dinâmica do workshop foi composta por apresentações conceituais, relatos de atividades e rodadas de discussão com os integrantes da rede. 
+Ao final foram encaminhadas ações necessárias para dinamizar o acesso e a curadoria de dados obtidos pelo **PELD-ILOC**.
 <br>
  
-
 **Data de realização:**
 
 **17 de agosto** (terça-feira) 9:00 - 12:00  e 13:30 - 15:30 
 
 
-[link da Reunião no Meet](https://meet.google.com/pwv-soqs-tuk)
+[**Video da Reunião - Manhã**](https://drive.google.com/file/d/1ojY5ZEqFO2xqy7rTd9KioCymrJ8VA1rl/view?usp=sharing)
 <br>
-  
+
+[**Video da Reunião - Tarde**](https://drive.google.com/file/d/1fy_vY1PL_v_OnRi6NcYKTQWLhS4QWw5C/view?usp=sharing)
+<br>
+
+[**Apresentação**](https://drive.google.com/file/d/1cOI6hdBYR7Shwie6JX_NIlfiLN-3ryDc/view?usp=sharing)
+<br>
+
+
 ***
 ## Programação
 
@@ -43,15 +48,13 @@ Ao final serão encaminhadas ações necessárias para dinamizar o acesso e a cu
 
 2. Boas práticas na construção e organização de bancos de dados (25 min)
 
-    [Slides ](https://)
-
 3. Apresentação do github do PELD ILOC (25 min)
-
 
 4. Dados da Biodiversidade das Ilhas Oceânicas integrados ao OBIS - Recursos empregados na construção do Darwin Core-A PELD ILOC (30 min) 
 
 
 ### **Terça-feira - Dia 17/08 - TARDE ** [13:30 - 15:30]
+
 
 1. Relato sobre padronização das bases de dados - principais problemas e soluções  (20 min)
 

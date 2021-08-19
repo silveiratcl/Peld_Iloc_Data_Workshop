@@ -570,7 +570,7 @@ scNames_rank %&gt;%
 <div id="bases-de-dados-com-morfotipos-e-gênerosespécies" class="section level3">
 <h3>2.4.1 Bases de dados com morfotipos e gêneros/espécies</h3>
 <p>Alguns bancos de dados possuem classificações em <strong>morfotipos</strong>. Além disso, no caso planilhas da comunidade bentônica, as planilhas apresentam um formato misto de organização, fruto da saída de softwares como o CPCe. As primeiras colunas com variáveis descrevendo os locais de coleta seguido por e repetições de colunas com nomes de espécies com os respectivos valores de cobertura relativa. Essa estrutura dificulta o uso dos dados, pois não há uma coluna <strong>filtro</strong> para separar as classificações em espécie, gênero, areia e frame, por exemplo.</p>
-<p>Com o objetivo de armazenar dados gerados pelo PELD-ILOC somente em planilhas longas (Tidy data; ver item <a href="https://peld-iloc.github.io/Peld_Iloc_Data_WS/dados.html">3.2 Formatos</a>) são necessários alguns passos para chegar a este formato. Abaixo um guia com uma das maneira de chegar ao formato longo com <strong>rótulo de classificação</strong>. Acesse <a href="https://github.com/peld-iloc/data_exemple_benthic">neste repositório</a> um set de dados fictícios para rodar o exemplo no R.</p>
+<p>Com o objetivo de armazenar dados gerados pelo PELD-ILOC somente em planilhas longas (Tidy data; ver item <a href="https://peld-iloc.github.io/Peld_Iloc_Data_WS/dados.html">3.2 Formatos</a>) são necessários alguns passos para chegar a este formato. Abaixo um guia com uma das maneira de chegar ao formato longo com <strong>rótulo de classificação</strong>. Acesse <a href="https://github.com/peld-iloc/data_example_benthic">neste repositório</a> um set de dados fictícios para rodar o exemplo no R.</p>
 <ol style="list-style-type: decimal">
 <li>No excel, agrupe as colunas de táxons, morfotipos e outras categorias que estiverem disponíveis conforme abaixo. O arquivo de dados de exemplo já está nesta organização.</li>
 </ol>
@@ -706,9 +706,9 @@ write_csv(DF.benthos_rocas_long, &quot;DF.benthos_rocas_long.csv&quot;) </code><
 <td align="right">IntBentospeixes</td>
 </tr>
 <tr class="even">
-<td align="center">Bruvis</td>
+<td align="center">BRUVs</td>
 <td align="center">Videos e planilhas</td>
-<td align="right">Bruvis</td>
+<td align="right">BRUVs</td>
 </tr>
 <tr class="odd">
 <td align="center">Dinoflagelados</td>

@@ -131,7 +131,7 @@ scNames_rank %>%
 
 Alguns bancos de dados possuem classificações em **morfotipos**. Além disso, no caso planilhas da comunidade bentônica, as planilhas apresentam um formato misto de organização, fruto da saída de softwares como o CPCe. As primeiras colunas com variáveis descrevendo os locais de coleta seguido por e repetições de colunas com nomes de espécies com os respectivos valores de cobertura relativa. Essa estrutura dificulta o uso dos dados, pois não há uma coluna **filtro** para separar as classificações em espécie, gênero, areia e frame, por exemplo.  
   
-  Com o objetivo de armazenar dados gerados pelo PELD-ILOC somente em planilhas longas (Tidy data; ver item [3.2 Formatos](https://peld-iloc.github.io/Peld_Iloc_Data_WS/dados.html)) são necessários alguns passos para chegar a este formato. Abaixo um guia com uma das maneira de chegar ao formato longo com **rótulo de classificação**. Acesse [neste repositório](https://github.com/peld-iloc/data_exemple_benthic) um set de dados fictícios para rodar o exemplo no R.
+  Com o objetivo de armazenar dados gerados pelo PELD-ILOC somente em planilhas longas (Tidy data; ver item [3.2 Formatos](https://peld-iloc.github.io/Peld_Iloc_Data_WS/dados.html)) são necessários alguns passos para chegar a este formato. Abaixo um guia com uma das maneira de chegar ao formato longo com **rótulo de classificação**. Acesse [neste repositório](https://github.com/peld-iloc/data_example_benthic) um set de dados fictícios para rodar o exemplo no R.
   
   
 1. No excel, agrupe as colunas de táxons, morfotipos e outras categorias que estiverem disponíveis conforme abaixo. O arquivo de dados de exemplo já está nesta organização.
@@ -263,7 +263,7 @@ Com o objetivo de padronizar os nomes dos grupos, abaixo segue uma sugestão:
 | Grapsus                         | Captura                               | Captura_Grapsus
 | Zooxantelas                     | Registro de coleta                    | Zooxantelas
 | Interação peixes e Bentos       | Análise de Video                      | IntBentospeixes  
-| Bruvis                          | Videos e planilhas                    | Bruvis
+| BRUVs                           | Videos e planilhas                    | BRUVs
 | Dinoflagelados                  | Registro de coleta                    | Dinoflagelados
 |
 <br><br>
